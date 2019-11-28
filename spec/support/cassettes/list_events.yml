@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.livil.io/event/events
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 28 Nov 2019 07:50:46 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '25'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"error":"invalid token"}'
+    http_version: 
+  recorded_at: Thu, 28 Nov 2019 07:50:46 GMT
+recorded_with: VCR 5.0.0

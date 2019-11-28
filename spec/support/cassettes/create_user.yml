@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-dev.livil.io/users
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"arbitrary_id":"someone@livil.co","environment_guid":"6dbc578e-dff4-4fed-bfd0-2133a88a03e3"},"type":"user"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1NzQ5MzQzOTYsImlhdCI6MTU3NDkzNDMzNiwiaXNzIjoiTGl2aWwgUnVieSBTREsgdjAuMS4wIiwidXNlciI6eyJlbnZpcm9ubWVudF9ndWlkIjoiNmRiYzU3OGUtZGZmNC00ZmVkLWJmZDAtMjEzM2E4OGEwM2UzIn19.zdInytAtsZTIDwcpZbgRA1hn5cmO03DCcwVzYpimC-SbYXnOiJMJ4LTlD0xsLPVeA3SvW8ZQpEJdl_-_IzesTo792WfBZqpnyawREVR0yUzYNg2mkxlp7o8-ClERJLlzi8oszPiFtfFZOLXi99T22iZYFmSlkeL46yCwWhm_fVBb3q46fyrvoPvJYfgQXzS3CgzM6oHPiZh3ZY4k3kYxpU_YcYjHvcQv5KK6EOa3pB5T646buHJbagwWQitetLg8_JbsplDb9UxjU6D4svB_FNl_mfkMDZfdofwAVjrJLyPrFTgpoxNxAX9j4Zmc7pVkLPP4SQN-8IsbIdhUpP9z4A
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.17.0
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 28 Nov 2019 09:45:36 GMT
+      X-Request-Id:
+      - 4faf9385-72bc-45b7-845d-cfd7c2f03109
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '357'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5ddf97409f0a31001e04bb93","type":"user","attributes":{"arbitrary_id":"someone@livil.co","token":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzczNTM1MzYsImlhdCI6MTU3NDkzNDMzNiwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZGRmOTc0MDlmMGEzMTAwMWUwNGJiOTMiLCJhcmJpdHJhcnlfaWQiOiJzb21lb25lQGxpdmlsLmNvIn19.DXqSfVhlqlM5Pm_86OzobSoq1C1V0GNC18iATow39FU"}}}'
+    http_version: 
+  recorded_at: Thu, 28 Nov 2019 09:45:36 GMT
+recorded_with: VCR 5.0.0
