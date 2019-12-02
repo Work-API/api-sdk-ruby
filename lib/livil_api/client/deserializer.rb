@@ -8,12 +8,15 @@ module LivilApi
       end
 
       def deserialize
-        data = @json[:data]
+        data = @json[:data] if @json.present?
 
-        if data.is_a?(Array)
+        case data
+        when Array
           deserialize_collection(data)
-        else
+        when Hash
           deserialize_single(data)
+        when nil
+          :no_content
         end
       end
 
@@ -21,7 +24,7 @@ module LivilApi
 
       def deserialize_single(hash)
         id, type, attributes = hash.slice(:id, :type, :attributes).values
-        class_for(type).new(id: id, **attributes.symbolize_keys)
+        class_for(type).new(id: id, **attributes.deep_symbolize_keys)
       end
 
       def deserialize_collection(array)

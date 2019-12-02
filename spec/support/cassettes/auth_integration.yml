@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-dev.livil.io/auth/init/5ddfde529f0a31000804bb94?integration_id=5ddfde529f0a31000804bb94&redirect=false&return_to=http://localhost:3000/done
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzczNTM1MzYsImlhdCI6MTU3NDkzNDMzNiwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZGRmOTc0MDlmMGEzMTAwMWUwNGJiOTMiLCJhcmJpdHJhcnlfaWQiOiJzb21lb25lQGxpdmlsLmNvIn19.DXqSfVhlqlM5Pm_86OzobSoq1C1V0GNC18iATow39FU
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 29 Nov 2019 14:30:48 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '941'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"uri":"https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-ma7p2o4vkn2hqh474000tgaro6nc8taj.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmtaR1prWlRVeU9XWXdZVE14TURBd09EQTBZbUk1TkNJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURk9lbU42VGxSTk1VMTZXWE5KYld4b1pFTkpOazFVVlROT1JHdDZUa1JOZWs1cGQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhUjFKdFQxUmpNRTFFYkcxTlIwVjZUVlJCZDAxWFZYZE9SMHBwVDFSTmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLZW1JeU1XeGlNalZzVVVkNGNHUnRiSE5NYlU1MlNXNHhPUzVFV0hGVFpsWm9iSEZzVFRWUWJWODROazk2YjJKVGIzRXhRekZXTUVkT1F6RTRhVUZVYjNjek9VWlZJbjA9Ig=="}'
+    http_version: 
+  recorded_at: Fri, 29 Nov 2019 14:30:48 GMT
+recorded_with: VCR 5.0.0

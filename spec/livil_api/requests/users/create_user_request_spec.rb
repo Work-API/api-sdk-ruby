@@ -16,8 +16,6 @@ RSpec.describe(LivilApi::Requests::Users::CreateUserRequest) do
     )
   end
 
-  let(:apt_token) { 'some-token' }
-
   context '#path' do
     subject { request.path }
     it { is_expected.to eq('users') }
@@ -26,11 +24,11 @@ RSpec.describe(LivilApi::Requests::Users::CreateUserRequest) do
   context 'client#call' do
     subject do
       VCR.use_cassette('create_user') do
-        client.call(request, token: apt_token)
+        client.call(request)
       end
     end
 
     it { is_expected.to be_a(LivilApi::Client::Response) }
-    it { is_expected.to have_attributes(model: LivilApi::User) }
+    it { is_expected.to have_attributes(body: LivilApi::User) }
   end
 end

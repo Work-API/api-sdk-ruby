@@ -29,10 +29,14 @@ module LivilApi
       end
 
       def args
-        { body: { data: body }, params: params }
+        { params: params }.tap do |hash|
+          hash[:body] = { data: body } if body.present?
+        end
       end
 
       def body
+        return if @body.nil?
+
         serializer = Client::Serializer.new(@body)
         serializer.serialize
       end
@@ -42,7 +46,18 @@ module LivilApi
       end
 
       def path
-        self.class.base_path
+        interpolate_path(self.class.base_path)
+      end
+
+      def interpolate_path(path)
+        interpolated_path = path.clone
+
+        path.scan(/({[^}]+})/).flatten.each do |segment|
+          segment_key = segment.gsub(/[{}]/, '').to_sym
+          interpolated_path = interpolated_path.gsub(segment, params[segment_key])
+        end
+
+        interpolated_path
       end
 
       def process_response(response)
@@ -51,10 +66,6 @@ module LivilApi
         else
           @response = response
         end
-      end
-
-      def token
-        LivilApi.configure
       end
     end
   end

@@ -8,11 +8,5 @@ module LivilApi
         alias_method :attributes_hash, :to_hash
       end
     end
-
-    module ClassMethods
-      def from_attrs(**args)
-        new(**args.deep_symbolize_keys)
-      end
-    end
   end
 end

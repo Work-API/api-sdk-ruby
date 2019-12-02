@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-dev.livil.io/integrations
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzczNTM1MzYsImlhdCI6MTU3NDkzNDMzNiwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZGRmOTc0MDlmMGEzMTAwMWUwNGJiOTMiLCJhcmJpdHJhcnlfaWQiOiJzb21lb25lQGxpdmlsLmNvIn19.DXqSfVhlqlM5Pm_86OzobSoq1C1V0GNC18iATow39FU
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.17.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 28 Nov 2019 14:57:44 GMT
+      X-Request-Id:
+      - ae8a06b7-0be0-4ced-ae00-f5ff84e7e8da
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '138'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"5ddfde529f0a31000804bb94","type":"integration","attributes":{"provider":"gcal","provider_id":null,"media_type":"event"}}]}'
+    http_version: 
+  recorded_at: Thu, 28 Nov 2019 14:57:44 GMT
+recorded_with: VCR 5.0.0

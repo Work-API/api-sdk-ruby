@@ -1,5 +1,9 @@
-Documentation:
+Style/Documentation:
   Enabled: false
 
 Metrics/LineLength:
   Max: 120
+
+AllCops:
+  Exclude:
+    - 'lib/livil/**/*.rb'

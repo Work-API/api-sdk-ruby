@@ -10,9 +10,11 @@ module LivilApi
       private
 
       def get(url, params: {}, **_opts)
-        adapter.get do |request|
+        raw_response = adapter.get do |request|
           request.url url, params
         end
+
+        Response.new(raw_response)
       end
 
       def post(url, params: {}, body: {}, content_type: CONTENT_TYPE_JSON_API)
@@ -62,9 +64,11 @@ module LivilApi
       end
 
       def delete(url, params: {}, **_opts)
-        adapter.delete do |request|
+        raw_response = adapter.delete do |request|
           request.url url, params
         end
+
+        Response.new(raw_response)
       end
 
       def download(url, params: {}, **_opts)

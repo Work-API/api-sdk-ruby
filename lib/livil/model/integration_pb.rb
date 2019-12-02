@@ -18,6 +18,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :subscriptions, :message, 6, 'livil.model.Subscription'
       optional :environment, :message, 7, 'livil.model.Environment'
       optional :created_at, :uint64, 8
+      optional :provider_id, :string, 9
     end
   end
 end

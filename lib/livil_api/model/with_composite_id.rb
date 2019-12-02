@@ -9,7 +9,7 @@ module LivilApi
         extend ClassMethods
 
         def id
-          @id ||= BaseModel.encode_id(integration_id, remote_id)
+          @id ||= WithCompositeId.encode_id(integration_id, remote_id)
         end
       end
     end
@@ -57,7 +57,7 @@ module LivilApi
         return if id.blank?
 
         %i[integration_id remote_id].each do |key|
-          hash[key] = BaseModel.decode_id(id, key)
+          hash[key] = WithCompositeId.decode_id(id, key)
         end
       end
     end

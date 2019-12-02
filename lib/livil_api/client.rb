@@ -10,10 +10,11 @@ module LivilApi
       HTTP.new(token, url)
     end
 
-    def call(request, token:)
+    def call(request, token: nil)
+      byebug if $debug
       token = request.respond_to?(:token) ? request.token : token
 
-      request.response = service(token: token).api_call(
+      service(token: token).api_call(
         request.http_method,
         request.path,
         **request.args

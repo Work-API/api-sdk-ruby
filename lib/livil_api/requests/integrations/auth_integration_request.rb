@@ -4,8 +4,8 @@ require_relative '../base_request'
 
 module LivilApi
   module Requests
-    module Events
-      class ListEventsRequest < BaseRequest[:get, 'event/events']; end
+    module Integrations
+      class AuthIntegrationRequest < BaseRequest[:get, 'auth/init/{integration_id}']; end
     end
   end
 end
