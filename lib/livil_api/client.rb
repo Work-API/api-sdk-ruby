@@ -11,7 +11,6 @@ module LivilApi
     end
 
     def call(request, token: nil)
-      byebug if $debug
       token = request.respond_to?(:token) ? request.token : token
 
       service(token: token).api_call(
@@ -24,7 +23,7 @@ module LivilApi
     private
 
     def url
-      @url || DEFAULT_URL
+      @url || ENV['LIVIL_API_HOST'] || DEFAULT_URL
     end
   end
 end
