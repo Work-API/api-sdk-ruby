@@ -2,17 +2,17 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-dev.livil.io/integrations
+    uri: https://api-alpha.work-api.com/integrations
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}}'
     headers:
       Authorization:
-      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzczNTM1MzYsImlhdCI6MTU3NDkzNDMzNiwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZGRmOTc0MDlmMGEzMTAwMWUwNGJiOTMiLCJhcmJpdHJhcnlfaWQiOiJzb21lb25lQGxpdmlsLmNvIn19.DXqSfVhlqlM5Pm_86OzobSoq1C1V0GNC18iATow39FU
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODQwMDYyMTcsImlhdCI6MTU4MTU4NzAxNywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTQ0MjQ4YmM0YzQzZDAwMTY4MTQ4MmQiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MjU5NzkwN0B3b3JrLWFwaS5jb20ifX0.OCSYExauEyQGvMPWQLTJlA9hzhzVRbrF-TyolrwSpWE
       Accept:
       - application/vnd.api+json
       User-Agent:
-      - Faraday v0.17.0
+      - Faraday v0.15.4
       Content-Type:
       - application/vnd.api+json
       Accept-Encoding:
@@ -27,9 +27,9 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 28 Nov 2019 14:48:50 GMT
+      - Thu, 13 Feb 2020 10:37:46 GMT
       X-Request-Id:
-      - 0f6fada7-7561-4ee5-aa3f-cdca6b0c928c
+      - 9484f332-c878-48a3-aa45-3758be1e115e
       Content-Type:
       - application/vnd.api+json
       Content-Length:
@@ -40,7 +40,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5ddfde529f0a31000804bb94","type":"integration","attributes":{"provider":"gcal","provider_id":null,"media_type":"event"}}}'
-    http_version: 
-  recorded_at: Thu, 28 Nov 2019 14:48:50 GMT
-recorded_with: VCR 5.0.0
+      string: '{"data":{"id":"5e4526fa1e546e000826ce50","type":"integration","attributes":{"provider":"gcal","provider_id":null,"media_type":"event"}}}'
+    http_version: null
+  recorded_at: Thu, 13 Feb 2020 10:37:46 GMT
+recorded_with: VCR 5.1.0
