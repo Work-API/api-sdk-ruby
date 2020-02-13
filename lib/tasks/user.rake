@@ -34,7 +34,7 @@ def reauth_user
     'Content-Type' => 'application/vnd.api+json',
     'Authorization' => "Bearer #{generate_apt(arbitrary_id: load_user.arbitrary_id)}"
   )
-  
+
   raise "Error reauthing user: #{response.status}" unless response.status < 299
 
   response.body
