@@ -27,7 +27,7 @@ module LivilApi
       def json
         return if @raw_response.body.blank?
 
-        JSON.parse(@raw_response.body).with_indifferent_access
+        JSON.parse(@raw_response.body)
       end
 
       def redirect?
