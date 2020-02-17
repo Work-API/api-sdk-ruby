@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe(LivilApi::Client::Deserializer) do
+RSpec.describe(LivilApi::JsonapiDeserializer) do
   context '#errors' do
     let(:json) do
       {

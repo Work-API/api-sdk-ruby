@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/users
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"arbitrary_id":"create_user_dupe@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODI4OTM5MTIsImlhdCI6MTU4Mjg5Mzg1MiwiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.CYxxALH_a1KIN70_nwjTfO8EdoONl8oOlY87SWMuo_LcJp9a80F2hhHQEDjv-cFwiaB4Ift6rhLrGzXR0l4itpsjR2sDQLhQc06Gkoq_4Ubh4FLIz2o5JC4agVaWuNJJFDcRHrsAAdGJjusyfWwu4ZsINy84rvC8Ljl1fVjrFIqwIE_P1cHOcErZx3sA9AwrZ5oGIxLIJIeph2vONZZ5MaN4QcTKb8Nw3l-c6AWA4B_FvnSBk11i4NSuOf6Y1Z-gMdQa4kX37TGOehIu6H5ovvJpCw2FsG22ffmrR_iePEygytemEp1QmmHJxo25EGUuQB6rikSdZUQORMB0QOtzHA
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 28 Feb 2020 12:44:13 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '126'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":"user_already_exists_error","detail":"a user with
+        that ID already exists in the specified environment: "}]}'
+    http_version: null
+  recorded_at: Fri, 28 Feb 2020 12:44:14 GMT
+recorded_with: VCR 5.1.0

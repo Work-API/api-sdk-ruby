@@ -5,10 +5,10 @@ http_interactions:
     uri: https://api-alpha.work-api.com/users
     body:
       encoding: UTF-8
-      string: '{"data":{"attributes":{"arbitrary_id":"someone@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
+      string: '{"data":{"attributes":{"arbitrary_id":"create_user@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
     headers:
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODE5NTE4NTMsImlhdCI6MTU4MTk1MTc5MywiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.Y80WKpyvaYuLr5h456VZYVTerfpkHmNE9cmxEMJpO33qUdll_0C9R-A4vC9vXDxLqL8mWoNv1i_NvkVtTs4ROYxKhiIvaAFhXlwunO1ufblJjHXzM1gfbJWXOPkN5dsPXUxkW41tIIUa4FkMoa5PpQkzv2ONOxvxXXvj-ItGxDXrd5Iao3V2xThO2WmCr250yflwE6RZ1GzoJpSt_eCYGhC7OPTWNmytj8ylmPSJZTkKiv_sj3745u2o9x5Lr3HfCBXh7MNNa07H-ghdVSMoX_d5xScifyCqk_BkKLpS2muG_K2spUvzax2Ri-SkJKJy17HgXzJeFs2ZaZ0MJwkZeQ
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODI4ODAwNTMsImlhdCI6MTU4Mjg3OTk5MywiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.D8BB6NY58N0TxUE6NQwghTUegp2Du_Ase3n75BsMw-9RdBEKYvermiBxJMwMZqzJcNMjlTMeWIFE5n3NcOLq4gnPrJOykqEL53hRER6JcdYqrIQxm46cApDsbGi_QGN6VplMLHd2D-_vxzKITE1_tPJBLLQtm6s5QR75x_zRZ_gv351j_EirHQKc3YqwPorovpNiVfGMq9SGjPnFBc9JFEbBN0EyxR0iiJ3HhROnS9or5BZA4tJT8Msjr-OY49xrJ5GKSiBeQ0h0nNmszNcH23SpIthC8abeOfGG1zVVG-brj4rpjhGnlohh54vanYHxYEf4QP6tv5Cf1r3FgvF4tg
       Accept:
       - application/vnd.api+json
       User-Agent:
@@ -27,47 +27,20 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 17 Feb 2020 15:03:13 GMT
+      - Fri, 28 Feb 2020 08:53:32 GMT
       X-Request-Id:
-      - 9abd25e4-e920-4b24-8ed5-d0e66ca40c04
+      - e1c7faba-bd77-4076-9c09-f34ae996a5cc
       Content-Type:
       - application/vnd.api+json
       Content-Length:
-      - '357'
+      - '367'
       Vary:
       - Origin
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5e4aab31a1abfa0008d5bfc8","type":"user","attributes":{"arbitrary_id":"someone@livil.co","token":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODQzNzA5OTMsImlhdCI6MTU4MTk1MTc5MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYWIzMWExYWJmYTAwMDhkNWJmYzgiLCJhcmJpdHJhcnlfaWQiOiJzb21lb25lQGxpdmlsLmNvIn19.1mjTv1Jm4O0TnX52_TF0wGqhkqW8R3gJ_7l94Eamwno"}}}'
+      string: '{"data":{"id":"5e58d50c1baf6a9aba105723","type":"user","attributes":{"arbitrary_id":"create_user@livil.co","token":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODUyOTkyMTIsImlhdCI6MTU4Mjg4MDAxMiwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTU4ZDUwYzFiYWY2YTlhYmExMDU3MjMiLCJhcmJpdHJhcnlfaWQiOiJjcmVhdGVfdXNlckBsaXZpbC5jbyJ9fQ.a7rLE-o6f64W5mojnGly4HKLNBaEVydxwZeqmaOLaE0"}}}'
     http_version: null
-  recorded_at: Mon, 17 Feb 2020 15:03:13 GMT
-- request:
-    method: post
-    uri: http://localhost:9292/users
-    body:
-      encoding: UTF-8
-      string: '{"data":{"attributes":{"arbitrary_id":"someone@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
-    headers:
-      Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODE5NTI2MTMsImlhdCI6MTU4MTk1MjU1MywiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.fIDudj5tIPiG_qGziJyosGIyreZB4D6JJnpdFfaZ2HpcEACL8Se3ralclWhbjAHJFdRkA87BEtyLuIyVqpMsn4OB9KWwVe-ms-dwoQXQ_caARpA5gRvynDFhwYOch7FE7af9pKCujjXeYl3l2HmR_roVDBGHrZE81RJG6d6PGRPmktbl75a4dNwXEfrp2py0eb8ANbywmplBz3dPB_ENpJlbMl1hYLOlCFPfAs-V6HU7WM7-ZZQt2S0DVKTgLrNPxgP5NPxWsz8ObjUIwl9AyJSAxTsxpkmXaeUuDvX_GJ6vBxUeoRlKhTVSbyXmWaXUmCMa9YbleSPIq6B_5y8VOA
-      Accept:
-      - application/vnd.api+json
-      User-Agent:
-      - Faraday v0.15.4
-      Content-Type:
-      - application/vnd.api+json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 500
-      message: Internal Server Error
-    headers: {}
-    body:
-      encoding: UTF-8
-      string: ''
-    http_version: null
-  recorded_at: Mon, 17 Feb 2020 15:15:56 GMT
+  recorded_at: Fri, 28 Feb 2020 08:53:32 GMT
 recorded_with: VCR 5.1.0

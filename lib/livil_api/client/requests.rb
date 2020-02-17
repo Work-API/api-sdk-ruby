@@ -60,7 +60,7 @@ module LivilApi
           end
         end
 
-        Client::Response.new(response)
+        Response.new(response)
       end
 
       def delete(url, params: {}, **_opts)

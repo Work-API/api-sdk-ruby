@@ -12,7 +12,7 @@ RSpec.shared_context 'with token' do
 
   def load_user
     user_payload = load_file('user.json')
-    LivilApi::Client::Deserializer.new(user_payload).deserialize
+    LivilApi::JsonapiDeserializer.new(user_payload).deserialize
   end
 
   let(:account_provder_token) { load_tokens[:apt] }

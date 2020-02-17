@@ -5,8 +5,8 @@ require 'tasks/common'
 RSpec.shared_context 'with live client' do
   include_context 'with token'
 
-  def make_request(request)
-    VCR.use_cassette(cassette_name, record: :new_episodes) do
+  def make_request(request, override_cassette: nil)
+    VCR.use_cassette(override_cassette || cassette_name, record: :new_episodes) do
       client.call(request, token: token)
     end
   end

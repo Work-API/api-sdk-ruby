@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/users
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"arbitrary_id":"delete_test@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODI4NzcxNTgsImlhdCI6MTU4Mjg3NzA5OCwiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.J7zbGG9ffQEW0yX-py0SPNqvTYaCuh2Hl4pGhHzuNn8o_9t9Ul6p6w0o2uj6L4Csqks2y1ITZc2h8179BqBzd5UYsDNX4oEUO4QVxagDM0_l1eMEPk8pQIHmXRPP0fwfKdDI_y8Yk9oIreRujmELMPLUpHUYq_f-w40a0xy4J0sTOQh5ZaCD31HNK1YSTsZHEHq2rpfu8Wktw8_cpIktQBfM4eeY9XPwZhRqEGKqqBuhbh1psz00jiC5sycP9lnWaYIGgSOn1E09sO3OWyva-ycCylIcK0XRS_gTegFTT7174UavIbhzhCoqqVEuZngdA4Sexzhi3lVBvJNs7TfENQ
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 28 Feb 2020 08:04:59 GMT
+      X-Request-Id:
+      - b87097d8-0ebe-4615-addb-aff322e3aff3
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '367'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e58c9ab8e04a30038bbccc7","type":"user","attributes":{"arbitrary_id":"delete_test@livil.co","token":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODUyOTYyOTksImlhdCI6MTU4Mjg3NzA5OSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTU4YzlhYjhlMDRhMzAwMzhiYmNjYzciLCJhcmJpdHJhcnlfaWQiOiJkZWxldGVfdGVzdEBsaXZpbC5jbyJ9fQ.DbvirgX4ls_OOh8itvxOLx6DczWGp_MNiVTpJZuaUFA"}}}'
+    http_version: null
+  recorded_at: Fri, 28 Feb 2020 08:04:59 GMT
+- request:
+    method: delete
+    uri: https://api-alpha.work-api.com/users/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODUyOTYyOTksImlhdCI6MTU4Mjg3NzA5OSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTU4YzlhYjhlMDRhMzAwMzhiYmNjYzciLCJhcmJpdHJhcnlfaWQiOiJkZWxldGVfdGVzdEBsaXZpbC5jbyJ9fQ.DbvirgX4ls_OOh8itvxOLx6DczWGp_MNiVTpJZuaUFA
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 28 Feb 2020 08:05:45 GMT
+      X-Request-Id:
+      - 98c20270-1c90-4e19-a4a7-8beeb00cb00a
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Fri, 28 Feb 2020 08:05:44 GMT
+recorded_with: VCR 5.1.0

@@ -47,7 +47,7 @@ RSpec.describe(LivilApi::Requests::Integrations::AuthIntegrationRequest) do
 
       context '#body' do
         subject { call.body }
-        it { is_expected.to eq(:no_content) }
+        it { is_expected.to include(:uri) }
       end
 
       context '#redirect_uri' do
@@ -61,7 +61,7 @@ RSpec.describe(LivilApi::Requests::Integrations::AuthIntegrationRequest) do
 
         it { is_expected.to include('return_to' => return_to) }
         it { is_expected.to include('integration_id' => integration_id) }
-        it { is_expected.to include('token' => token) }
+        it { is_expected.to include('token' => String) }
       end
     end
   end

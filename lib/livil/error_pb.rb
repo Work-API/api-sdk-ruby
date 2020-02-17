@@ -5,19 +5,17 @@ require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("error.proto", :syntax => :proto3) do
-    add_message "spico.protobufs.Error" do
+    add_message "livil.Error" do
       optional :code, :string, 1
       optional :message, :string, 2
       optional :reference, :string, 3
       optional :error_class, :string, 4
       optional :http_code, :uint32, 5
-      repeated :original, :message, 6, "spico.protobufs.Error"
+      repeated :original, :message, 6, "livil.Error"
     end
   end
 end
 
-module Spico
-  module Protobufs
-    Error = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("spico.protobufs.Error").msgclass
-  end
+module Livil
+  Error = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("livil.Error").msgclass
 end
