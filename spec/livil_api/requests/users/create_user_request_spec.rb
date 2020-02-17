@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'livil_api/model/user'
-require 'livil_api/client'
 require 'livil_api/requests/users/create_user_request'
 
 RSpec.describe(LivilApi::Requests::Users::CreateUserRequest) do
