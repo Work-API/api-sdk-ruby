@@ -5,10 +5,11 @@ require 'livil_api/client'
 require 'livil_api/requests/integrations/destroy_integration_request'
 
 RSpec.describe(LivilApi::Requests::Integrations::DestroyIntegrationRequest) do
-  include_context 'with token'
+  include_context 'with live client'
+  include_context 'with live integration'
 
-  let(:integration_id) { '5ddfde529f0a31000804bb94' }
-  let(:client) { LivilApi::Client.new }
+  let(:cassette_name) { 'integration_destroy' }
+
   let(:request) { described_class.new(integration_id: integration_id) }
 
   context '#path' do
@@ -17,20 +18,15 @@ RSpec.describe(LivilApi::Requests::Integrations::DestroyIntegrationRequest) do
   end
 
   context 'client#call' do
-    let(:call) do
-      VCR.use_cassette('destroy_integration') do
-        client.call(request, token: token)
-      end
-    end
+    subject { response }
 
-    subject do
-      call
-    end
+    let(:response) { make_request(request) }
 
-    it { is_expected.to be_a(LivilApi::Client::Response) }
+    it { is_expected.not_to be_error }
+    it { is_expected.to be_success }
 
     context '#body' do
-      subject { call.body }
+      subject { response.body }
       it { is_expected.to eq(:no_content) }
     end
   end

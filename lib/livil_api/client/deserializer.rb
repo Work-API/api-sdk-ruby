@@ -5,7 +5,7 @@ module LivilApi
     class Deserializer
       def initialize(json)
         json = JSON.parse(json) if json.is_a?(String)
-        @json = json.with_indifferent_access
+        @json = json&.with_indifferent_access
       end
 
       def deserialize
@@ -24,7 +24,7 @@ module LivilApi
       def errors
         errors = @json[:errors] if @json.present?
 
-        errors.map do |error|
+        errors&.map do |error|
           LivilApi::Error.new(code: error[:code], message: error[:detail])
         end
       end
