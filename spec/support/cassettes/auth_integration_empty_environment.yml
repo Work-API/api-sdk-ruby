@@ -27,9 +27,9 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 17 Feb 2020 13:39:59 GMT
+      - Mon, 17 Feb 2020 13:00:01 GMT
       X-Request-Id:
-      - c692e1b1-7e1c-4ab4-84d6-507aa881cc1d
+      - 60f1031a-8375-4aeb-8758-1b07ee8df584
       Content-Type:
       - application/vnd.api+json
       Content-Length:
@@ -40,12 +40,12 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5e4a97af5a83120008901da7","type":"integration","attributes":{"provider":"gcal","provider_id":null,"media_type":"event"}}}'
+      string: '{"data":{"id":"5e4a8e515a83120022901da6","type":"integration","attributes":{"provider":"gcal","provider_id":null,"media_type":"event"}}}'
     http_version: null
-  recorded_at: Mon, 17 Feb 2020 13:39:59 GMT
+  recorded_at: Mon, 17 Feb 2020 13:00:01 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/auth/init/5e4a97af5a83120008901da7?integration_id=5e4a97af5a83120008901da7&redirect=false&return_to=http://localhost:3000/done
+    uri: https://api-alpha.work-api.com/auth/init/5e4a8e515a83120022901da6?integration_id=5e4a8e515a83120022901da6&redirect=false&return_to=http://localhost:3000/done
     body:
       encoding: US-ASCII
       string: ''
@@ -60,26 +60,27 @@ http_interactions:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
-      code: 200
-      message: OK
+      code: 401
+      message: Unauthorized
     headers:
       Server:
       - Cowboy
       Connection:
       - keep-alive
       Date:
-      - Mon, 17 Feb 2020 13:39:59 GMT
+      - Mon, 17 Feb 2020 13:00:10 GMT
       Content-Type:
       - application/vnd.api+json
       Content-Length:
-      - '974'
+      - '125'
       Vary:
       - Origin
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"uri":"https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api-dev.livil.io/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOR0U1TjJGbU5XRTRNekV5TURBd09Ea3dNV1JoTnlJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURlBSRkYzVFVSWmVVMVVZM05KYld4b1pFTkpOazFVVlRSTlZGVTBUbnBCZUU1NWQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhVkZFd1RXcFJORmx0VFRCWmVsRjZXa1JCZDAxVVdUUk5WRkUwVFcxUmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLTUZwWVRqQk5hbFUxVG5wcmQwNHdRak5pTTBweVRGZEdkMkZUTldwaU1qQnBabGd3TGs5RFUxbEZlR0YxUlhsUlIzWk5VRmRSVEZSS2JFRTVhSHBvZWxaU1luSkdMVlI1YjJ4eWQxTndWMFVpZlE9PSI="}'
+      string: '{"errors":[{"code":"remote_authorization_missing_error","detail":"credentials
+        for underlying API have not been provided: "}]}'
     http_version: null
-  recorded_at: Mon, 17 Feb 2020 13:39:59 GMT
+  recorded_at: Mon, 17 Feb 2020 13:00:10 GMT
 recorded_with: VCR 5.1.0

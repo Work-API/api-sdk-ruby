@@ -12,8 +12,15 @@ module LivilApi
       end
 
       def body
-        deserializer = Deserializer.new(json)
-        deserializer.deserialize
+        @body ||= deserializer.deserialize
+      end
+
+      def errors
+        @errors ||= deserializer.errors
+      end
+
+      def error?
+        errors.present?
       end
 
       def json
@@ -28,6 +35,12 @@ module LivilApi
 
       def redirect_uri
         json[:uri]
+      end
+
+      protected
+
+      def deserializer
+        @deserializer ||= Deserializer.new(json)
       end
     end
   end

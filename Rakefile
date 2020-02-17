@@ -14,7 +14,7 @@ task default: :spec
 
 desc 'compile protobufs to ruby classes'
 task :compile_protobufs do
-  args = ['-I protobufs', 'protobufs/model/*.proto']
+  args = ['-I protobufs', 'protobufs/model/*.proto', 'protobufs/error.proto']
   args << '--ruby_out lib/livil'
 
   cmd = "protoc  #{args.join(' ')}"

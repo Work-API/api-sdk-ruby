@@ -21,6 +21,14 @@ module LivilApi
         end
       end
 
+      def errors
+        errors = @json[:errors] if @json.present?
+
+        errors.map do |error|
+          LivilApi::Error.new(code: error[:code], message: error[:detail])
+        end
+      end
+
       protected
 
       def deserialize_single(hash)
