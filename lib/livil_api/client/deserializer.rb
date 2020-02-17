@@ -4,7 +4,8 @@ module LivilApi
   class Client
     class Deserializer
       def initialize(json)
-        @json = json
+        json = JSON.parse(json) if json.is_a?(String)
+        @json = json.with_indifferent_access
       end
 
       def deserialize

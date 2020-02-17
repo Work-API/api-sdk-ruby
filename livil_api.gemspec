@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'activesupport', '~> 6'
-  spec.add_dependency 'faraday', '~> 0.17'
+  spec.add_dependency 'faraday', '~> 0.15'
   spec.add_dependency 'google-protobuf', '3.7.0'
   spec.add_dependency 'jwt', '~> 2.2'
   spec.add_dependency 'uuidtools', '~> 2.1'

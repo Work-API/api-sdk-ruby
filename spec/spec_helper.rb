@@ -5,8 +5,10 @@ require 'byebug'
 require 'ffaker'
 require 'livil_api'
 
-Dir['./spec/support/*.rb'].each { |r| require r }
-Dir['./spec/support/shared_contexts/*.rb'].each { |r| require r }
+APP_ROOT = File.expand_path('..', __dir__)
+
+Dir['./spec/support/*.rb'].sort.each { |r| require r }
+Dir['./spec/support/shared_contexts/*.rb'].sort.each { |r| require r }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

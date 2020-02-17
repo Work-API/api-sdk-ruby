@@ -4,7 +4,7 @@ require_relative './client/http'
 
 module LivilApi
   class Client
-    DEFAULT_URL = 'https://api-dev.livil.io'
+    DEFAULT_URL = 'https://api-alpha.work-api.com'
 
     def service(token:)
       HTTP.new(token, url)
@@ -20,10 +20,14 @@ module LivilApi
       )
     end
 
+    def self.url
+      @url || ENV['LIVIL_API_HOST'] || DEFAULT_URL
+    end
+
     private
 
     def url
-      @url || ENV['LIVIL_API_HOST'] || DEFAULT_URL
+      @url ||= self.class.url
     end
   end
 end
