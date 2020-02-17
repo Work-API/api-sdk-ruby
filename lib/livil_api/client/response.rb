@@ -21,7 +21,7 @@ module LivilApi
       end
 
       def error?
-        errors.present?
+        errors.present? || (400..599).include?(@raw_response.status)
       end
 
       def json
