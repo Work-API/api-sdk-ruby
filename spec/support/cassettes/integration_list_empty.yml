@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-dev.livil.io/integrations
+    uri: https://api-alpha.work-api.com/integrations
     body:
       encoding: US-ASCII
       string: ''
@@ -39,6 +39,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-    http_version: 
+    http_version: null
   recorded_at: Thu, 28 Nov 2019 14:43:53 GMT
-recorded_with: VCR 5.0.0
+recorded_with: VCR 5.1.0

@@ -19,7 +19,6 @@ RSpec.describe(LivilApi::Requests::Integrations::DestroyIntegrationRequest) do
 
   context 'client#call' do
     subject { response }
-
     let(:response) { make_request(request) }
 
     it { is_expected.not_to be_error }

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'livil_api/model/integration'
-require 'livil_api/client'
 require 'livil_api/requests/integrations/create_integration_request'
 
 RSpec.describe(LivilApi::Requests::Integrations::CreateIntegrationRequest) do
