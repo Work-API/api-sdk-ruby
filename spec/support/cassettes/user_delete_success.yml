@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/users
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"arbitrary_id":"delete_test@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODE5NTcxMjcsImlhdCI6MTU4MTk1NzA2NywiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.Nocg4J5cj40tlOt9AFZNQHf2t7U6f3f3DLvH-xdHxqUil3v0EK8BUuFgMuy6NIDIyz9R6S8r7OIMI2HNlhKZh3grBK0YqVRoiCSKRp60KRbHBUY0cEBTnR6MOlSKIRIBzFHQTfXBa1oeZmtPaVBc9K8igMCtdx962wT_AaR8fk7wel7QveBxwdldLiJydTztmwWMPzaPu3RzX4lJIT2426rf3ndAHN-psH24Quav0G_7in6IR5-GzS-0R1Rc7azRElyI6UkriNA7GljV_nFE4uRLKVSz0tLyJrlOa3fxF-SPPny1jcRKnYbQApK-fNZ3VKm8FyrlZ1nBubhYyeqntw
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 17 Feb 2020 16:31:07 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '71'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":"server_error","detail":"internal server error:
+        "}]}'
+    http_version: null
+  recorded_at: Mon, 17 Feb 2020 16:31:08 GMT
+recorded_with: VCR 5.1.0
