@@ -1,0 +1,175 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/integrations
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"provider":"gmail","media_type":"email"},"type":"integration"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODQwMDYyMTcsImlhdCI6MTU4MTU4NzAxNywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTQ0MjQ4YmM0YzQzZDAwMTY4MTQ4MmQiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MjU5NzkwN0B3b3JrLWFwaS5jb20ifX0.OCSYExauEyQGvMPWQLTJlA9hzhzVRbrF-TyolrwSpWE
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 17 Feb 2020 14:33:16 GMT
+      X-Request-Id:
+      - 8361015b-b3d5-4c38-8b7b-9d8cf2efa50b
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '137'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e4aa42ca1abfa0008d5bfc7","type":"integration","attributes":{"provider":"gmail","provider_id":null,"media_type":"email"}}}'
+    http_version: null
+  recorded_at: Mon, 17 Feb 2020 14:33:16 GMT
+- request:
+    method: put
+    uri: https://api-alpha.work-api.com/integrations/5e4aa42ca1abfa0008d5bfc7?integration_id=5e4aa42ca1abfa0008d5bfc7
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"provider":"gmail","media_type":"email"},"type":"integration"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODQwMDYyMTcsImlhdCI6MTU4MTU4NzAxNywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTQ0MjQ4YmM0YzQzZDAwMTY4MTQ4MmQiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MjU5NzkwN0B3b3JrLWFwaS5jb20ifX0.OCSYExauEyQGvMPWQLTJlA9hzhzVRbrF-TyolrwSpWE
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 17 Feb 2020 14:33:17 GMT
+      X-Request-Id:
+      - 6019ac81-0b26-4d60-9bfd-609846342784
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '137'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e4aa42ca1abfa0008d5bfc7","type":"integration","attributes":{"provider":"gmail","provider_id":null,"media_type":"email"}}}'
+    http_version: null
+  recorded_at: Mon, 17 Feb 2020 14:33:17 GMT
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/integrations
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODQwMDYyMTcsImlhdCI6MTU4MTU4NzAxNywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTQ0MjQ4YmM0YzQzZDAwMTY4MTQ4MmQiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MjU5NzkwN0B3b3JrLWFwaS5jb20ifX0.OCSYExauEyQGvMPWQLTJlA9hzhzVRbrF-TyolrwSpWE
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 17 Feb 2020 14:34:57 GMT
+      X-Request-Id:
+      - b1ddf488-d7f3-442c-b18e-1389b667aa76
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '136'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e4aa491a1abfa0013d5bfc7","type":"integration","attributes":{"provider":"gcal","provider_id":null,"media_type":"event"}}}'
+    http_version: null
+  recorded_at: Mon, 17 Feb 2020 14:34:58 GMT
+- request:
+    method: put
+    uri: https://api-alpha.work-api.com/integrations/5e4aa491a1abfa0013d5bfc7?integration_id=5e4aa491a1abfa0013d5bfc7
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODQwMDYyMTcsImlhdCI6MTU4MTU4NzAxNywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTQ0MjQ4YmM0YzQzZDAwMTY4MTQ4MmQiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MjU5NzkwN0B3b3JrLWFwaS5jb20ifX0.OCSYExauEyQGvMPWQLTJlA9hzhzVRbrF-TyolrwSpWE
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 17 Feb 2020 14:34:59 GMT
+      X-Request-Id:
+      - 4fd6168e-f460-43af-9e1b-0cebdcc8b1ea
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '136'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e4aa491a1abfa0013d5bfc7","type":"integration","attributes":{"provider":"gcal","provider_id":null,"media_type":"event"}}}'
+    http_version: null
+  recorded_at: Mon, 17 Feb 2020 14:34:59 GMT
+recorded_with: VCR 5.1.0

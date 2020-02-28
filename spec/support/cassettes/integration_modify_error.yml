@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://api-alpha.work-api.com/integrations
+    method: put
+    uri: https://api-alpha.work-api.com/integrations/doesnt_exist?integration_id=doesnt_exist
     body:
       encoding: UTF-8
-      string: '{"data":{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}}'
+      string: '{"data":{"attributes":{"provider":"gmail","media_type":"email"},"type":"integration"}}'
     headers:
       Authorization:
       - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODQwMDYyMTcsImlhdCI6MTU4MTU4NzAxNywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTQ0MjQ4YmM0YzQzZDAwMTY4MTQ4MmQiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MjU5NzkwN0B3b3JrLWFwaS5jb20ifX0.OCSYExauEyQGvMPWQLTJlA9hzhzVRbrF-TyolrwSpWE
@@ -19,28 +19,27 @@ http_interactions:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
-      code: 201
-      message: Created
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Connection:
       - keep-alive
       Date:
-      - Mon, 17 Feb 2020 14:56:28 GMT
-      X-Request-Id:
-      - 34b9fe4d-3d8a-49fc-a33d-e5c2a1fef22f
+      - Mon, 17 Feb 2020 14:52:33 GMT
       Content-Type:
       - application/vnd.api+json
       Content-Length:
-      - '136'
+      - '91'
       Vary:
       - Origin
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5e4aa99ca1abfa0016d5bfc7","type":"integration","attributes":{"provider":"gcal","provider_id":null,"media_type":"event"}}}'
+      string: '{"errors":[{"code":"not_found_error","detail":"the remote resource
+        could not be found: "}]}'
     http_version: null
-  recorded_at: Mon, 17 Feb 2020 14:56:28 GMT
+  recorded_at: Mon, 17 Feb 2020 14:52:33 GMT
 recorded_with: VCR 5.1.0

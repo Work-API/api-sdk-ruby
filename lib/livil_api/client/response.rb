@@ -1,19 +1,30 @@
 # frozen_string_literal: true
 
-require_relative './deserializer'
+require 'livil_api/deserializers/jsonapi_deserializer'
 
 module LivilApi
   class Client
     class Response
+      attr_accessor :request
       attr_reader :raw_response
+      delegate :success?, to: :raw_response
+
+      DEFAULT_DESERIALIZER = JsonapiDeserializer
 
       def initialize(raw_response)
         @raw_response = raw_response
       end
 
       def body
-        deserializer = Deserializer.new(json)
-        deserializer.deserialize
+        @body ||= deserializer.deserialize
+      end
+
+      def errors
+        @errors ||= deserializer.errors
+      end
+
+      def error?
+        errors.present? || (400..599).include?(@raw_response.status)
       end
 
       def json
@@ -28,6 +39,16 @@ module LivilApi
 
       def redirect_uri
         json[:uri]
+      end
+
+      protected
+
+      def deserializer
+        @deserializer ||= deserializer_class.new(json)
+      end
+
+      def deserializer_class
+        request.deserializer_class || DEFAULT_DESERIALIZER
       end
     end
   end

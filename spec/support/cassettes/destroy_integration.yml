@@ -2,17 +2,17 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api-dev.livil.io/integrations/5ddfde529f0a31000804bb94?integration_id=5ddfde529f0a31000804bb94
+    uri: https://api-alpha.work-api.com/integrations/5ddfde529f0a31000804bb94?integration_id=5ddfde529f0a31000804bb94
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzczNTM1MzYsImlhdCI6MTU3NDkzNDMzNiwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZGRmOTc0MDlmMGEzMTAwMWUwNGJiOTMiLCJhcmJpdHJhcnlfaWQiOiJzb21lb25lQGxpdmlsLmNvIn19.DXqSfVhlqlM5Pm_86OzobSoq1C1V0GNC18iATow39FU
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODQwMDYyMTcsImlhdCI6MTU4MTU4NzAxNywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTQ0MjQ4YmM0YzQzZDAwMTY4MTQ4MmQiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MjU5NzkwN0B3b3JrLWFwaS5jb20ifX0.OCSYExauEyQGvMPWQLTJlA9hzhzVRbrF-TyolrwSpWE
       Accept:
       - application/vnd.api+json
       User-Agent:
-      - Faraday v0.17.0
+      - Faraday v0.15.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -27,9 +27,9 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 02 Dec 2019 09:27:56 GMT
+      - Mon, 17 Feb 2020 14:56:28 GMT
       X-Request-Id:
-      - 42954e89-9fee-467c-99c4-db8d7324a56a
+      - b19e4d0d-69fe-4787-bdc0-d2103a91b8d8
       Vary:
       - Origin
       Via:
@@ -37,6 +37,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
-  recorded_at: Mon, 02 Dec 2019 09:27:56 GMT
-recorded_with: VCR 5.0.0
+    http_version: null
+  recorded_at: Mon, 17 Feb 2020 14:56:28 GMT
+recorded_with: VCR 5.1.0

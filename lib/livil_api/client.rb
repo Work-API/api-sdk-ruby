@@ -17,7 +17,9 @@ module LivilApi
         request.http_method,
         request.path,
         **request.args
-      )
+      ).tap do |response|
+        response.request = request
+      end
     end
 
     def self.url

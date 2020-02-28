@@ -16,6 +16,7 @@ module LivilApi
       end
 
       attr_accessor :response, :params
+      attr_accessor :deserializer_class
 
       def initialize(body: nil, **params)
         @body = body

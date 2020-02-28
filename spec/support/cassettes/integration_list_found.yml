@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-dev.livil.io/integrations
+    uri: https://api-alpha.work-api.com/integrations
     body:
       encoding: US-ASCII
       string: ''

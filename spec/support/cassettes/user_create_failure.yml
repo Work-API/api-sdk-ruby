@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/users
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"arbitrary_id":"create_user@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODI4ODAwNzIsImlhdCI6MTU4Mjg4MDAxMiwiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.JyxXL_V9jZexx7xMEnu07kV9JmK8rMF3_TgE_KxnQfpBiPhHQscPVme1jr66bOOZtqQRlfYlVShaWm76xtZpimXo6nCae0a70rkz9CwOeqYCW4wLcdtO8R8WkKgN18KaOaw_tNg_l7jCYZ7tco5S35cE7qdpEIuLRf9HZgrbItHzl0PUJbQVCotZI107igQylziJUsfpNBBIUtS-kblCvg_WxB6-EQcMlsPCv-Kza377b9-VBO7raQcoCa8UIYTMPs0SZYRKqUQRjhgppKc-ihLEuCYKR806ClmuSFoxGlQ9hIpHJu_WGe1NSzCWFyC1E7Bx5N8Kh0iuzo3uIs0DyA
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 28 Feb 2020 08:53:33 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '91'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":"invalid_token_error","detail":"the supplied auth
+        token is invalid: "}]}'
+    http_version: null
+  recorded_at: Fri, 28 Feb 2020 08:53:33 GMT
+recorded_with: VCR 5.1.0
