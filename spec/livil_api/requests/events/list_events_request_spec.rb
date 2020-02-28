@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 require 'livil_api/model/event'
-require 'livil_api/client'
 require 'livil_api/requests/events/list_events_request'
 
 RSpec.describe(LivilApi::Requests::Events::ListEventsRequest) do
-  include_context 'with token'
+  include_context 'with live client'
 
-  let(:client) { LivilApi::Client.new }
   let(:request) { described_class.new }
 
   context '#path' do
@@ -16,25 +14,18 @@ RSpec.describe(LivilApi::Requests::Events::ListEventsRequest) do
   end
 
   context 'client#call' do
+    let(:call) { make_request(request) }
+    subject { call }
+
     context 'with no events found' do
-      subject do
-        VCR.use_cassette('list_events_empty') do
-          client.call(request, token: token)
-        end
-      end
+      let(:cassette_name) { 'event_list_success_empty' }
 
       it { is_expected.to be_a(LivilApi::Client::Response) }
       it { is_expected.to have_attributes(body: []) }
     end
 
     context 'with events found' do
-      let(:call) do
-        VCR.use_cassette('list_events_found') do
-          client.call(request, token: token)
-        end
-      end
-
-      subject { call }
+      let(:cassette_name) { 'event_list_success_found' }
 
       it { is_expected.to be_a(LivilApi::Client::Response) }
 
@@ -46,17 +37,11 @@ RSpec.describe(LivilApi::Requests::Events::ListEventsRequest) do
     end
 
     context 'with date range' do
+      let(:cassette_name) { 'event_list_success_ranged' }
+
       let(:date_from) { '2019-12-02T00:00' }
       let(:date_until) { '2019-12-10T00:00' }
       let(:request) { described_class.new(date_from: date_from, date_until: date_until) }
-
-      let(:call) do
-        VCR.use_cassette('list_events_ranged') do
-          client.call(request, token: token)
-        end
-      end
-
-      subject { call }
 
       it { is_expected.to be_a(LivilApi::Client::Response) }
 
