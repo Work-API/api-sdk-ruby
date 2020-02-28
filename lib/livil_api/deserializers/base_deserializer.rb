@@ -6,7 +6,7 @@ module LivilApi
       json = JSON.parse(json) if json.is_a?(String)
       @json = json&.with_indifferent_access
 
-      @error_json = @json.delete(:errors)
+      @error_json = @json&.delete(:errors)
     end
 
     def deserialize
