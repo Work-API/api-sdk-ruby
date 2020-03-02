@@ -55,7 +55,7 @@ module LivilApi
 
         path.scan(/({[^}]+})/).flatten.each do |segment|
           segment_key = segment.gsub(/[{}]/, '').to_sym
-          interpolated_path = interpolated_path.gsub(segment, params[segment_key])
+          interpolated_path = interpolated_path.gsub(segment, params.delete(segment_key))
         end
 
         interpolated_path
