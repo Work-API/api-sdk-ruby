@@ -1,0 +1,126 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/integrations
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU1NjA3MDgsImlhdCI6MTU4MzE0MTUwOCwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.s2O_M_-QMo3Qi3khEcENEeMJFU23gdRiCNb5cTHWhIU
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 02 Mar 2020 14:29:31 GMT
+      X-Request-Id:
+      - aaff55e7-b193-4ed3-aa7e-8126ce5478dc
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '136'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e5d184b390585001bd8fc69","type":"integration","attributes":{"provider":"gcal","provider_id":null,"media_type":"event"}}}'
+    http_version: null
+  recorded_at: Mon, 02 Mar 2020 14:29:31 GMT
+- request:
+    method: get
+    uri: https://api-alpha.work-api.com/auth/init/5e5d184b390585001bd8fc69?redirect=true&return_to=http://localhost:3000/done
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU1NjA3MDgsImlhdCI6MTU4MzE0MTUwOCwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.s2O_M_-QMo3Qi3khEcENEeMJFU23gdRiCNb5cTHWhIU
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 02 Mar 2020 14:29:32 GMT
+      Location:
+      - https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api-alpha.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F4T0RSaU16a3dOVGcxTURBeFltUTRabU0yT1NJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURlBSRlV4VG1wQk0wMUVaM05KYld4b1pFTkpOazFVVlRSTmVrVXdUVlJWZDA5RGQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhVkZKb1dXMVJlbGxxU21wTmFtZDNXVlJCZDAxWFZYcE5ha1pyVDBSbmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLTUZwWVRqQk9SR014VGtSck5VMUZRak5pTTBweVRGZEdkMkZUTldwaU1qQnBabGd3TG5NeVQxOU5YeTFSVFc4elVXa3phMmhGWTBWT1JXVk5Ta1pWTWpOblpGSnBRMDVpTldOVVNGZG9TVlVpZlE9PSI=
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '1015'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: This resource has been moved temporarily to https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api-alpha.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F4T0RSaU16a3dOVGcxTURBeFltUTRabU0yT1NJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURlBSRlV4VG1wQk0wMUVaM05KYld4b1pFTkpOazFVVlRSTmVrVXdUVlJWZDA5RGQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhVkZKb1dXMVJlbGxxU21wTmFtZDNXVlJCZDAxWFZYcE5ha1pyVDBSbmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLTUZwWVRqQk9SR014VGtSck5VMUZRak5pTTBweVRGZEdkMkZUTldwaU1qQnBabGd3TG5NeVQxOU5YeTFSVFc4elVXa3phMmhGWTBWT1JXVk5Ta1pWTWpOblpGSnBRMDVpTldOVVNGZG9TVlVpZlE9PSI=.
+    http_version: null
+  recorded_at: Mon, 02 Mar 2020 14:29:32 GMT
+- request:
+    method: get
+    uri: https://api-alpha.work-api.com/auth/init/5e5d184b390585001bd8fc69?redirect=false&return_to=http://localhost:3000/done
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU1NjA3MDgsImlhdCI6MTU4MzE0MTUwOCwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.s2O_M_-QMo3Qi3khEcENEeMJFU23gdRiCNb5cTHWhIU
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 02 Mar 2020 14:30:18 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '980'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"uri":"https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api-alpha.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F4T0RSaU16a3dOVGcxTURBeFltUTRabU0yT1NJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURlBSRlV4VG1wQk0wMUVaM05KYld4b1pFTkpOazFVVlRSTmVrVXdUVlJWZDA5RGQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhVkZKb1dXMVJlbGxxU21wTmFtZDNXVlJCZDAxWFZYcE5ha1pyVDBSbmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLTUZwWVRqQk9SR014VGtSck5VMUZRak5pTTBweVRGZEdkMkZUTldwaU1qQnBabGd3TG5NeVQxOU5YeTFSVFc4elVXa3phMmhGWTBWT1JXVk5Ta1pWTWpOblpGSnBRMDVpTldOVVNGZG9TVlVpZlE9PSI="}'
+    http_version: null
+  recorded_at: Mon, 02 Mar 2020 14:30:18 GMT
+recorded_with: VCR 5.1.0
