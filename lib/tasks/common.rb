@@ -20,3 +20,41 @@ def generate_apt(arbitrary_id: nil)
 
   apt
 end
+
+def load_user
+  @load_user ||= begin
+                   user_json = File.read(File.expand_path('tmp/user.json', APP_ROOT))
+                   LivilApi::JsonapiDeserializer.new(user_json).deserialize
+                 end
+end
+
+def write_to_file(path, content)
+  File.open(File.expand_path("tmp/#{path}.json", APP_ROOT), 'wx') do |f|
+    f.write(content)
+  end
+end
+
+def read_from_file(path)
+  File.read(File.expand_path("tmp/#{path}.json", APP_ROOT))
+end
+
+def perform_request(method, path, payload_attrs: nil, query: nil, token: nil)
+  path = "#{LivilApi::Client.url}/#{path}"
+  params = if payload_attrs.present?
+             { data: { attributes: payload_attrs } }.to_json
+           else
+             query
+           end
+
+  headers = {
+    'Accept' => 'application/vnd.api+json',
+    'Content-Type' => 'application/vnd.api+json',
+    'Authorization' => "Bearer #{token || load_user.token}"
+  }
+
+  response = Faraday.send(method, path, params, headers)
+
+  return response.body if response.status < 299
+
+  raise "Error processing request: #{response.body}"
+end
