@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-alpha.work-api.com/auth/init/5e5d239b3905850018d8fc6a?return_to=http://localhost:3000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU1NjA3MDgsImlhdCI6MTU4MzE0MTUwOCwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.s2O_M_-QMo3Qi3khEcENEeMJFU23gdRiCNb5cTHWhIU
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 02 Mar 2020 15:18:20 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '968'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"uri":"https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api-alpha.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F5TXpsaU16a3dOVGcxTURBeE9HUTRabU0yWVNJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUNJc0luUnZhMlZ1SWpvaVpYbEthR0pIWTJsUGFVcEpWWHBKTVU1cFNqa3VaWGxLYkdWSVFXbFBha1V4VDBSVk1VNXFRVE5OUkdkelNXMXNhR1JEU1RaTlZGVTBUWHBGTUUxVVZYZFBRM2RwWVZoT2VrbHFiMmxWTVVKS1VUQTRaMUZYVG1waU0xWjFaRU5KYzBsdVZucGFXRWxwVDI1emFXRlhVV2xQYVVreFdsUlNhRmx0VVhwWmFrcHFUV3BuZDFsVVFYZE5WMVY2VFdwR2EwOUVaMmxNUTBwb1kyMUtjR1JJU21oamJteG1ZVmRSYVU5cFNqQmFXRTR3VGtSak1VNUVhelZOUlVJellqTktja3hYUm5kaFV6VnFZakl3YVdaWU1DNXpNazlmVFY4dFVVMXZNMUZwTTJ0b1JXTkZUa1ZsVFVwR1ZUSXpaMlJTYVVOT1lqVmpWRWhYYUVsVkluMD0i"}'
+    http_version: null
+  recorded_at: Mon, 02 Mar 2020 15:18:20 GMT
+recorded_with: VCR 5.1.0

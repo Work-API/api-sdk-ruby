@@ -37,11 +37,20 @@ module LivilApi
     end
 
     def list_integrations
-      call(Requests::Integrations::ListIntegrationsRequest.new)
+      call(Requests::Integrations::ListIntegrationsRequest.new).body
+    end
+
+    def modify_integration(integration_id:, **params)
+      integration = Integration.new(id: integration_id, **params)
+      request = Requests::Integrations::ModifyIntegrationRequest.new(integration_id: integration_id, body: integration)
+
+      call(request).body
     end
 
     def destroy_integration(integration_id:)
-      call(Requests::Integrations::DestroyIntegrationRequest.new(integration_id: integration_id))
+      request = Requests::Integrations::DestroyIntegrationRequest.new(integration_id: integration_id)
+
+      call(request)
     end
 
     def list_events

@@ -4,33 +4,47 @@ RSpec.describe(LivilApi::Service) do
   include_context 'with token'
 
   let(:service) { described_class.new(token) }
+  let(:expected_outcome) { 'success' }
+  let(:cassette_name) { "client_#{api_method.to_s.split('_').reverse.join('_')}_#{expected_outcome}" }
+  let(:args) { {} }
+  let(:call) do
+    VCR.use_cassette(cassette_name) do
+      if args.present?
+        service.send(api_method, **args)
+      else
+        service.send(api_method)
+      end
+    end
+  end
+
   subject { call }
+
+  let(:integration_id) { '5e5d239b3905850018d8fc6a' }
+
+  context 'list_integrations' do
+    let(:api_method) { :list_integrations }
+
+    it { is_expected.to be_a(Array) }
+
+    context '#first' do
+      subject { call.first }
+      it { is_expected.to be_a(LivilApi::Integration) }
+    end
+  end
 
   context 'create_integration' do
     let(:provider) { 'gcal' }
     let(:media_type) { 'event' }
-
-    let(:call) do
-      VCR.use_cassette('create_integration_success') do
-        service.create_integration(provider: provider, media_type: media_type)
-      end
-    end
+    let(:api_method) { :create_integration }
+    let(:args) { { provider: provider, media_type: media_type } }
 
     it { is_expected.to be_a(LivilApi::Integration) }
   end
 
   context 'auth_integration' do
-    let(:integration_id) { '5ddfde529f0a31000804bb94' }
     let(:return_to) { 'http://localhost:3000' }
-
-    let(:call) do
-      VCR.use_cassette('auth_integration_success') do
-        service.auth_integration(
-          integration_id: integration_id,
-          return_to: return_to
-        )
-      end
-    end
+    let(:api_method) { :auth_integration }
+    let(:args) { { integration_id: integration_id, return_to: return_to } }
 
     it { is_expected.to be_redirect }
 
@@ -40,14 +54,18 @@ RSpec.describe(LivilApi::Service) do
     end
   end
 
-  context 'destroy_integration' do
-    let(:integration_id) { '5ddfde529f0a31000804bb94' }
+  context 'modify_integration' do
+    let(:media_type) { 'event' }
+    let(:api_method) { :modify_integration }
+    let(:args) { { integration_id: integration_id, media_type: media_type } }
 
-    let(:call) do
-      VCR.use_cassette('destroy_integration') do
-        service.destroy_integration(integration_id: integration_id)
-      end
-    end
+    it { is_expected.to be_a(LivilApi::Integration) }
+  end
+
+  context 'destroy_integration' do
+    let(:integration_id) { '5e5d2007390585003fd8fc69' }
+    let(:api_method) { :destroy_integration }
+    let(:args) { { integration_id: integration_id } }
 
     subject { call.raw_response.status }
 
