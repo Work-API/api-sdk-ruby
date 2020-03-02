@@ -32,15 +32,15 @@ RSpec.describe(LivilApi::Requests::Events::ListEventsRequest) do
       context '#body' do
         subject { call.body }
         it { is_expected.to be_a(Array) }
-        it { is_expected.to have_attributes(count: 1) }
+        it { is_expected.to have_attributes(count: 22) }
       end
     end
 
     context 'with date range' do
       let(:cassette_name) { 'event_list_success_ranged' }
 
-      let(:date_from) { '2019-12-02T00:00' }
-      let(:date_until) { '2019-12-10T00:00' }
+      let(:date_from) { '2019-11-18T00:00' }
+      let(:date_until) { '2019-12-20T00:00' }
       let(:request) { described_class.new(date_from: date_from, date_until: date_until) }
 
       it { is_expected.to be_a(LivilApi::Client::Response) }
@@ -48,7 +48,7 @@ RSpec.describe(LivilApi::Requests::Events::ListEventsRequest) do
       context '#body' do
         subject { call.body }
         it { is_expected.to be_a(Array) }
-        it { is_expected.to have_attributes(count: 1) }
+        it { is_expected.to have_attributes(count: 4) }
       end
     end
   end

@@ -2,54 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-dev.livil.io/event/events?date_from=2019-12-02T00:00&date_until=2019-12-10T00:00
+    uri: https://api-alpha.work-api.com/event/events?date_from=2019-11-18T00:00&date_until=2019-12-20T00:00
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzczNTM1MzYsImlhdCI6MTU3NDkzNDMzNiwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZGRmOTc0MDlmMGEzMTAwMWUwNGJiOTMiLCJhcmJpdHJhcnlfaWQiOiJzb21lb25lQGxpdmlsLmNvIn19.DXqSfVhlqlM5Pm_86OzobSoq1C1V0GNC18iATow39FU
-      Accept:
-      - application/vnd.api+json
-      User-Agent:
-      - Faraday v0.17.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Connection:
-      - keep-alive
-      Date:
-      - Mon, 02 Dec 2019 10:39:20 GMT
-      X-Request-Id:
-      - 88a6f6d2-516f-48ae-b094-414c394fd5d1
-      Content-Type:
-      - application/vnd.api+json
-      Content-Length:
-      - '11'
-      Vary:
-      - Origin
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-    http_version: null
-  recorded_at: Mon, 02 Dec 2019 10:39:20 GMT
-- request:
-    method: get
-    uri: https://api-alpha.work-api.com/event/events?date_from=2019-12-02T00:00&date_until=2019-12-10T00:00
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODQzNzU2MTEsImlhdCI6MTU4MTk1NjQxMSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.DX-F--zKA4rX2UZi3TeR4vkxkKXEnJjtOk1gSZFleTQ
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU1NjA3MDgsImlhdCI6MTU4MzE0MTUwOCwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.s2O_M_-QMo3Qi3khEcENEeMJFU23gdRiCNb5cTHWhIU
       Accept:
       - application/vnd.api+json
       User-Agent:
@@ -66,20 +25,24 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 28 Feb 2020 16:23:24 GMT
+      - Mon, 02 Mar 2020 14:26:41 GMT
       X-Request-Id:
-      - 44386abc-e033-4779-8e9e-5ab47e71f2a3
+      - c3f9e154-da3a-4e29-a68e-b6dc139d9138
       Content-Type:
       - application/vnd.api+json
       Content-Length:
-      - '11'
+      - '1813'
       Vary:
       - Origin
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
+      string: '{"data":[{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OjQzZjhoZWZpNWd2ODhnMTdrMzNibTBiNm81","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"Test
+        recurred","description":"","attendees":[],"start_date_time":"2019-06-29T01:30:00+02:00","start_timezone":"Europe/Moscow","end_date_time":"2019-06-29T02:30:00+02:00","end_timezone":"Europe/Moscow","all_day":false,"recurrence":"RRULE:FREQ=WEEKLY;BYDAY=SA","location":"","created_at":1561673060,"updated_at":1561673060}},{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OjA2ajNvNmY1MWQxcTc2NDlzZDUzZ2I2djVh","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"test
+        event","description":"","attendees":[],"start_date_time":"2019-07-15T16:30:00+02:00","start_timezone":"UTC","end_date_time":"2019-07-15T17:30:00+02:00","end_timezone":"UTC","all_day":false,"recurrence":"RRULE:FREQ=DAILY;INTERVAL=2","location":"","created_at":1563187455,"updated_at":1563484460}},{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmxqMGs4c292dnA3dDcxMWY3dnZzcWdoNjM0","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"Batch
+        updated 2","description":"","attendees":[],"start_date_time":"2019-11-18T11:27:54+01:00","start_timezone":"UTC","end_date_time":"2019-11-18T12:27:54+01:00","end_timezone":"UTC","all_day":false,"recurrence":"","location":"","created_at":1558739267,"updated_at":1574072874}},{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OjFtajV1bmtocnY2ZmttYmM3dGI0bDVrczdw","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"Test
+        Event","description":"","attendees":[],"start_date_time":"2019-11-19T11:00:00+01:00","start_timezone":"","end_date_time":"2019-11-19T12:00:00+01:00","end_timezone":"","all_day":false,"recurrence":"","location":"","created_at":1574088066,"updated_at":1574088066}}]}'
     http_version: null
-  recorded_at: Fri, 28 Feb 2020 16:23:24 GMT
+  recorded_at: Mon, 02 Mar 2020 14:26:42 GMT
 recorded_with: VCR 5.1.0
