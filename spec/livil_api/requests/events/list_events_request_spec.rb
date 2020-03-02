@@ -51,5 +51,20 @@ RSpec.describe(LivilApi::Requests::Events::ListEventsRequest) do
         it { is_expected.to have_attributes(count: 4) }
       end
     end
+
+    context 'with search_text string' do
+      let(:cassette_name) { 'event_list_success_search_text' }
+
+      let(:search_text) { 'batch' }
+      let(:request) { described_class.new(search_text: search_text) }
+
+      it { is_expected.to be_a(LivilApi::Client::Response) }
+
+      context '#body' do
+        subject { call.body }
+        it { is_expected.to be_a(Array) }
+        it { is_expected.to have_attributes(count: 1) }
+      end
+    end
   end
 end

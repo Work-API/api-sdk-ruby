@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-alpha.work-api.com/event/events?search_text=batch
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU1NjA3MDgsImlhdCI6MTU4MzE0MTUwOCwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.s2O_M_-QMo3Qi3khEcENEeMJFU23gdRiCNb5cTHWhIU
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 02 Mar 2020 14:45:33 GMT
+      X-Request-Id:
+      - 72bd72c0-ab12-4de4-87a9-6794a5355887
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '447'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmxqMGs4c292dnA3dDcxMWY3dnZzcWdoNjM0","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"Batch
+        updated 2","description":"","attendees":[],"start_date_time":"2019-11-18T11:27:54+01:00","start_timezone":"UTC","end_date_time":"2019-11-18T12:27:54+01:00","end_timezone":"UTC","all_day":false,"recurrence":"","location":"","created_at":1558739267,"updated_at":1574072874}}]}'
+    http_version: null
+  recorded_at: Mon, 02 Mar 2020 14:45:33 GMT
+recorded_with: VCR 5.1.0
