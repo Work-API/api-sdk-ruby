@@ -46,15 +46,17 @@ def perform_request(method, path, payload_attrs: nil, query: nil, token: nil)
              query
            end
 
-  headers = {
-    'Accept' => 'application/vnd.api+json',
-    'Content-Type' => 'application/vnd.api+json',
-    'Authorization' => "Bearer #{token || load_user.token}"
-  }
-
-  response = Faraday.send(method, path, params, headers)
+  response = Faraday.send(method, path, params, build_request_headers(token))
 
   return response.body if response.status < 299
 
   raise "Error processing request: #{response.body}"
+end
+
+def build_request_headers(token = nil)
+  {
+    'Accept' => 'application/vnd.api+json',
+    'Content-Type' => 'application/vnd.api+json',
+    'Authorization' => "Bearer #{token || load_user.token}"
+  }
 end

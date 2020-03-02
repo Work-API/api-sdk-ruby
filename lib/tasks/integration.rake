@@ -53,4 +53,3 @@ namespace :integration do
     auth_integration(args[:provider], args[:media_type])
   end
 end
-
