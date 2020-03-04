@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../client/serializer'
-
 module LivilApi
   module Requests
     class BaseRequest
@@ -38,7 +36,7 @@ module LivilApi
       def body
         return if @body.nil?
 
-        serializer = Client::Serializer.new(@body)
+        serializer = JsonapiSerializer.new(@body)
         serializer.serialize
       end
 

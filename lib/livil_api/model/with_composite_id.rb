@@ -7,10 +7,7 @@ module LivilApi
     def self.included(base)
       base.class_eval do
         extend ClassMethods
-
-        def id
-          @id ||= WithCompositeId.encode_id(integration_id, remote_id)
-        end
+        include InstanceMethods
       end
     end
 
@@ -59,6 +56,16 @@ module LivilApi
         %i[integration_id remote_id].each do |key|
           hash[key] = WithCompositeId.decode_id(id, key)
         end
+      end
+    end
+
+    module InstanceMethods
+      def id
+        @id ||= WithCompositeId.encode_id(integration_id, remote_id)
+      end
+
+      def new?
+        integration_id.blank? || remote_id.blank?
       end
     end
   end

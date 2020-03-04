@@ -8,5 +8,9 @@ module LivilApi
         alias_method :attributes_hash, :to_hash
       end
     end
+
+    def new?
+      id.blank?
+    end
   end
 end
