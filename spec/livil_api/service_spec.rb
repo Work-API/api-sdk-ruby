@@ -72,6 +72,17 @@ RSpec.describe(LivilApi::Service) do
     it { is_expected.to eq(204) }
   end
 
+  context 'list_calendars' do
+    let(:api_method) { :list_calendars }
+
+    it { is_expected.to be_a(Array) }
+
+    context '#first' do
+      subject { call.first }
+      it { is_expected.to be_a(LivilApi::Calendar) }
+    end
+  end
+
   context 'list_events' do
     let(:api_method) { :list_events }
 

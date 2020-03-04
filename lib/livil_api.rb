@@ -17,6 +17,7 @@ require 'livil_api/requests/integrations/create_integration_request'
 require 'livil_api/requests/integrations/modify_integration_request'
 require 'livil_api/requests/integrations/auth_integration_request'
 require 'livil_api/requests/integrations/destroy_integration_request'
+require 'livil_api/requests/events/list_calendars_request'
 require 'livil_api/requests/events/list_events_request'
 
 require 'livil_api/client'
