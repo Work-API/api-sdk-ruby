@@ -67,10 +67,12 @@ RSpec.describe(LivilApi::Requests::Events::ListEventsRequest) do
       end
     end
 
-    context 'with recurrence ID' do
+    context 'with recurring event ID' do
       let(:cassette_name) { 'event_list_success_recurrence' }
 
-      let(:recurring_event_id) { Base64.urlsafe_encode64('5e5d1077390585003fd8fc68:43f8hefi5gv88g17k33bm0b6o5') }
+      let(:integration_id) { '5e5d1077390585003fd8fc68' }
+      let(:remote_id) { '43f8hefi5gv88g17k33bm0b6o5' }
+      let(:recurring_event_id) { Base64.urlsafe_encode64("#{integration_id}:#{remote_id}") }
       let(:request) { described_class.new(recurring_event_id: recurring_event_id) }
 
       it { is_expected.to be_a(LivilApi::Client::Response) }
