@@ -66,5 +66,20 @@ RSpec.describe(LivilApi::Requests::Events::ListEventsRequest) do
         it { is_expected.to have_attributes(count: 1) }
       end
     end
+
+    context 'with recurrence ID' do
+      let(:cassette_name) { 'event_list_success_recurrence' }
+
+      let(:recurring_event_id) { Base64.urlsafe_encode64('5e5d1077390585003fd8fc68:43f8hefi5gv88g17k33bm0b6o5') }
+      let(:request) { described_class.new(recurring_event_id: recurring_event_id) }
+
+      it { is_expected.to be_a(LivilApi::Client::Response) }
+
+      context '#body' do
+        subject { call.body }
+        it { is_expected.to be_a(Array) }
+        it { is_expected.to have_attributes(count: 250) }
+      end
+    end
   end
 end

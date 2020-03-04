@@ -35,9 +35,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :all_day, :bool, 11
       repeated :reminders, :message, 12, "livil.model.EventReminder"
       optional :recurrence, :string, 13
-      repeated :attachments, :message, 14, "livil.model.EventAttachment"
-      optional :created_at, :uint64, 15
-      optional :updated_at, :uint64, 16
+      optional :parent_event_id, :string, 14
+      repeated :attachments, :message, 15, "livil.model.EventAttachment"
+      optional :created_at, :uint64, 16
+      optional :updated_at, :uint64, 17
     end
     add_message "livil.model.EventAttachment" do
       optional :remote_id, :string, 1
