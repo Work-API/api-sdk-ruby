@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-RSpec.describe(LivilApi::Service) do
+RSpec.describe(LivilApi::Service::Emails) do
   include_context 'with service'
 
-  let(:integration_id) { '5e5d1077390585003fd8fc68' }
+  let(:integration_id) { '5e60f76b99ce66000936897b' }
 
   context 'list_mailboxes' do
     let(:api_method) { :list_mailboxes }
