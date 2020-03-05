@@ -19,7 +19,7 @@ RSpec.describe(LivilApi::Service) do
 
   subject { call }
 
-  let(:integration_id) { '5e5d239b3905850018d8fc6a' }
+  let(:integration_id) { '5e5d1077390585003fd8fc68' }
 
   context 'list_integrations' do
     let(:api_method) { :list_integrations }
@@ -92,5 +92,22 @@ RSpec.describe(LivilApi::Service) do
       subject { call.first }
       it { is_expected.to be_a(LivilApi::Event) }
     end
+  end
+
+  context 'create_event' do
+    let(:api_method) { :create_event }
+    let(:event) do
+      LivilApi::Event.new(
+        name: 'test',
+        start_date_time: '2020-02-29T13:00:00',
+        start_timezone: 'Europe/Budapest',
+        end_date_time: '2020-02-29T14:00:00',
+        end_timezone: 'Europe/Budapest',
+        integration_id: integration_id
+      )
+    end
+    let(:args) { { event: event } }
+
+    it { is_expected.to be_a(LivilApi::Event) }
   end
 end

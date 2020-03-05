@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/auth/init/5e5d239b3905850018d8fc6a?return_to=http://localhost:3000
+    uri: https://api-alpha.work-api.com/auth/init/5e5d1077390585003fd8fc68?return_to=http://localhost:3000
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU1NjA3MDgsImlhdCI6MTU4MzE0MTUwOCwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.s2O_M_-QMo3Qi3khEcENEeMJFU23gdRiCNb5cTHWhIU
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
       Accept:
       - application/vnd.api+json
       User-Agent:
@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 02 Mar 2020 15:18:20 GMT
+      - Thu, 05 Mar 2020 10:11:09 GMT
       Content-Type:
       - application/vnd.api+json
       Content-Length:
@@ -36,7 +36,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"uri":"https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api-alpha.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F5TXpsaU16a3dOVGcxTURBeE9HUTRabU0yWVNJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUNJc0luUnZhMlZ1SWpvaVpYbEthR0pIWTJsUGFVcEpWWHBKTVU1cFNqa3VaWGxLYkdWSVFXbFBha1V4VDBSVk1VNXFRVE5OUkdkelNXMXNhR1JEU1RaTlZGVTBUWHBGTUUxVVZYZFBRM2RwWVZoT2VrbHFiMmxWTVVKS1VUQTRaMUZYVG1waU0xWjFaRU5KYzBsdVZucGFXRWxwVDI1emFXRlhVV2xQYVVreFdsUlNhRmx0VVhwWmFrcHFUV3BuZDFsVVFYZE5WMVY2VFdwR2EwOUVaMmxNUTBwb1kyMUtjR1JJU21oamJteG1ZVmRSYVU5cFNqQmFXRTR3VGtSak1VNUVhelZOUlVJellqTktja3hYUm5kaFV6VnFZakl3YVdaWU1DNXpNazlmVFY4dFVVMXZNMUZwTTJ0b1JXTkZUa1ZsVFVwR1ZUSXpaMlJTYVVOT1lqVmpWRWhYYUVsVkluMD0i"}'
+      string: '{"uri":"https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api-alpha.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F4TURjM016a3dOVGcxTURBelptUTRabU0yT0NJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUNJc0luUnZhMlZ1SWpvaVpYbEthR0pIWTJsUGFVcEpWWHBKTVU1cFNqa3VaWGxLYkdWSVFXbFBha1V4VDBSVk0wNVVXVEJPUkUxelNXMXNhR1JEU1RaTlZGVTBUWHBOZWs1NlNUQk5lWGRwWVZoT2VrbHFiMmxWTVVKS1VUQTRaMUZYVG1waU0xWjFaRU5KYzBsdVZucGFXRWxwVDI1emFXRlhVV2xQYVVreFdsUlNhRmx0VVhwWmFrcHFUV3BuZDFsVVFYZE5WMVY2VFdwR2EwOUVaMmxNUTBwb1kyMUtjR1JJU21oamJteG1ZVmRSYVU5cFNqQmFXRTR3VGtSak1VNUVhelZOUlVJellqTktja3hYUm5kaFV6VnFZakl3YVdaWU1DNHpVMU16TFhSTVNFUmFNRzlYVFd4eGNraFJXbFkzVWtsRE1UTmpOa2s1VTJKUWNTMVpRa0p6WTJoekluMD0i"}'
     http_version: null
-  recorded_at: Mon, 02 Mar 2020 15:18:20 GMT
+  recorded_at: Thu, 05 Mar 2020 10:11:09 GMT
 recorded_with: VCR 5.1.0
