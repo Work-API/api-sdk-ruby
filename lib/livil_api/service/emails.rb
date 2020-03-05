@@ -15,12 +15,6 @@ module LivilApi
         call(request).body
       end
 
-      # def modify_event(event_id:, event:)
-      #   request = Requests::Events::ModifyEventRequest.new(event_id: event_id, body: event)
-
-      #   call(request).body
-      # end
-
       def list_emails(email_ids: nil, mailbox_ids: nil, limit: nil, date_from: nil, date_until: nil, search_text: nil)
         params = {}
         params[:email_ids] = email_ids unless email_ids.nil?
@@ -31,6 +25,12 @@ module LivilApi
         params[:search_text] = search_text unless search_text.nil?
 
         request = Requests::Emails::ListEmailsRequest.new(params)
+
+        call(request).body
+      end
+
+      def get_email(email_id:)
+        request = Requests::Emails::GetEmailRequest.new(email_id: email_id)
 
         call(request).body
       end

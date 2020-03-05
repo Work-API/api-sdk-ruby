@@ -16,17 +16,6 @@ RSpec.describe(LivilApi::Service::Emails) do
     end
   end
 
-  context 'list_emails' do
-    let(:api_method) { :list_emails }
-
-    it { is_expected.to be_a(Array) }
-
-    context '#first' do
-      subject { call.first }
-      it { is_expected.to be_a(LivilApi::Email) }
-    end
-  end
-
   context 'send_email' do
     let(:api_method) { :send_email }
     let(:args) { { email: email } }
@@ -43,5 +32,24 @@ RSpec.describe(LivilApi::Service::Emails) do
     let(:email) { LivilApi::Email.new(**email_attributes) }
 
     it { is_expected.to eq(:no_content) }
+  end
+
+  context 'list_emails' do
+    let(:api_method) { :list_emails }
+
+    it { is_expected.to be_a(Array) }
+
+    context '#first' do
+      subject { call.first }
+      it { is_expected.to be_a(LivilApi::Email) }
+    end
+  end
+
+  context 'get_email' do
+    let(:api_method) { :get_email }
+    let(:email_id) { 'NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOjE3MGFhZjY3NDVkZWEwZGM6' }
+    let(:args) { { email_id: email_id } }
+
+    it { is_expected.to be_a(LivilApi::Email) }
   end
 end
