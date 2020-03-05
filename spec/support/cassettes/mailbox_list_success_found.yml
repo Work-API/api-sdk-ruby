@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-alpha.work-api.com/email/mailboxes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 05 Mar 2020 13:51:30 GMT
+      X-Request-Id:
+      - d4ea18e0-c4b7-4cd6-9b13-67adef0358c5
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '2998'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOkNIQVQ6","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"CHAT","unread_count":0,"total_count":0}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOlNFTlQ6","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"SENT","unread_count":138,"total_count":174}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOklOQk9Y","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"INBOX","unread_count":347,"total_count":355}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOklNUE9SVEFOVDo6","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"IMPORTANT","unread_count":46,"total_count":47}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOlRSQVNI","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"TRASH","unread_count":0,"total_count":0}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOkRSQUZU","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"DRAFT","unread_count":0,"total_count":126}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOlNQQU06","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"SPAM","unread_count":0,"total_count":0}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOkNBVEVHT1JZX0ZPUlVNUzo6","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"CATEGORY_FORUMS","unread_count":0,"total_count":0}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOkNBVEVHT1JZX1VQREFURVM6","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"CATEGORY_UPDATES","unread_count":7,"total_count":7}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOkNBVEVHT1JZX1BFUlNPTkFM","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"CATEGORY_PERSONAL","unread_count":204,"total_count":211}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOkNBVEVHT1JZX1BST01PVElPTlM6","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"CATEGORY_PROMOTIONS","unread_count":0,"total_count":0}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOkNBVEVHT1JZX1NPQ0lBTDo6","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"CATEGORY_SOCIAL","unread_count":0,"total_count":0}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOlNUQVJSRUQ6","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"STARRED","unread_count":0,"total_count":0}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOlVOUkVBRDo6","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"UNREAD","unread_count":349,"total_count":349}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOkxhYmVsXzE6","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"My
+        Test Label","unread_count":0,"total_count":0}},{"id":"NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOkxhYmVsXzI6","type":"mailbox","attributes":{"integration_id":"5e60f76b99ce66000936897b","name":"Test
+        Mailbox","unread_count":0,"total_count":0}}]}'
+    http_version: null
+  recorded_at: Thu, 05 Mar 2020 13:51:30 GMT
+recorded_with: VCR 5.1.0

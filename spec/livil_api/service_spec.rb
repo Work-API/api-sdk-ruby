@@ -155,4 +155,15 @@ RSpec.describe(LivilApi::Service) do
 
     it { is_expected.to eq(:no_content) }
   end
+
+  context 'list_mailboxes' do
+    let(:api_method) { :list_mailboxes }
+
+    it { is_expected.to be_a(Array) }
+
+    context '#first' do
+      subject { call.first }
+      it { is_expected.to be_a(LivilApi::Mailbox) }
+    end
+  end
 end
