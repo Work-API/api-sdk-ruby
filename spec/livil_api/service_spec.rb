@@ -132,4 +132,27 @@ RSpec.describe(LivilApi::Service) do
     it { is_expected.to be_a(LivilApi::Event) }
     it { is_expected.to have_attributes(attributes) }
   end
+
+  context 'destroy_event' do
+    let(:attributes) do
+      {
+        integration_id: integration_id,
+        name: 'should be deleted',
+        start_date_time: '2020-02-13T13:00:00+01:00',
+        start_timezone: 'Europe/Paris',
+        end_date_time: '2020-02-14T14:00:00+01:00',
+        end_timezone: 'Europe/Paris'
+      }
+    end
+
+    let(:created_event) do
+      service.create_event(event: LivilApi::Event.new(**attributes))
+    end
+
+    let(:api_method) { :destroy_event }
+    let(:event_id) { created_event.id }
+    let(:args) { { event_id: event_id } }
+
+    it { is_expected.to eq(:no_content) }
+  end
 end

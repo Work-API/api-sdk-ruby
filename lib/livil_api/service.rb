@@ -82,6 +82,12 @@ module LivilApi
       call(request).body
     end
 
+    def destroy_event(event_id:)
+      request = Requests::Events::DestroyEventRequest.new(event_id: event_id)
+
+      call(request).body
+    end
+
     protected
 
     def call(request)
