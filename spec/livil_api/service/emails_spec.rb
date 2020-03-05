@@ -26,4 +26,22 @@ RSpec.describe(LivilApi::Service::Emails) do
       it { is_expected.to be_a(LivilApi::Email) }
     end
   end
+
+  context 'send_email' do
+    let(:api_method) { :send_email }
+    let(:args) { { email: email } }
+
+    let(:email_attributes) do
+      {
+        integration_id: integration_id,
+        subject: 'this is a test',
+        to_recipients: [{ address: 'dan@livil.co' }],
+        body: { plain_text: ['This is a plain text test email'] }
+      }
+    end
+
+    let(:email) { LivilApi::Email.new(**email_attributes) }
+
+    it { is_expected.to eq(:no_content) }
+  end
 end

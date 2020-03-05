@@ -9,11 +9,11 @@ module LivilApi
         call(request).body
       end
 
-      # def create_event(event:)
-      #   request = Requests::Events::CreateEventRequest.new(body: event)
+      def send_email(email:)
+        request = Requests::Emails::SendEmailRequest.new(body: email)
 
-      #   call(request).body
-      # end
+        call(request).body
+      end
 
       # def modify_event(event_id:, event:)
       #   request = Requests::Events::ModifyEventRequest.new(event_id: event_id, body: event)
