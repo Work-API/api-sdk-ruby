@@ -19,6 +19,7 @@ require 'livil_api/model/integration'
 require 'livil_api/model/calendar'
 require 'livil_api/model/event'
 require 'livil_api/model/mailbox'
+require 'livil_api/model/email'
 
 require 'livil_api/requests/users/create_user_request'
 
@@ -35,6 +36,7 @@ require 'livil_api/requests/events/modify_event_request'
 require 'livil_api/requests/events/destroy_event_request'
 
 require 'livil_api/requests/emails/list_mailboxes_request'
+require 'livil_api/requests/emails/list_emails_request'
 
 module LivilApi
   class APIError < StandardError; end
