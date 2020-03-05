@@ -8,7 +8,8 @@ RSpec.describe(LivilApi::Requests::Integrations::AuthIntegrationRequest) do
   include_context 'with live integration'
 
   let(:return_to) { 'http://localhost:3000/done' }
-  let(:request) { described_class.new(integration_id: integration_id, redirect: false, return_to: return_to) }
+  let(:redirect) { false }
+  let(:request) { described_class.new(integration_id: integration_id, redirect: redirect, return_to: return_to) }
 
   # Note: created with the same environment prior to adding provider_configs.
   # To recreate, you need a blank environment

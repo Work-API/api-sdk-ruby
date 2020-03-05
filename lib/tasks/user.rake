@@ -6,38 +6,23 @@ require 'byebug'
 def create_user
   user_id = ENV['USER_ID'] || "test#{(rand * 10_000_000).to_i}@work-api.com"
 
-  response = Faraday.post(
-    "#{LivilApi::Client.url}/users",
-    { data: { attributes: { environment_guid: environment_guid, arbitrary_id: user_id } } }.to_json,
-    'Accept' => 'application/vnd.api+json',
-    'Content-Type' => 'application/vnd.api+json',
-    'Authorization' => "Bearer #{generate_apt}"
+  perform_request(
+    :post,
+    'users',
+    payload_attrs: { environment_guid: environment_guid, arbitrary_id: user_id },
+    token: generate_apt
   )
-
-  raise "Error creating user: #{response.status}" unless response.status < 299
-
-  response.body
-end
-
-def load_user
-  @load_user ||= begin
-                   user_json = File.read(File.expand_path('tmp/user.json', APP_ROOT))
-                   LivilApi::Client::Deserializer.new(user_json).deserialize
-                 end
 end
 
 def reauth_user
-  response = Faraday.post(
-    "#{LivilApi::Client.url}/users/reauth",
-    { data: { attributes: { environment_guid: environment_guid, arbitrary_id: load_user.arbitrary_id } } }.to_json,
-    'Accept' => 'application/vnd.api+json',
-    'Content-Type' => 'application/vnd.api+json',
-    'Authorization' => "Bearer #{generate_apt(arbitrary_id: load_user.arbitrary_id)}"
+  user_id = ENV['USER_ID'] || load_user.arbitrary_id
+
+  perform_request(
+    :post,
+    'users/reauth',
+    payload_attrs: { environment_guid: environment_guid, arbitrary_id: user_id },
+    token: generate_apt(arbitrary_id: user_id)
   )
-
-  raise "Error reauthing user: #{response.status}" unless response.status < 299
-
-  response.body
 end
 
 namespace :user do

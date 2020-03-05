@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api-alpha.work-api.com/integrations/5e5d1077390585003fd8fc68
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"provider":"","media_type":"event"},"type":"integration","id":"5e5d1077390585003fd8fc68"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 05 Mar 2020 10:11:26 GMT
+      X-Request-Id:
+      - bbe348a4-874b-4545-b80f-877841530fc6
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '156'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e5d1077390585003fd8fc68","type":"integration","attributes":{"provider":"gcal","provider_id":"liviltestacc@gmail.com","media_type":"event"}}}'
+    http_version: null
+  recorded_at: Thu, 05 Mar 2020 10:11:26 GMT
+recorded_with: VCR 5.1.0

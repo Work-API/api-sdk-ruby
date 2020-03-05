@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-alpha.work-api.com/event/calendars
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU1NjA3MDgsImlhdCI6MTU4MzE0MTUwOCwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.s2O_M_-QMo3Qi3khEcENEeMJFU23gdRiCNb5cTHWhIU
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 04 Mar 2020 07:39:52 GMT
+      X-Request-Id:
+      - 2a73ebb8-2340-457f-a8bc-a9610c3bc84f
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '618'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmxpdmlsdGVzdGFjY0BnbWFpbC5jb206","type":"calendar","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"My
+        Awesome Calendar"}},{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmFkZHJlc3Nib29rI2NvbnRhY3RzQGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbTo6","type":"calendar","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"Contacts"}},{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmVuLnJ1c3NpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb206","type":"calendar","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"Holidays
+        in Russian Federation"}}]}'
+    http_version: null
+  recorded_at: Wed, 04 Mar 2020 07:39:52 GMT
+recorded_with: VCR 5.1.0

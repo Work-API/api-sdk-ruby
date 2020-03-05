@@ -9,6 +9,7 @@ RSpec.shared_context 'with live integration' do
   def create_live_integration
     integration = LivilApi::Integration.new(provider: provider, media_type: media_type)
     request = LivilApi::Requests::Integrations::CreateIntegrationRequest.new(body: integration)
+
     make_request(request).body
   end
 

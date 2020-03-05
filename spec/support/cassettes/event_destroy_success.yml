@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/event/events
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e5d1077390585003fd8fc68","name":"should
+        be deleted","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","location":"","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0},"type":"event"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 05 Mar 2020 11:39:20 GMT
+      X-Request-Id:
+      - 12b1cf8f-7c48-4b53-90f7-08852259756a
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '470'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4Ojdrb2VnOTl0aTZlZThlczZnZ2M0cHZ0OHAw","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"should
+        be deleted","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","all_day":false,"parent_event_id":"","location":"","created_at":1583408359,"updated_at":1583408359}}}'
+    http_version: null
+  recorded_at: Thu, 05 Mar 2020 11:39:20 GMT
+- request:
+    method: delete
+    uri: https://api-alpha.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4Ojdrb2VnOTl0aTZlZThlczZnZ2M0cHZ0OHAw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 05 Mar 2020 11:41:19 GMT
+      X-Request-Id:
+      - 6c6d68d3-83a5-44b2-ac64-a53a820ad4a8
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Thu, 05 Mar 2020 11:41:19 GMT
+recorded_with: VCR 5.1.0

@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 require 'livil_api/model/event'
-require 'livil_api/client'
 require 'livil_api/requests/events/list_events_request'
 
 RSpec.describe(LivilApi::Requests::Events::ListEventsRequest) do
-  include_context 'with token'
+  include_context 'with live client'
 
-  let(:client) { LivilApi::Client.new }
   let(:request) { described_class.new }
 
   context '#path' do
@@ -16,25 +14,49 @@ RSpec.describe(LivilApi::Requests::Events::ListEventsRequest) do
   end
 
   context 'client#call' do
+    let(:call) { make_request(request) }
+    subject { call }
+
     context 'with no events found' do
-      subject do
-        VCR.use_cassette('list_events_empty') do
-          client.call(request, token: token)
-        end
-      end
+      let(:cassette_name) { 'event_list_success_empty' }
 
       it { is_expected.to be_a(LivilApi::Client::Response) }
       it { is_expected.to have_attributes(body: []) }
     end
 
     context 'with events found' do
-      let(:call) do
-        VCR.use_cassette('list_events_found') do
-          client.call(request, token: token)
-        end
-      end
+      let(:cassette_name) { 'event_list_success_found' }
 
-      subject { call }
+      it { is_expected.to be_a(LivilApi::Client::Response) }
+
+      context '#body' do
+        subject { call.body }
+        it { is_expected.to be_a(Array) }
+        it { is_expected.to have_attributes(count: 22) }
+      end
+    end
+
+    context 'with date range' do
+      let(:cassette_name) { 'event_list_success_ranged' }
+
+      let(:date_from) { '2019-11-18T00:00' }
+      let(:date_until) { '2019-12-20T00:00' }
+      let(:request) { described_class.new(date_from: date_from, date_until: date_until) }
+
+      it { is_expected.to be_a(LivilApi::Client::Response) }
+
+      context '#body' do
+        subject { call.body }
+        it { is_expected.to be_a(Array) }
+        it { is_expected.to have_attributes(count: 4) }
+      end
+    end
+
+    context 'with search_text string' do
+      let(:cassette_name) { 'event_list_success_search_text' }
+
+      let(:search_text) { 'batch' }
+      let(:request) { described_class.new(search_text: search_text) }
 
       it { is_expected.to be_a(LivilApi::Client::Response) }
 
@@ -45,25 +67,20 @@ RSpec.describe(LivilApi::Requests::Events::ListEventsRequest) do
       end
     end
 
-    context 'with date range' do
-      let(:date_from) { '2019-12-02T00:00' }
-      let(:date_until) { '2019-12-10T00:00' }
-      let(:request) { described_class.new(date_from: date_from, date_until: date_until) }
+    context 'with recurring event ID' do
+      let(:cassette_name) { 'event_list_success_recurrence' }
 
-      let(:call) do
-        VCR.use_cassette('list_events_ranged') do
-          client.call(request, token: token)
-        end
-      end
-
-      subject { call }
+      let(:integration_id) { '5e5d1077390585003fd8fc68' }
+      let(:remote_id) { '43f8hefi5gv88g17k33bm0b6o5' }
+      let(:recurring_event_id) { Base64.urlsafe_encode64("#{integration_id}:#{remote_id}") }
+      let(:request) { described_class.new(recurring_event_id: recurring_event_id) }
 
       it { is_expected.to be_a(LivilApi::Client::Response) }
 
       context '#body' do
         subject { call.body }
         it { is_expected.to be_a(Array) }
-        it { is_expected.to have_attributes(count: 1) }
+        it { is_expected.to have_attributes(count: 250) }
       end
     end
   end

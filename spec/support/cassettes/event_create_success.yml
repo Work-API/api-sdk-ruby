@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/event/events
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e5d1077390585003fd8fc68","name":"Exciting","description":"An
+        exciting event","attendees":[],"start_date_time":"2020-02-29T00:00:00+01:00","start_timezone":"Europe/Budapest","end_date_time":"2020-02-29T02:00:00+01:00","end_timezone":"Europe/Budapest","location":"An
+        exciting place","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0},"type":"event"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU1NjA3MDgsImlhdCI6MTU4MzE0MTUwOCwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.s2O_M_-QMo3Qi3khEcENEeMJFU23gdRiCNb5cTHWhIU
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 04 Mar 2020 15:44:03 GMT
+      X-Request-Id:
+      - b1490ea5-0d6d-4061-a284-6e57b92fdef3
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '501'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZnaTM4dGhudWI4ZHBmdGN1MGtkaG91azBj","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"Exciting","description":"An
+        exciting event","attendees":[],"start_date_time":"2020-02-29T00:00:00+01:00","start_timezone":"Europe/Budapest","end_date_time":"2020-02-29T02:00:00+01:00","end_timezone":"Europe/Budapest","all_day":false,"parent_event_id":"","location":"An
+        exciting place","created_at":1583336643,"updated_at":1583336643}}}'
+    http_version: null
+  recorded_at: Wed, 04 Mar 2020 15:44:03 GMT
+recorded_with: VCR 5.1.0

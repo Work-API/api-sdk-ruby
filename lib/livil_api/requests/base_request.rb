@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../client/serializer'
-
 module LivilApi
   module Requests
     class BaseRequest
@@ -38,7 +36,7 @@ module LivilApi
       def body
         return if @body.nil?
 
-        serializer = Client::Serializer.new(@body)
+        serializer = JsonapiSerializer.new(@body)
         serializer.serialize
       end
 
@@ -55,7 +53,7 @@ module LivilApi
 
         path.scan(/({[^}]+})/).flatten.each do |segment|
           segment_key = segment.gsub(/[{}]/, '').to_sym
-          interpolated_path = interpolated_path.gsub(segment, params[segment_key])
+          interpolated_path = interpolated_path.gsub(segment, params.delete(segment_key))
         end
 
         interpolated_path
