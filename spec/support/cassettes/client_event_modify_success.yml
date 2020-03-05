@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api-alpha.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"remote_id":"","integration_id":"","name":"new
+        name","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","location":"","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0},"type":"event"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 05 Mar 2020 11:15:24 GMT
+      X-Request-Id:
+      - 1d971c40-afdc-4c4e-9f27-f4ea38500c7a
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '461'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"new
+        name","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","all_day":false,"parent_event_id":"","location":"","created_at":1583403049,"updated_at":1583406843}}}'
+    http_version: null
+  recorded_at: Thu, 05 Mar 2020 11:15:24 GMT
+recorded_with: VCR 5.1.0

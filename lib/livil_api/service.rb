@@ -65,6 +65,12 @@ module LivilApi
       call(request).body
     end
 
+    def modify_event(event_id:, event:)
+      request = Requests::Events::ModifyEventRequest.new(event_id: event_id, body: event)
+
+      call(request).body
+    end
+
     def list_events(date_from: nil, date_until: nil, search_text: nil)
       params = {}
       params[:date_from] = date_from unless date_from.nil?

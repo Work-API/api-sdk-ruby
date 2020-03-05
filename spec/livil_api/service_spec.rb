@@ -96,18 +96,40 @@ RSpec.describe(LivilApi::Service) do
 
   context 'create_event' do
     let(:api_method) { :create_event }
-    let(:event) do
-      LivilApi::Event.new(
+    let(:attributes) do
+      {
         name: 'test',
-        start_date_time: '2020-02-29T13:00:00',
+        start_date_time: '2020-02-29T13:00:00+01:00',
         start_timezone: 'Europe/Budapest',
-        end_date_time: '2020-02-29T14:00:00',
+        end_date_time: '2020-02-29T14:00:00+01:00',
         end_timezone: 'Europe/Budapest',
         integration_id: integration_id
-      )
+      }
     end
+
+    let(:event) { LivilApi::Event.new(attributes) }
     let(:args) { { event: event } }
 
     it { is_expected.to be_a(LivilApi::Event) }
+    it { is_expected.to have_attributes(attributes) }
+  end
+
+  context 'modify_event' do
+    let(:api_method) { :modify_event }
+    let(:event_id) { 'NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv' }
+    let(:attributes) do
+      {
+        name: 'new name',
+        start_date_time: '2020-02-13T13:00:00+01:00',
+        start_timezone: 'Europe/Paris',
+        end_date_time: '2020-02-14T14:00:00+01:00',
+        end_timezone: 'Europe/Paris'
+      }
+    end
+    let(:event) { LivilApi::Event.new(**attributes) }
+    let(:args) { { event_id: event_id, event: event } }
+
+    it { is_expected.to be_a(LivilApi::Event) }
+    it { is_expected.to have_attributes(attributes) }
   end
 end

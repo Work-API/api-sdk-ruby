@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api-alpha.work-api.com/event/events
     body:
       encoding: UTF-8
-      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e5d1077390585003fd8fc68","name":"test","description":"","attendees":[],"start_date_time":"2020-02-29T13:00:00","start_timezone":"Europe/Budapest","end_date_time":"2020-02-29T14:00:00","end_timezone":"Europe/Budapest","location":"","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0},"type":"event"}}'
+      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e5d1077390585003fd8fc68","name":"test","description":"","attendees":[],"start_date_time":"2020-02-29T13:00:00+01:00","start_timezone":"Europe/Budapest","end_date_time":"2020-02-29T14:00:00+01:00","end_timezone":"Europe/Budapest","location":"","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0},"type":"event"}}'
     headers:
       Authorization:
       - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
@@ -27,9 +27,9 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 05 Mar 2020 10:10:49 GMT
+      - Thu, 05 Mar 2020 11:16:23 GMT
       X-Request-Id:
-      - 7dd16996-0a89-4980-b51c-f5d3f2f7ca66
+      - 78df2b87-2792-445b-b4f0-8f50c2e6d0ad
       Content-Type:
       - application/vnd.api+json
       Content-Length:
@@ -40,7 +40,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"test","description":"","attendees":[],"start_date_time":"2020-02-29T13:00:00+01:00","start_timezone":"Europe/Budapest","end_date_time":"2020-02-29T14:00:00+01:00","end_timezone":"Europe/Budapest","all_day":false,"parent_event_id":"","location":"","created_at":1583403049,"updated_at":1583403049}}}'
+      string: '{"data":{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmlyY2w2cnNpZmxiYmE0MDFtMWV0dGdrNWFv","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"test","description":"","attendees":[],"start_date_time":"2020-02-29T13:00:00+01:00","start_timezone":"Europe/Budapest","end_date_time":"2020-02-29T14:00:00+01:00","end_timezone":"Europe/Budapest","all_day":false,"parent_event_id":"","location":"","created_at":1583406983,"updated_at":1583406983}}}'
     http_version: null
-  recorded_at: Thu, 05 Mar 2020 10:10:49 GMT
+  recorded_at: Thu, 05 Mar 2020 11:16:23 GMT
 recorded_with: VCR 5.1.0
