@@ -52,4 +52,12 @@ RSpec.describe(LivilApi::Service::Emails) do
 
     it { is_expected.to be_a(LivilApi::Email) }
   end
+
+  context 'trash_email' do
+    let(:api_method) { :trash_email }
+    let(:email_id) { 'NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOjE3MGFhZjY3NDVkZWEwZGM6' }
+    let(:args) { { email_id: email_id } }
+
+    it { is_expected.to eq(:no_content) }
+  end
 end

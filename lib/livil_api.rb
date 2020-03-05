@@ -39,6 +39,7 @@ require 'livil_api/requests/emails/list_mailboxes_request'
 require 'livil_api/requests/emails/list_emails_request'
 require 'livil_api/requests/emails/send_email_request'
 require 'livil_api/requests/emails/get_email_request'
+require 'livil_api/requests/emails/trash_email_request'
 
 module LivilApi
   class APIError < StandardError; end

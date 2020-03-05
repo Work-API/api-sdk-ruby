@@ -35,11 +35,11 @@ module LivilApi
         call(request).body
       end
 
-      # def destroy_event(event_id:)
-      #   request = Requests::Events::DestroyEventRequest.new(event_id: event_id)
+      def trash_email(email_id:)
+        request = Requests::Emails::TrashEmailRequest.new(email_id: email_id)
 
-      #   call(request).body
-      # end
+        call(request).body
+      end
     end
   end
 end
