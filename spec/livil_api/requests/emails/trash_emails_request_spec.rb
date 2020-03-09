@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'livil_api/model/email'
-require 'livil_api/requests/emails/trash_email_request'
+require 'livil_api/requests/emails/trash_emails_request'
 
-RSpec.describe(LivilApi::Requests::Emails::TrashEmailRequest) do
+RSpec.describe(LivilApi::Requests::Emails::TrashEmailsRequest) do
   include_context 'with live client'
   let(:service) { LivilApi::Service.new(token) }
 
@@ -11,11 +11,11 @@ RSpec.describe(LivilApi::Requests::Emails::TrashEmailRequest) do
 
   let(:cassette_name) { 'email_trash_success' }
 
-  let(:request) { described_class.new(email_id: email_id) }
+  let(:request) { described_class.new(ids: [email_id]) }
 
   context '#path' do
     subject { request.path }
-    it { is_expected.to eq("email/emails/#{email_id}") }
+    it { is_expected.to eq('email/emails') }
   end
 
   context 'client#call' do

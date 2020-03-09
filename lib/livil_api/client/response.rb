@@ -7,6 +7,7 @@ module LivilApi
     class Response
       attr_accessor :request
       attr_reader :raw_response
+
       delegate :success?, to: :raw_response
 
       DEFAULT_DESERIALIZER = JsonapiDeserializer
@@ -25,6 +26,10 @@ module LivilApi
 
       def error?
         errors.present? || (400..599).include?(@raw_response.status)
+      end
+
+      def http_code
+        @raw_response.status
       end
 
       def json

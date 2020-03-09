@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api-alpha.work-api.com/email/emails/NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOjE3MGFhZjY3NDVkZWEwZGM6
+    uri: https://api-alpha.work-api.com/email/emails?ids%5B%5D=NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOjE3MGFhZjY3NDVkZWEwZGM6
     body:
       encoding: US-ASCII
       string: ''
@@ -27,9 +27,9 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 05 Mar 2020 16:03:51 GMT
+      - Mon, 09 Mar 2020 08:24:55 GMT
       X-Request-Id:
-      - 3cc89013-1850-48c0-8c71-231800dfa9e2
+      - 46c50e21-54eb-4c8f-bfe6-c2042470ee3f
       Vary:
       - Origin
       Via:
@@ -38,5 +38,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: null
-  recorded_at: Thu, 05 Mar 2020 16:03:51 GMT
+  recorded_at: Mon, 09 Mar 2020 08:24:55 GMT
 recorded_with: VCR 5.1.0

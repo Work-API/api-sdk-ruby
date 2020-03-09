@@ -51,12 +51,21 @@ RSpec.describe(LivilApi::Service::Emails) do
     let(:args) { { email_id: email_id } }
 
     it { is_expected.to be_a(LivilApi::Email) }
+
+    context 'with bad ID' do
+      let(:expected_outcome) { 'error' }
+      let(:email_id) { 'does-not-exist' }
+
+      it 'should raise an error' do
+        expect { subject }.to raise_error(LivilApi::RemoteError, /not_found_error/)
+      end
+    end
   end
 
-  context 'trash_email' do
-    let(:api_method) { :trash_email }
+  context 'trash_emails' do
+    let(:api_method) { :trash_emails }
     let(:email_id) { 'NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOjE3MGFhZjY3NDVkZWEwZGM6' }
-    let(:args) { { email_id: email_id } }
+    let(:args) { { ids: [email_id] } }
 
     it { is_expected.to eq(:no_content) }
   end

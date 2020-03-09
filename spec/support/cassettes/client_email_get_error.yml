@@ -1,8 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: delete
-    uri: https://api-alpha.work-api.com/email/emails?ids%5B%5D=NWU2MGY3NmI5OWNlNjYwMDA5MzY4OTdiOjE3MGFhZjY3NDVkZWEwZGM6
+    method: get
+    uri: https://api-alpha.work-api.com/email/emails/does-not-exist
     body:
       encoding: US-ASCII
       string: ''
@@ -17,26 +17,27 @@ http_interactions:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
-      code: 204
-      message: No Content
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
-      Content-Length:
-      - '0'
       Connection:
       - keep-alive
       Date:
-      - Mon, 09 Mar 2020 08:24:04 GMT
-      X-Request-Id:
-      - 480a5d64-9a66-4c59-a029-1e1e37515d40
+      - Mon, 09 Mar 2020 08:49:39 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '107'
       Vary:
       - Origin
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: ''
+      string: '{"errors":[{"code":"not_found_error","detail":"the remote resource
+        could not be found: Record not found"}]}'
     http_version: null
-  recorded_at: Mon, 09 Mar 2020 08:24:04 GMT
+  recorded_at: Mon, 09 Mar 2020 08:49:39 GMT
 recorded_with: VCR 5.1.0

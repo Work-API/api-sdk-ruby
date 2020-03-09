@@ -35,8 +35,8 @@ module LivilApi
         call(request).body
       end
 
-      def trash_email(email_id:)
-        request = Requests::Emails::TrashEmailRequest.new(email_id: email_id)
+      def trash_emails(ids:)
+        request = Requests::Emails::TrashEmailsRequest.new(ids: ids)
 
         call(request).body
       end

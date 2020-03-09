@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'livil_api/service/error_handling'
 require 'livil_api/service/users'
 require 'livil_api/service/integrations'
 require 'livil_api/service/events'
@@ -7,6 +8,7 @@ require 'livil_api/service/emails'
 
 module LivilApi
   class Service
+    include ErrorHandling
     include Users
     include Integrations
     include Events
@@ -19,7 +21,11 @@ module LivilApi
     protected
 
     def call(request)
-      client.call(request, token: @token)
+      response = client.call(request, token: @token)
+
+      handle_errors(request, response) if response.error?
+
+      response
     end
 
     def client

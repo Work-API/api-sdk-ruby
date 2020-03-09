@@ -6,6 +6,7 @@ require 'active_support/core_ext/hash'
 
 require 'livil_api/version'
 require 'livil_api/error'
+require 'livil_api/remote_error'
 
 require 'livil_api/client'
 require 'livil_api/service'
@@ -39,7 +40,7 @@ require 'livil_api/requests/emails/list_mailboxes_request'
 require 'livil_api/requests/emails/list_emails_request'
 require 'livil_api/requests/emails/send_email_request'
 require 'livil_api/requests/emails/get_email_request'
-require 'livil_api/requests/emails/trash_email_request'
+require 'livil_api/requests/emails/trash_emails_request'
 
 module LivilApi
   class APIError < StandardError; end
