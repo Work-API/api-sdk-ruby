@@ -5,8 +5,7 @@ http_interactions:
     uri: https://api-alpha.work-api.com/email/emails
     body:
       encoding: UTF-8
-      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e60f76b99ce66000936897b","thread_id":"","subject":"this
-        is a test","body":{"plain_text":["This is a plain text test email"],"html":[]},"sender":null,"to_recipients":[{"name":"","address":"dan@livil.co"}],"cc_recipients":[],"bcc_recipients":[],"flags":null,"labels":[],"mailboxes":[],"attachments":[],"has_attachments":false,"received_at":0},"type":"email"}}'
+      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e60f76b99ce66000936897b","subject":"this is a test","body":{"plain_text":["This is a plain text test email"],"html":[]},"sender":null,"to_recipients":[{"name":"","address":"dan@livil.co"}],"cc_recipients":[],"bcc_recipients":[],"flags":null},"type":"email"}}'
     headers:
       Authorization:
       - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs

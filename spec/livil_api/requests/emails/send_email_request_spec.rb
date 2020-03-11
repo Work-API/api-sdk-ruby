@@ -38,9 +38,56 @@ RSpec.describe(LivilApi::Requests::Emails::SendEmailRequest) do
 
     it { is_expected.to be_a(LivilApi::Client::Response) }
 
+    let(:boundary) { '--test-boundary' }
+
+    before do
+      allow(email.serializer)
+        .to receive(:boundary)
+        .and_return(boundary)
+    end
+
     context '#body' do
       subject { call.body }
       it { is_expected.to eq(:no_content) }
+    end
+
+    context 'with attachments' do
+      let(:cassette_name) { 'email_send_attachment_success' }
+
+      let(:attachments) do
+        tempfile_one = Tempfile.new.tap do |tf|
+          tf.write('test content one')
+          tf.rewind
+        end
+
+        attachment_one = LivilApi::EmailAttachment.new
+        attachment_one.attach('test_1.txt', tempfile_one)
+
+        tempfile_two = Tempfile.new.tap do |tf|
+          tf.write('test content two')
+          tf.rewind
+        end
+
+        attachment_two = LivilApi::EmailAttachment.new
+        attachment_two.attach('test_2.txt', tempfile_two)
+
+        [
+          attachment_one,
+          attachment_two
+        ]
+      end
+
+      let(:email_attributes) do
+        {
+          integration_id: integration_id,
+          subject: email_subject,
+          body: body,
+          to_recipients: to_recipients,
+          attachments: attachments
+        }
+      end
+
+      it { is_expected.to be_success }
     end
   end
 end

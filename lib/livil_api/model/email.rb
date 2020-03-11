@@ -12,5 +12,23 @@ module LivilApi
   class Email
     include BaseModel
     include WithCompositeId
+
+    serialize_with :remote_id,
+                   :integration_id,
+                   :subject,
+                   :body,
+                   :sender,
+                   :to_recipients,
+                   :cc_recipients,
+                   :bcc_recipients,
+                   :flags
+
+    def serializer
+      @serializer ||= if attachments.present?
+                        WithAttachmentSerializer.new(self)
+                      else
+                        super
+                      end
+    end
   end
 end

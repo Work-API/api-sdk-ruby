@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'faraday', '~> 0.15'
   spec.add_dependency 'google-protobuf', '3.7.0'
   spec.add_dependency 'jwt', '~> 2.2'
+  spec.add_dependency 'mimemagic', '~> 0.3.4'
   spec.add_dependency 'uuidtools', '~> 2.1'
 
   spec.add_development_dependency 'bundler', '~> 2.0'

@@ -123,4 +123,80 @@ http_interactions:
       string: '{"uri":"https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api-alpha.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F4T0RSaU16a3dOVGcxTURBeFltUTRabU0yT1NJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURlBSRlV4VG1wQk0wMUVaM05KYld4b1pFTkpOazFVVlRSTmVrVXdUVlJWZDA5RGQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhVkZKb1dXMVJlbGxxU21wTmFtZDNXVlJCZDAxWFZYcE5ha1pyVDBSbmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLTUZwWVRqQk9SR014VGtSck5VMUZRak5pTTBweVRGZEdkMkZUTldwaU1qQnBabGd3TG5NeVQxOU5YeTFSVFc4elVXa3phMmhGWTBWT1JXVk5Ta1pWTWpOblpGSnBRMDVpTldOVVNGZG9TVlVpZlE9PSI="}'
     http_version: null
   recorded_at: Mon, 02 Mar 2020 14:30:18 GMT
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/integrations
+    body:
+      encoding: UTF-8
+      string: '{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Mar 2020 16:24:01 GMT
+      X-Request-Id:
+      - 9df8eadf-01bc-4555-815e-1eedf1b65180
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '127'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e6910a11f35090015efe50a","type":"integration","attributes":{"provider":"","provider_id":null,"media_type":""}}}'
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 16:24:01 GMT
+- request:
+    method: get
+    uri: https://api-alpha.work-api.com/auth/init/5e6910a11f35090015efe50a?redirect=false&return_to=http://localhost:3000/done
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 11 Mar 2020 16:24:01 GMT
+      Connection:
+      - close
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 16:24:02 GMT
 recorded_with: VCR 5.1.0

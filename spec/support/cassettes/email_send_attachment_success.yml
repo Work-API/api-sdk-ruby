@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/email/emails
+    body:
+      encoding: UTF-8
+      string: "----test-boundary\r\nContent-Disposition: form-data; name=\"email\"\r\nContent-Type:
+        application/vnd.api+json\r\n\r\n{\r\n  \"data\": {\r\n    \"attributes\":
+        {\r\n      \"remote_id\": \"\",\r\n      \"integration_id\": \"5e60f76b99ce66000936897b\",\r\n
+        \     \"subject\": \"Test Email Subject\",\r\n      \"body\": {\r\n        \"plain_text\":
+        [\r\n          \"This is a plain text body segment\"\r\n        ],\r\n        \"html\":
+        [\r\n\r\n        ]\r\n      },\r\n      \"sender\": null,\r\n      \"to_recipients\":
+        [\r\n        {\r\n          \"name\": \"Dan\",\r\n          \"address\": \"dan@livil.co\"\r\n
+        \       }\r\n      ],\r\n      \"cc_recipients\": [\r\n\r\n      ],\r\n      \"bcc_recipients\":
+        [\r\n\r\n      ],\r\n      \"flags\": null\r\n    },\r\n    \"type\": \"email\"\r\n
+        \ }\r\n}\r\n\r\n----test-boundary\r\nContent-Disposition: form-data; name=\"files[]\";
+        filename=\"test_1.txt\"\r\nContent-Type: application/octet-stream\r\nContent-Transfer-Encoding:
+        base64\r\n\r\ndGVzdCBjb250ZW50IG9uZQ==\r\n----test-boundary\r\nContent-Disposition:
+        form-data; name=\"files[]\"; filename=\"test_2.txt\"\r\nContent-Type: application/octet-stream\r\nContent-Transfer-Encoding:
+        base64\r\n\r\ndGVzdCBjb250ZW50IHR3bw==\r\n----test-boundary--"
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - multipart/form-data; boundary=--test-boundary
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Mar 2020 16:29:46 GMT
+      X-Request-Id:
+      - 623ca7a7-3852-49b0-97cb-8161cba41851
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '0'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 16:29:47 GMT
+recorded_with: VCR 5.1.0

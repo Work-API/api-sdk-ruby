@@ -13,14 +13,20 @@ require 'livil_api/service'
 require 'livil_api/configuration'
 
 require 'livil_api/serializers/jsonapi_serializer'
+require 'livil_api/serializers/multipart_serializer'
+require 'livil_api/serializers/with_attachment_serializer'
 require 'livil_api/deserializers/jsonapi_deserializer'
 
+require 'livil_api/model/serializable'
 require 'livil_api/model/user'
 require 'livil_api/model/integration'
 require 'livil_api/model/calendar'
 require 'livil_api/model/event'
 require 'livil_api/model/mailbox'
 require 'livil_api/model/email'
+require 'livil_api/model/email_attachment'
+require 'livil_api/model/file'
+require 'livil_api/model/file_upload'
 
 require 'livil_api/requests/users/create_user_request'
 

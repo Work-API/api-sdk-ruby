@@ -37,7 +37,7 @@ module LivilApi
       private
 
       def load_key(path_to_key)
-        raw_key = File.read(path_to_key)
+        raw_key = ::File.read(path_to_key)
         OpenSSL::PKey::RSA.new(raw_key)
       end
     end
