@@ -1,12 +1,27 @@
 # frozen_string_literal: true
 
-require 'spico/utils/protobuf_extensions'
+require 'google/protobuf/well_known_types'
 
-module Spico
+module LivilApi
   module Buffable
     def self.included(base)
       base.send(:extend, ClassMethods)
       base.send(:include, ProtobufExtensions)
+    end
+
+    module ProtobufExtensions
+      def update(**args)
+        args.each_pair do |key, value|
+          if value.is_a?(Array)
+            arr = send(key)
+            value.each { |element| arr << element }
+          else
+            send(:"#{key}=", value)
+          end
+        end
+
+        self
+      end
     end
 
     module ClassMethods

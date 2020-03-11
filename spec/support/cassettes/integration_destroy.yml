@@ -82,4 +82,86 @@ http_interactions:
       string: ''
     http_version: null
   recorded_at: Mon, 02 Mar 2020 15:27:35 GMT
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/integrations
+    body:
+      encoding: UTF-8
+      string: '{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Mar 2020 16:24:04 GMT
+      X-Request-Id:
+      - 1180dd7f-44f5-43ee-ad0f-6fe03f91427c
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '127'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e6910a31f3509003eefe50a","type":"integration","attributes":{"provider":"","provider_id":null,"media_type":""}}}'
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 16:24:04 GMT
+- request:
+    method: delete
+    uri: https://api-alpha.work-api.com/integrations/5e6910a31f3509003eefe50a
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Mar 2020 16:24:04 GMT
+      X-Request-Id:
+      - 222175a2-7d46-4e1c-a426-829d2d470083
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 16:24:05 GMT
 recorded_with: VCR 5.1.0

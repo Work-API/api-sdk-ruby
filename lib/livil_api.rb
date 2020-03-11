@@ -6,30 +6,47 @@ require 'active_support/core_ext/hash'
 
 require 'livil_api/version'
 require 'livil_api/error'
+require 'livil_api/remote_error'
 
 require 'livil_api/client'
 require 'livil_api/service'
 require 'livil_api/configuration'
 
 require 'livil_api/serializers/jsonapi_serializer'
+require 'livil_api/serializers/multipart_serializer'
+require 'livil_api/serializers/with_attachment_serializer'
 require 'livil_api/deserializers/jsonapi_deserializer'
 
+require 'livil_api/model/serializable'
 require 'livil_api/model/user'
 require 'livil_api/model/integration'
 require 'livil_api/model/calendar'
 require 'livil_api/model/event'
+require 'livil_api/model/mailbox'
+require 'livil_api/model/email'
+require 'livil_api/model/email_attachment'
+require 'livil_api/model/file'
+require 'livil_api/model/file_upload'
 
 require 'livil_api/requests/users/create_user_request'
+
 require 'livil_api/requests/integrations/list_integrations_request'
 require 'livil_api/requests/integrations/create_integration_request'
 require 'livil_api/requests/integrations/modify_integration_request'
 require 'livil_api/requests/integrations/auth_integration_request'
 require 'livil_api/requests/integrations/destroy_integration_request'
+
 require 'livil_api/requests/events/list_calendars_request'
 require 'livil_api/requests/events/list_events_request'
 require 'livil_api/requests/events/create_event_request'
 require 'livil_api/requests/events/modify_event_request'
 require 'livil_api/requests/events/destroy_event_request'
+
+require 'livil_api/requests/emails/list_mailboxes_request'
+require 'livil_api/requests/emails/list_emails_request'
+require 'livil_api/requests/emails/send_email_request'
+require 'livil_api/requests/emails/get_email_request'
+require 'livil_api/requests/emails/trash_emails_request'
 
 module LivilApi
   class APIError < StandardError; end

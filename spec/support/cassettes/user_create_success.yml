@@ -43,4 +43,46 @@ http_interactions:
       string: '{"data":{"id":"5e58d50c1baf6a9aba105723","type":"user","attributes":{"arbitrary_id":"create_user@livil.co","token":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODUyOTkyMTIsImlhdCI6MTU4Mjg4MDAxMiwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTU4ZDUwYzFiYWY2YTlhYmExMDU3MjMiLCJhcmJpdHJhcnlfaWQiOiJjcmVhdGVfdXNlckBsaXZpbC5jbyJ9fQ.a7rLE-o6f64W5mojnGly4HKLNBaEVydxwZeqmaOLaE0"}}}'
     http_version: null
   recorded_at: Fri, 28 Feb 2020 08:53:32 GMT
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/users
+    body:
+      encoding: UTF-8
+      string: '{"attributes":{"arbitrary_id":"create_user@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODM5NDM5MDcsImlhdCI6MTU4Mzk0Mzg0NywiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.G8HV-zFr8AQr2wkkplKNlXPgC2wb60JA1u1nAdI2V2SBS6h_7K3-kCeUwVWZ1-o52fn-LyoxM_LG1ZTM1QgjaeT6ToUwqmL8JBw4TYutbEn9ORtl50587i7fuDgmxMJN8orJmVVota-9K9IC-dPJKjDZRD1ZkCZ5cmWnF-VkTxAEMgP8P8BhsPieW5B7KhMtmgDikAUPjG3qxuy7CV3nLciVhTi_hPFyP__xiBnw0Rafu1-nvxq5RFlKm5V-Q41RtG_rNQIxSQ-V2Rc7zHCYYUMJEkNaaAMEWUipTSXdkd2KvJBz0Dd_1p7d8oosZbJEO9C-Ao0p8quNcZJTnHplBQ
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Mar 2020 16:24:08 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '174'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":"environment_not_found_error","detail":"the remote
+        resource could not be found: the remote resource could not be found: Spico::EnvironmentNotFoundError"}]}'
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 16:24:08 GMT
 recorded_with: VCR 5.1.0

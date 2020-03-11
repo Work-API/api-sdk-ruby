@@ -6,14 +6,14 @@ module LivilApi
   class Client
     DEFAULT_URL = 'https://api-alpha.work-api.com'
 
-    def service(token:)
-      HTTP.new(token, url)
+    def service(token:, content_type: nil)
+      HTTP.new(token, url, content_type)
     end
 
     def call(request, token: nil)
       token = request.respond_to?(:token) ? request.token : token
 
-      service(token: token).api_call(
+      service(token: token, content_type: request.content_type).api_call(
         request.http_method,
         request.path,
         **request.args

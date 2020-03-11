@@ -53,7 +53,7 @@ module LivilApi
       def execute_request(method, url, params:, body:, content_type:)
         body = JSON.dump(body) if body.is_a?(Hash)
 
-        response = with_content_type content_type do
+        response = with_content_type(content_type) do
           adapter.send(method) do |request|
             request.url url, params
             request.body = body

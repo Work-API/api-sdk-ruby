@@ -82,4 +82,46 @@ http_interactions:
       string: ''
     http_version: null
   recorded_at: Fri, 28 Feb 2020 08:05:44 GMT
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/users
+    body:
+      encoding: UTF-8
+      string: '{"attributes":{"arbitrary_id":"delete_test@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODM5NDM5MTMsImlhdCI6MTU4Mzk0Mzg1MywiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.cHo1JCud-lVNo1aO28y0smxaxxsl6x81tjqLHyMvpUvl9uqsRNoPBvJivrQIRji9HZ1moh_839D0LCsR4mXz0Zj25KjRYNPHJdUokqCJByVbMb5GSXdefWQazt6Hcu3bzd4R0QJ9B2uP4Z2Yx-LpZ4MVy7yKzd5mpAPa1sAD41OYbjghWTlFo3vICVv_slwV15jHfIM5c4rO0rZXg7j9rQV_rKDDxjpBe-xUZOU7UqAWo-MVprr_Fl4cbeSzSmkbTRyQJ5b1a-DlIqEn1DrzOIpU2dH9TgucWGOreUC2osf5Wvg50tkeMK210cpNZNBr3HGMXnIxUFURZDDzhEKlvA
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Mar 2020 16:24:13 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '174'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":"environment_not_found_error","detail":"the remote
+        resource could not be found: the remote resource could not be found: Spico::EnvironmentNotFoundError"}]}'
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 16:24:13 GMT
 recorded_with: VCR 5.1.0

@@ -1,0 +1,228 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/email/emails
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e60f76b99ce66000936897b","thread_id":"","subject":"Test
+        Email Subject","body":{"plain_text":["This is a plain text body segment"],"html":[]},"sender":null,"to_recipients":[{"name":"Dan","address":"dan@livil.co"}],"cc_recipients":[],"bcc_recipients":[],"flags":null,"labels":[],"mailboxes":[],"attachments":[],"has_attachments":false,"received_at":0},"type":"email"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 05 Mar 2020 15:34:58 GMT
+      X-Request-Id:
+      - 90fdc256-9723-469c-827b-285c3baa8b78
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '0'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Thu, 05 Mar 2020 15:34:59 GMT
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/email/emails
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e60f76b99ce66000936897b","subject":"Test
+        Email Subject","body":{"plain_text":["This is a plain text body segment"],"html":[]},"sender":null,"to_recipients":[{"name":"Dan","address":"dan@livil.co"}],"cc_recipients":[],"bcc_recipients":[],"flags":null},"type":"email"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Mar 2020 10:27:10 GMT
+      X-Request-Id:
+      - 07506b3e-82f4-454a-8d6d-9dbf0f842a90
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '0'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 10:27:10 GMT
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/email/emails
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{},"type":"email"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 11 Mar 2020 11:55:55 GMT
+      Connection:
+      - close
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 11:55:56 GMT
+- request:
+    method: post
+    uri: http://localhost:9292/email/emails
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e60f76b99ce66000936897b","subject":"Test
+        Email Subject","body":{"plain_text":["This is a plain text body segment"],"html":[]},"sender":null,"to_recipients":[{"name":"Dan","address":"dan@livil.co"}],"cc_recipients":[],"bcc_recipients":[],"flags":null},"type":"email"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Date:
+      - Wed, 11 Mar 2020 14:33:12 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '0'
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 14:33:12 GMT
+- request:
+    method: post
+    uri: http://localhost:9292/email/emails
+    body:
+      encoding: UTF-8
+      string: '{"attributes":{"remote_id":"","integration_id":"5e60f76b99ce66000936897b","subject":"Test
+        Email Subject","body":{"plain_text":["This is a plain text body segment"],"html":[]},"sender":null,"to_recipients":[{"name":"Dan","address":"dan@livil.co"}],"cc_recipients":[],"bcc_recipients":[],"flags":null},"type":"email"}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 14:53:24 GMT
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/email/emails
+    body:
+      encoding: UTF-8
+      string: '{"attributes":{"remote_id":"","integration_id":"5e60f76b99ce66000936897b","subject":"Test
+        Email Subject","body":{"plain_text":["This is a plain text body segment"],"html":[]},"sender":null,"to_recipients":[{"name":"Dan","address":"dan@livil.co"}],"cc_recipients":[],"bcc_recipients":[],"flags":null},"type":"email"}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 11 Mar 2020 16:23:51 GMT
+      Connection:
+      - close
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 16:23:51 GMT
+recorded_with: VCR 5.1.0

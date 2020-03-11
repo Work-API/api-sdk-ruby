@@ -12,6 +12,10 @@ module LivilApi
       end
     end
 
+    def content_type
+      'application/vnd.api+json'
+    end
+
     protected
 
     def serialize_single(model)
@@ -21,10 +25,6 @@ module LivilApi
       }.tap do |hash|
         hash[:id] = model.id unless model.new?
       end
-    end
-
-    def class_name_for(model)
-      model.class.name.split('::').last.underscore
     end
   end
 end

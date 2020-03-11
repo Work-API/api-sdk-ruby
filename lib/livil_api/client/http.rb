@@ -27,13 +27,16 @@ module LivilApi
     end
 
     class HTTP
-      def initialize(token, api_url)
+      DEFAULT_CONTENT_TYPE = 'application/vnd.api+json'
+
+      def initialize(token, api_url, content_type = nil)
         @token = token
         @api_url = api_url
+        @content_type = content_type
       end
 
       def api_call(method, url, **opts)
-        response = send(method, url.to_s, **opts)
+        response = send(method, url.to_s, **opts, content_type: @content_type)
         if response.respond_to?(:status)
           process_response(response, redirect_method: opts[:redirect_method])
         else
@@ -139,7 +142,7 @@ module LivilApi
 
         conn.headers = {
           'Authorization' => "Bearer #{token}",
-          'Accept' => 'application/vnd.api+json'
+          'Accept' => DEFAULT_CONTENT_TYPE
         }
       end
     end

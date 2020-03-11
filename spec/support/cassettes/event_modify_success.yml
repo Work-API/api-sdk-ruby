@@ -47,4 +47,90 @@ http_interactions:
         change of location","created_at":1583403049,"updated_at":1583404858}}}'
     http_version: null
   recorded_at: Thu, 05 Mar 2020 10:54:12 GMT
+- request:
+    method: put
+    uri: https://api-alpha.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{},"type":"event","id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Mar 2020 10:27:13 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '146'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":"bad_request_error","detail":"the supplied request
+        is invalid: the supplied request is invalid: required: Missing end time."}]}'
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 10:27:14 GMT
+- request:
+    method: put
+    uri: https://api-alpha.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
+    body:
+      encoding: UTF-8
+      string: '{"attributes":{"remote_id":"fipmdsvbpd9rus4i3jbbk1561o","integration_id":"5e5d1077390585003fd8fc68","name":"New
+        name","description":"A new description","attendees":[],"start_date_time":"2020-02-01T00:00:00+00:00","start_timezone":"Europe/London","end_date_time":"2020-02-02T02:00:00+00:00","end_timezone":"Europe/London","location":"A
+        change of location","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0},"type":"event","id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv"}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Mar 2020 16:23:58 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '146'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":"bad_request_error","detail":"the supplied request
+        is invalid: the supplied request is invalid: required: Missing end time."}]}'
+    http_version: null
+  recorded_at: Wed, 11 Mar 2020 16:23:58 GMT
 recorded_with: VCR 5.1.0

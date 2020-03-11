@@ -14,7 +14,7 @@ module LivilApi
       end
 
       attr_accessor :response, :params
-      attr_accessor :deserializer_class
+      attr_accessor :deserializer_class, :serializer_class
 
       def initialize(body: nil, **params)
         @body = body
@@ -29,15 +29,25 @@ module LivilApi
 
       def args
         { params: params }.tap do |hash|
-          hash[:body] = { data: body } if body.present?
+          hash[:body] = body if body.present?
         end
       end
 
       def body
         return if @body.nil?
 
-        serializer = JsonapiSerializer.new(@body)
-        serializer.serialize
+        serialized = @body.serializer.serialize
+
+        case content_type
+        when /api\+json/
+          { data: serialized }
+        else
+          serialized
+        end
+      end
+
+      def content_type
+        @body&.serializer&.content_type
       end
 
       def http_method
