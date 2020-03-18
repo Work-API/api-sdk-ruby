@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/users
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"arbitrary_id":"another_create_user@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODQ1MjA0NjksImlhdCI6MTU4NDUyMDQwOSwiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.tIX9M4IssttOUwGnW73UFGbkP-8mJSxaDPUf5lAKr2X692tM3w9j9jzlAr65voQnhlh5sbuZPplofzY7CXF5GZwATfh1t8I0CYDj0CWjuNPI8QZsGlfZYW0HoYL0WpZ5Spav5O8DKOlrWPe_O1W5Dv7vnN7tKlYGOGWWvaGCj8DhO1j4PKD6pxvgL5KG5K1prJ9ZiVnQTAz7nQFcwEDiR7Xiwma6DiVsoE6LIqdE3S3_tbKStfFQd3nhntit3wABrA2MFRcxpxxHM3tf_jqdqyOy7-K0USftHlumLKlg4LR8u9wTvqLHQk9LphkGJ7yTmYg4ZNhNslsKKv8gCA8zUw
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 18 Mar 2020 08:33:30 GMT
+      X-Request-Id:
+      - 5da3094a-1973-465d-8b90-b1acccbb405a
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '385'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e71dcdaa126a600116aa561","type":"user","attributes":{"arbitrary_id":"another_create_user@livil.co","token":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY5Mzk2MTAsImlhdCI6MTU4NDUyMDQxMCwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTcxZGNkYWExMjZhNjAwMTE2YWE1NjEiLCJhcmJpdHJhcnlfaWQiOiJhbm90aGVyX2NyZWF0ZV91c2VyQGxpdmlsLmNvIn19.sjAZvUTc3RapvRyEkR-JzcEAfpo6lD-7ZaXCianWd90"}}}'
+    http_version: null
+  recorded_at: Wed, 18 Mar 2020 08:33:30 GMT
+recorded_with: VCR 5.1.0
