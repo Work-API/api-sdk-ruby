@@ -3,12 +3,7 @@
 module LivilApi
   class Service
     module Integrations
-      def create_integration(provider:, media_type:)
-        integration = Integration.new(
-          provider: provider,
-          media_type: media_type
-        )
-
+      def create_integration(integration:)
         request = Requests::Integrations::CreateIntegrationRequest.new(body: integration)
 
         call(request).body
@@ -27,9 +22,8 @@ module LivilApi
         call(Requests::Integrations::ListIntegrationsRequest.new).body
       end
 
-      def modify_integration(integration_id:, **params)
-        integration = Integration.new(id: integration_id, **params)
-        request = Requests::Integrations::ModifyIntegrationRequest.new(integration_id: integration_id, body: integration)
+      def modify_integration(integration:)
+        request = Requests::Integrations::ModifyIntegrationRequest.new(integration_id: integration.id, body: integration)
 
         call(request).body
       end

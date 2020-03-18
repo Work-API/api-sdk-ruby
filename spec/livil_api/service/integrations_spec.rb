@@ -20,7 +20,8 @@ RSpec.describe(LivilApi::Service::Integrations) do
     let(:provider) { 'gcal' }
     let(:media_type) { 'event' }
     let(:api_method) { :create_integration }
-    let(:args) { { provider: provider, media_type: media_type } }
+    let(:integration) { LivilApi::Integration.new(provider: provider, media_type: media_type) }
+    let(:args) { { integration: integration } }
 
     it { is_expected.to be_a(LivilApi::Integration) }
   end
@@ -40,8 +41,9 @@ RSpec.describe(LivilApi::Service::Integrations) do
 
   context 'modify_integration' do
     let(:media_type) { 'event' }
+    let(:integration) { LivilApi::Integration.new(id: integration_id, media_type: media_type) }
     let(:api_method) { :modify_integration }
-    let(:args) { { integration_id: integration_id, media_type: media_type } }
+    let(:args) { { integration: integration } }
 
     it { is_expected.to be_a(LivilApi::Integration) }
   end
