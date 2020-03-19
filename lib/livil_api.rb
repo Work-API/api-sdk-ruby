@@ -28,7 +28,13 @@ require 'livil_api/model/email_attachment'
 require 'livil_api/model/file'
 require 'livil_api/model/file_upload'
 
+require 'livil_api/requests/base_request'
+require 'livil_api/requests/apt_request'
+
 require 'livil_api/requests/users/create_user_request'
+require 'livil_api/requests/users/get_user_request'
+require 'livil_api/requests/users/reauth_user_request'
+require 'livil_api/requests/users/delete_user_request'
 
 require 'livil_api/requests/integrations/list_integrations_request'
 require 'livil_api/requests/integrations/create_integration_request'
