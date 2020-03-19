@@ -28,6 +28,8 @@ module LivilApi
       def validate!
         raise 'no private key path provided' unless @params[:path_to_private_key].present?
         raise 'private key file does not exist' unless ::File.exist?(@params[:path_to_private_key])
+
+        super
       end
     end
   end

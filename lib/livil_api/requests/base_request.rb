@@ -7,10 +7,11 @@ module LivilApi
       attr_accessor :deserializer_class, :serializer_class
 
       class << self
-        def [](http_method, path, **opts)
+        def [](http_method, path, accepted_params = [], **opts)
           Class.new(self).tap do |klass|
-            klass.define_singleton_method(:base_path, -> { path })
             klass.define_singleton_method(:http_method, -> { http_method })
+            klass.define_singleton_method(:base_path, -> { path })
+            klass.define_singleton_method(:accepted_params, -> { accepted_params })
             klass.define_singleton_method(:opts, -> { opts })
           end
         end
@@ -24,7 +25,8 @@ module LivilApi
       end
 
       def validate!
-        # override in subclasses
+        invalid_params = @params.keys.reject { |key| self.class.accepted_params.include?(key) }
+        raise ArgumentError, "invalid parameters for #{self.class.name}: #{invalid_params.join(', ')}" if invalid_params.present?
       end
 
       def args
