@@ -5,7 +5,7 @@ require_relative '../base_request'
 module LivilApi
   module Requests
     module Emails
-      class TrashEmailsRequest < BaseRequest[:delete, 'email/emails']; end
+      class TrashEmailsRequest < BaseRequest[:delete, 'email/emails', %i[ids]]; end
     end
   end
 end

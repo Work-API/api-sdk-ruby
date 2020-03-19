@@ -6,7 +6,9 @@ require 'livil_api/deserializers/json_deserializer'
 module LivilApi
   module Requests
     module Integrations
-      class AuthIntegrationRequest < BaseRequest[:get, 'auth/init/{integration_id}']
+      VALID_PARAMS = %i[integration_id redirect return_to].freeze
+
+      class AuthIntegrationRequest < BaseRequest[:get, 'auth/init/{integration_id}', VALID_PARAMS]
         def deserializer_class
           JsonDeserializer
         end
