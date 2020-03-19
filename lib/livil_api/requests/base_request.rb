@@ -3,18 +3,18 @@
 module LivilApi
   module Requests
     class BaseRequest
+      attr_accessor :response, :params
+      attr_accessor :deserializer_class, :serializer_class
+
       class << self
         def [](http_method, path, **opts)
-          Class.new(BaseRequest).tap do |klass|
+          Class.new(self).tap do |klass|
             klass.define_singleton_method(:base_path, -> { path })
             klass.define_singleton_method(:http_method, -> { http_method })
             klass.define_singleton_method(:opts, -> { opts })
           end
         end
       end
-
-      attr_accessor :response, :params
-      attr_accessor :deserializer_class, :serializer_class
 
       def initialize(body: nil, **params)
         @body = body

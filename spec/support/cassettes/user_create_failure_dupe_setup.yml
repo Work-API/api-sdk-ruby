@@ -84,4 +84,129 @@ http_interactions:
         resource could not be found: the remote resource could not be found: Spico::EnvironmentNotFoundError"}]}'
     http_version: null
   recorded_at: Wed, 11 Mar 2020 16:24:12 GMT
+- request:
+    method: get
+    uri: https://api-alpha.work-api.com/users/reauth?path_to_private_key=/repos/spico/livil_api/keys/livil-31d6543f-5e26-4203-a258-011b5032a1c6.pem
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 405
+      message: Method Not Allowed
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 18 Mar 2020 14:00:56 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Allow:
+      - OPTIONS, POST
+      Content-Length:
+      - '27'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"error":"405 Not Allowed"}'
+    http_version: null
+  recorded_at: Wed, 18 Mar 2020 14:00:56 GMT
+- request:
+    method: get
+    uri: https://api-alpha.work-api.com/users/reauth
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODQ1NDAyOTEsImlhdCI6MTU4NDU0MDIzMSwiaXNzIjoiTGl2aWwgUnVieSBTREsgdjAuMS4wIiwidXNlciI6eyJlbnZpcm9ubWVudF9ndWlkIjoiMzFkNjU0M2YtNWUyNi00MjAzLWEyNTgtMDExYjUwMzJhMWM2In19.pKPqR_CrGrKljhCBBJONX4JEZsTbSiCwV-6otCkna55d9DDZKqpS5N6hJ--4FO9nURQsUu_CgtMM4XTbuag9mJmiiV2tZTxo3wsLzuH56x02lbVcZtN8n8sIIoaG4d4WNNIaezQnDsQbl5RNC2D43agjwlYOhCW6w2Ji9c5VRO0fzcDo4wLsR1piojg_7SLBmOJg6691ovQ_uKoXUkHNSl3mA_wF7b8D5BW25WHWme2GTgylsBZ4dLL7zz6YrSDhjVDdM1sSY0R3dKc3xHaA-x35iHsLifPqB9zwFRT3pycHbJHUgv1BuWCp3xF_V18crmgMR4bqnhpExYt7IrFHFA
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 405
+      message: Method Not Allowed
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 18 Mar 2020 14:03:51 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Allow:
+      - OPTIONS, POST
+      Content-Length:
+      - '27'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"error":"405 Not Allowed"}'
+    http_version: null
+  recorded_at: Wed, 18 Mar 2020 14:03:51 GMT
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/users/reauth
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"arbitrary_id":"create_user_dupe@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODQ1NDAzMzQsImlhdCI6MTU4NDU0MDI3NCwiaXNzIjoiTGl2aWwgUnVieSBTREsgdjAuMS4wIiwidXNlciI6eyJlbnZpcm9ubWVudF9ndWlkIjoiMzFkNjU0M2YtNWUyNi00MjAzLWEyNTgtMDExYjUwMzJhMWM2In19.ZMC-WEo6r1ZpX5UdrCJuiuW-l_McbUq7yN2eKPiLF09iWFCmgoSaxZDHIhWqJnGtUxNqjB9wocEDa-4hwetWIsdKbMsshEWI9632GGesn7FHCTrVLAsrFx73zZ2D0sem1PXwFztr-bKwXOsbOb1bZVMq2Pz7MyebZOrZKkZIjkpLbfBBJlJ5UqiUp9WoWteAgdwK0pQ05uVMOiIISr2IsKXeKMj73lowN-Gv4FvGNFC-owNHmIFeczFiS6AIrTgv625sG43sFqEuNf-_yr5Q8nYLdvsCdYEfUk6cefZp81MYx6NGMYJ02ndSKX_hs1qttHlI657XiOzdrY3oL2b4BQ
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 18 Mar 2020 14:04:34 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '161'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":"invalid_token_error","detail":"the supplied auth
+        token is invalid: the supplied auth token is invalid: +arbitrary_id+ is missing
+        from APT"}]}'
+    http_version: null
+  recorded_at: Wed, 18 Mar 2020 14:04:34 GMT
 recorded_with: VCR 5.1.0

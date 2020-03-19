@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-alpha.work-api.com/users/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 18 Mar 2020 09:38:27 GMT
+      X-Request-Id:
+      - b94a9b93-221a-41c6-b935-731daffa7aaf
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '376'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e4abd3b2c280a001e321d88","type":"user","attributes":{"arbitrary_id":"test4754990@work-api.com","token":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY5NDM1MDcsImlhdCI6MTU4NDUyNDMwNywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.PuydR5uLphqkgMZB_Njr0R7V7fHrNHuMKGLJF2K5Ho4"}}}'
+    http_version: null
+  recorded_at: Wed, 18 Mar 2020 09:38:28 GMT
+recorded_with: VCR 5.1.0

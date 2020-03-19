@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/users/reauth
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"arbitrary_id":"create_user@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODQ1NDA1NzQsImlhdCI6MTU4NDU0MDUxNCwiaXNzIjoiTGl2aWwgUnVieSBTREsgdjAuMS4wIiwidXNlciI6eyJlbnZpcm9ubWVudF9ndWlkIjoiMzFkNjU0M2YtNWUyNi00MjAzLWEyNTgtMDExYjUwMzJhMWM2IiwiYXJiaXRyYXJ5X2lkIjoiY3JlYXRlX3VzZXJAbGl2aWwuY28ifX0.c3XAj6cSWZAFIvXBfawvKAg7s8m8XGLqRkIpEu_MV3ut18fJyAEadGGVua0ZGyWrTojFm7dbO_e-TOTIw8NLrZs_fYIP-ptQIv5Q1He2hDe5mQxTjdvVv8bXV5i1MMCeoXpme1eNEQbUDtgXeIKpeVfOPg32P0gT2EmxYo1OdSr1q1NpR1jQkMvyOmf8CnpcYKQd2NxcG-ETs26nI8uqC_vxwKI1DHSv5gAhiiNoSNrnLhCb0YVqqGowNgAev-8djdBgw6gD8ESQIjuwdx0yTPIASFiQZ8anRmQuHLmkv2iBgvrOTcRzSWJlFFMs8u07olF01A-ABwPlIUqOIF1-sg
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 18 Mar 2020 14:08:34 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '140'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":"invalid_token_error","detail":"the supplied auth
+        token is invalid: the supplied auth token is invalid: invalid token"}]}'
+    http_version: null
+  recorded_at: Wed, 18 Mar 2020 14:08:34 GMT
+recorded_with: VCR 5.1.0

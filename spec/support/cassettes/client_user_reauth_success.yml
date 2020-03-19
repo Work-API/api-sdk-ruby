@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/users/reauth
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"arbitrary_id":"another_create_user@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODQ1NDA2OTEsImlhdCI6MTU4NDU0MDYzMSwiaXNzIjoiTGl2aWwgUnVieSBTREsgdjAuMS4wIiwidXNlciI6eyJlbnZpcm9ubWVudF9ndWlkIjoiMzFkNjU0M2YtNWUyNi00MjAzLWEyNTgtMDExYjUwMzJhMWM2IiwiYXJiaXRyYXJ5X2lkIjoiYW5vdGhlcl9jcmVhdGVfdXNlckBsaXZpbC5jbyJ9fQ.DCuNkEVt0RYjy3SnU84RdlbZdn59VcdhHmX7FLu2ObIIYh4hKNVF5IsaFgQBG9KbkiJat_kwT7rzucgEsXOCkiiNkTv-qZJ8-OFnNgQ0bFoS8FMtYzEomLBaMrMzhPCamnAXPPcmuTM_RxyFMpl-avFowMwz-pUw-wMASfuffG30S5VPTEZdfXTGfH3vBnXR1wadojn3FmLr7qr-PoI1DNh9Jbncd2B_glKgU14PFZXk23_gqRo3KH2mrlICOmNPCXvi8SNlSHTK9nqSItoYM0m6bjGYCcl6Hks_ndQEw5vkgxxfq2oimNogMkx1aBnWm1_1P1QgGg-tfC-uDzTZyg
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 18 Mar 2020 14:10:32 GMT
+      X-Request-Id:
+      - ece0e9d6-dffd-4c98-bf27-d65103894ba6
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '385'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5e71dcdaa126a600116aa561","type":"user","attributes":{"arbitrary_id":"another_create_user@livil.co","token":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY5NTk4MzIsImlhdCI6MTU4NDU0MDYzMiwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTcxZGNkYWExMjZhNjAwMTE2YWE1NjEiLCJhcmJpdHJhcnlfaWQiOiJhbm90aGVyX2NyZWF0ZV91c2VyQGxpdmlsLmNvIn19.a_aflyetPv5PMh5GuRUlCugjMx6kWTJf6nrIiaTC9_8"}}}'
+    http_version: null
+  recorded_at: Wed, 18 Mar 2020 14:10:32 GMT
+recorded_with: VCR 5.1.0

@@ -5,10 +5,10 @@ http_interactions:
     uri: https://api-alpha.work-api.com/users
     body:
       encoding: UTF-8
-      string: '{"data":{"attributes":{"arbitrary_id":"delete_test@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
+      string: '{"data":{"attributes":{"arbitrary_id":"delete_test_two@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
     headers:
       Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODI4NzcxNTgsImlhdCI6MTU4Mjg3NzA5OCwiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.J7zbGG9ffQEW0yX-py0SPNqvTYaCuh2Hl4pGhHzuNn8o_9t9Ul6p6w0o2uj6L4Csqks2y1ITZc2h8179BqBzd5UYsDNX4oEUO4QVxagDM0_l1eMEPk8pQIHmXRPP0fwfKdDI_y8Yk9oIreRujmELMPLUpHUYq_f-w40a0xy4J0sTOQh5ZaCD31HNK1YSTsZHEHq2rpfu8Wktw8_cpIktQBfM4eeY9XPwZhRqEGKqqBuhbh1psz00jiC5sycP9lnWaYIGgSOn1E09sO3OWyva-ycCylIcK0XRS_gTegFTT7174UavIbhzhCoqqVEuZngdA4Sexzhi3lVBvJNs7TfENQ
+      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODQ1NDMxMDEsImlhdCI6MTU4NDU0MzA0MSwiaXNzIjoiTGl2aWwgUnVieSBTREsgdjAuMS4wIiwidXNlciI6eyJlbnZpcm9ubWVudF9ndWlkIjoiMzFkNjU0M2YtNWUyNi00MjAzLWEyNTgtMDExYjUwMzJhMWM2In19.IlqhgnfaZq1VlW_YQ3OwK14JwdjD6YM10bIh7wEsEhO4rjuB7oKM-eiNPZx8mO-s9QNvu3xNVJn5wjDdJT3p2O9yLyIHoW4niaGjHw7iRCvNu0j6IpOBX1xn7pA9OtZWd_PNZtu8GFqaonbCqP4C24i3UkrXDZ-4IcheHyuSMtAEYUHSiqzuNQwAg8bUCSBKJo-BrwYQExWvGAJEZSlP47nX8V9_ladHQ_5BTNneYJkHLMjZAYWGliFQOK-Z6cnkqYg_hZp0RHvnwwNlfCLIWDc_ZLYofWFDWXQJ3C0m0rEQUs1zp6DLYA1WiHVsq2YjuhW-mBylwAbKls56frahKA
       Accept:
       - application/vnd.api+json
       User-Agent:
@@ -27,22 +27,22 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 28 Feb 2020 08:04:59 GMT
+      - Wed, 18 Mar 2020 14:50:41 GMT
       X-Request-Id:
-      - b87097d8-0ebe-4615-addb-aff322e3aff3
+      - 86add905-ae84-4ad5-841f-659b8da8efff
       Content-Type:
       - application/vnd.api+json
       Content-Length:
-      - '367'
+      - '376'
       Vary:
       - Origin
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"5e58c9ab8e04a30038bbccc7","type":"user","attributes":{"arbitrary_id":"delete_test@livil.co","token":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODUyOTYyOTksImlhdCI6MTU4Mjg3NzA5OSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTU4YzlhYjhlMDRhMzAwMzhiYmNjYzciLCJhcmJpdHJhcnlfaWQiOiJkZWxldGVfdGVzdEBsaXZpbC5jbyJ9fQ.DbvirgX4ls_OOh8itvxOLx6DczWGp_MNiVTpJZuaUFA"}}}'
+      string: '{"data":{"id":"5e723541a126a600286aa561","type":"user","attributes":{"arbitrary_id":"delete_test_two@livil.co","token":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY5NjIyNDEsImlhdCI6MTU4NDU0MzA0MSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTcyMzU0MWExMjZhNjAwMjg2YWE1NjEiLCJhcmJpdHJhcnlfaWQiOiJkZWxldGVfdGVzdF90d29AbGl2aWwuY28ifX0.9hJIX-p0HRPxvXLr4Sfn6PsG96YmCuQCxmGN3DlTHBA"}}}'
     http_version: null
-  recorded_at: Fri, 28 Feb 2020 08:04:59 GMT
+  recorded_at: Wed, 18 Mar 2020 14:50:41 GMT
 - request:
     method: delete
     uri: https://api-alpha.work-api.com/users/me
@@ -51,7 +51,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODUyOTYyOTksImlhdCI6MTU4Mjg3NzA5OSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTU4YzlhYjhlMDRhMzAwMzhiYmNjYzciLCJhcmJpdHJhcnlfaWQiOiJkZWxldGVfdGVzdEBsaXZpbC5jbyJ9fQ.DbvirgX4ls_OOh8itvxOLx6DczWGp_MNiVTpJZuaUFA
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY5NjIyNDEsImlhdCI6MTU4NDU0MzA0MSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTcyMzU0MWExMjZhNjAwMjg2YWE1NjEiLCJhcmJpdHJhcnlfaWQiOiJkZWxldGVfdGVzdF90d29AbGl2aWwuY28ifX0.9hJIX-p0HRPxvXLr4Sfn6PsG96YmCuQCxmGN3DlTHBA
       Accept:
       - application/vnd.api+json
       User-Agent:
@@ -70,9 +70,9 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 28 Feb 2020 08:05:45 GMT
+      - Wed, 18 Mar 2020 14:50:42 GMT
       X-Request-Id:
-      - 98c20270-1c90-4e19-a4a7-8beeb00cb00a
+      - 7cfd7870-9b4e-4da5-8eec-3173d3918e31
       Vary:
       - Origin
       Via:
@@ -81,47 +81,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: null
-  recorded_at: Fri, 28 Feb 2020 08:05:44 GMT
-- request:
-    method: post
-    uri: https://api-alpha.work-api.com/users
-    body:
-      encoding: UTF-8
-      string: '{"attributes":{"arbitrary_id":"delete_test@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}'
-    headers:
-      Authorization:
-      - Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE1ODM5NDM5MTMsImlhdCI6MTU4Mzk0Mzg1MywiaXNzIjoiV29ya0FQSSIsInVzZXIiOnsiZW52aXJvbm1lbnRfZ3VpZCI6IjMxZDY1NDNmLTVlMjYtNDIwMy1hMjU4LTAxMWI1MDMyYTFjNiJ9fQ.cHo1JCud-lVNo1aO28y0smxaxxsl6x81tjqLHyMvpUvl9uqsRNoPBvJivrQIRji9HZ1moh_839D0LCsR4mXz0Zj25KjRYNPHJdUokqCJByVbMb5GSXdefWQazt6Hcu3bzd4R0QJ9B2uP4Z2Yx-LpZ4MVy7yKzd5mpAPa1sAD41OYbjghWTlFo3vICVv_slwV15jHfIM5c4rO0rZXg7j9rQV_rKDDxjpBe-xUZOU7UqAWo-MVprr_Fl4cbeSzSmkbTRyQJ5b1a-DlIqEn1DrzOIpU2dH9TgucWGOreUC2osf5Wvg50tkeMK210cpNZNBr3HGMXnIxUFURZDDzhEKlvA
-      Accept:
-      - application/vnd.api+json
-      User-Agent:
-      - Faraday v0.15.4
-      Content-Type:
-      - application/vnd.api+json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Server:
-      - Cowboy
-      Connection:
-      - keep-alive
-      Date:
-      - Wed, 11 Mar 2020 16:24:13 GMT
-      Content-Type:
-      - application/vnd.api+json
-      Content-Length:
-      - '174'
-      Vary:
-      - Origin
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"errors":[{"code":"environment_not_found_error","detail":"the remote
-        resource could not be found: the remote resource could not be found: Spico::EnvironmentNotFoundError"}]}'
-    http_version: null
-  recorded_at: Wed, 11 Mar 2020 16:24:13 GMT
+  recorded_at: Wed, 18 Mar 2020 14:50:42 GMT
 recorded_with: VCR 5.1.0

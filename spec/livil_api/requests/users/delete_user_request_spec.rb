@@ -9,7 +9,7 @@ RSpec.describe(LivilApi::Requests::Users::DeleteUserRequest) do
     attr_reader :token
   end
 
-  let(:arbitrary_id) { 'delete_test@livil.co' }
+  let(:arbitrary_id) { 'delete_test_two@livil.co' }
   let(:request) { described_class.new }
 
   context 'success' do
