@@ -37,6 +37,7 @@ module LivilApi
 
       def api_call(method, url, **opts)
         response = send(method, url.to_s, **opts, content_type: @content_type)
+
         if response.respond_to?(:status)
           process_response(response, redirect_method: opts[:redirect_method])
         else
