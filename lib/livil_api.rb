@@ -54,6 +54,7 @@ require 'livil_api/requests/emails/send_email_request'
 require 'livil_api/requests/emails/get_email_request'
 require 'livil_api/requests/emails/trash_emails_request'
 require 'livil_api/requests/emails/create_draft_request'
+require 'livil_api/requests/emails/update_draft_request'
 
 module LivilApi
   class APIError < StandardError; end

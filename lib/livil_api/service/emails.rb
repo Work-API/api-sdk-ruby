@@ -51,6 +51,12 @@ module LivilApi
 
         call(request).body
       end
+
+      def update_draft(email_id:, email:)
+        request = Requests::Emails::UpdateDraftRequest.new(body: email, email_id: email_id)
+
+        call(request).body
+      end
     end
   end
 end
