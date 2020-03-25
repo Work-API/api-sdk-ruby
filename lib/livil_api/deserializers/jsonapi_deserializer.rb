@@ -59,7 +59,7 @@ module LivilApi
     end
 
     def get_included(id, type)
-      @json['included'].find do |included_hash|
+      @json['included']&.find do |included_hash|
         included_hash['id'] == id && included_hash['type'] == type
       end
     end

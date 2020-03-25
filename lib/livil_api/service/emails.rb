@@ -45,6 +45,12 @@ module LivilApi
 
         call(request).body
       end
+
+      def create_draft(email:)
+        request = Requests::Emails::CreateDraftRequest.new(body: email)
+
+        call(request).body
+      end
     end
   end
 end

@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/email/drafts
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e74696b859c20000902b159","subject":"Test
+        Email Subject","body":{"plain_text":["This is a plain text body segment"],"html":[]},"sender":null,"to_recipients":[{"name":"Dan","address":"dan@livil.co"}],"cc_recipients":[],"bcc_recipients":[],"flags":null},"type":"email"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODcxMDY0MzUsImlhdCI6MTU4NDY4NzIzNSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTc0Njg3Mzg1OWMyMDAwMDkwMmIxNTgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MzUxNDgxM0B3b3JrLWFwaS5jb20ifX0.syElOsiOeUBt4DeiMjc1rm1NdEEi6bV_4dcPE4MBkdA
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 25 Mar 2020 13:57:25 GMT
+      X-Request-Id:
+      - ba6ccd8d-92e3-4d17-9b8c-0dec433d7aad
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '703'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OnItMzY4MTk5NzYwMTMwMjc3MDcyOTo6","type":"email","attributes":{"integration_id":"5e74696b859c20000902b159","bcc_recipients":[],"body":{"plain_text":["This
+        is a plain text body segment"],"html":[]},"cc_recipients":[],"flags":{"seen":true,"flagged":false},"labels":["draft"],"received_at":1585144645,"sender":{"name":"","address":"liviltestacc@gmail.com"},"subject":"Test
+        Email Subject","thread_id":"NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OjE3MTExZmJjNzM4ZmFiZjk6","to_recipients":[{"name":"Dan","address":"dan@livil.co"}]},"relationships":{"mailboxes":{"data":[{"id":"NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OkRSQUZU","type":"mailbox"}]},"email_attachments":{"data":[]}}}}'
+    http_version: null
+  recorded_at: Wed, 25 Mar 2020 13:57:25 GMT
+recorded_with: VCR 5.1.0

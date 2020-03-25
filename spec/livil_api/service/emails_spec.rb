@@ -98,4 +98,30 @@ RSpec.describe(LivilApi::Service::Emails) do
 
     it { is_expected.to eq(:no_content) }
   end
+
+  context 'create_draft' do
+    let(:api_method) { :create_draft }
+    let(:args) { { email: email } }
+    let(:integration_id) { '5e74696b859c20000902b159' }
+
+    let(:email_attributes) do
+      {
+        integration_id: integration_id,
+        subject: 'this is a test',
+        to_recipients: [{ address: 'dan@livil.co' }],
+        body: { plain_text: ['This is a plain text test email'] }
+      }
+    end
+
+    let(:email) { LivilApi::Email.new(**email_attributes) }
+
+    it { is_expected.to be_a(LivilApi::Email) }
+    it do
+      is_expected.to have_attributes(
+        **email_attributes,
+        body: LivilApi::EmailBody,
+        to_recipients: [LivilApi::EmailAddress]
+      )
+    end
+  end
 end
