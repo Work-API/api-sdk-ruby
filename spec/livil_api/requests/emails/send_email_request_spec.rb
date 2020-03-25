@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'tempfile'
 require 'livil_api/model/email'
 require 'livil_api/requests/emails/send_email_request'
 
@@ -48,35 +49,10 @@ RSpec.describe(LivilApi::Requests::Emails::SendEmailRequest) do
 
     context '#body' do
       subject { call.body }
-      it { is_expected.to eq(:no_content) }
+      it { is_expected.to eq(:accepted) }
     end
 
     context 'with attachments' do
-      let(:cassette_name) { 'email_send_attachment_success' }
-
-      let(:attachments) do
-        tempfile_one = Tempfile.new.tap do |tf|
-          tf.write('test content one')
-          tf.rewind
-        end
-
-        attachment_one = LivilApi::EmailAttachment.new
-        attachment_one.attach('test_1.txt', tempfile_one)
-
-        tempfile_two = Tempfile.new.tap do |tf|
-          tf.write('test content two')
-          tf.rewind
-        end
-
-        attachment_two = LivilApi::EmailAttachment.new
-        attachment_two.attach('test_2.txt', tempfile_two)
-
-        [
-          attachment_one,
-          attachment_two
-        ]
-      end
-
       let(:email_attributes) do
         {
           integration_id: integration_id,
@@ -87,7 +63,58 @@ RSpec.describe(LivilApi::Requests::Emails::SendEmailRequest) do
         }
       end
 
-      it { is_expected.to be_success }
+      context 'direct upload' do
+        let(:cassette_name) { 'email_send_attachment_success' }
+
+        let(:attachments) do
+          tempfile_one = Tempfile.new.tap do |tf|
+            tf.write('test content one')
+            tf.rewind
+          end
+
+          attachment_one = LivilApi::EmailAttachment.new
+          attachment_one.attach('test_1.txt', tempfile_one)
+
+          tempfile_two = Tempfile.new.tap do |tf|
+            tf.write('test content two')
+            tf.rewind
+          end
+
+          attachment_two = LivilApi::EmailAttachment.new
+          attachment_two.attach('test_2.txt', tempfile_two)
+
+          [
+            attachment_one,
+            attachment_two
+          ]
+        end
+
+        it { is_expected.to be_success }
+      end
+
+      xcontext 'with remote file', 'pending implementation of file integrations' do
+        let(:cassette_name) { 'email_send_attachment_remote_file_success' }
+
+        let(:attachments) do
+          attachment_one = LivilApi::EmailAttachment.new
+          attachment_one.attach('test_1.txt', tempfile_one)
+
+          tempfile_two = Tempfile.new.tap do |tf|
+            tf.write('test content two')
+            tf.rewind
+          end
+
+          attachment_two = LivilApi::EmailAttachment.new
+          attachment_two.attach('test_2.txt', tempfile_two)
+
+          [
+            attachment_one,
+            attachment_two
+          ]
+        end
+
+        it { is_expected.to be_success }
+      end
     end
   end
 end

@@ -43,6 +43,35 @@ RSpec.describe(LivilApi::Service::Emails) do
       subject { call.first }
       it { is_expected.to be_a(LivilApi::Email) }
     end
+
+    context 'with params' do
+      context 'mailbox_ids' do
+        let(:expected_outcome) { 'mailbox_ids_success' }
+        let(:mailbox_ids) { ['NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OlVOUkVBRDo6'] }
+
+        let(:args) { { mailbox_ids: mailbox_ids } }
+
+        it { is_expected.to be_a(Array) }
+        it { is_expected.to have_attributes(count: 20) }
+        it 'should have filtered to the mailbox ID' do
+          subject.all? { |email| email.mailboxes.map(&:id).include?(mailbox_ids.first) }
+        end
+      end
+
+      context 'date range' do
+        let(:expected_outcome) { 'date_range_success' }
+        let(:date_from) { '2019-10-01T00:00z' }
+        let(:date_until) { '2019-12-31T00:00z' }
+
+        let(:args) { { date_from: date_from, date_until: date_until } }
+
+        it { is_expected.to be_a(Array) }
+        it { is_expected.to have_attributes(count: 20) }
+        it 'should have filtered to the date range' do
+          subject.all? { |email| (date_from..date_until).include?(email.received_at) }
+        end
+      end
+    end
   end
 
   context 'get_email' do
