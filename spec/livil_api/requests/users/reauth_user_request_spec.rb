@@ -56,7 +56,7 @@ RSpec.describe(LivilApi::Requests::Users::ReauthUserRequest) do
 
         it { is_expected.to be_error }
         it { is_expected.not_to be_success }
-        it { is_expected.to have_attributes(body: :no_content) }
+        it { is_expected.to have_attributes(body: :unauthorized) }
 
         context 'response#errors' do
           subject { response.errors }

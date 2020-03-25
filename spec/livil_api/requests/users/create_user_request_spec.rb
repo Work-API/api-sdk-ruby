@@ -56,7 +56,7 @@ RSpec.describe(LivilApi::Requests::Users::CreateUserRequest) do
 
         it { is_expected.to be_error }
         it { is_expected.not_to be_success }
-        it { is_expected.to have_attributes(body: :no_content) }
+        it { is_expected.to have_attributes(body: :unauthorized) }
 
         context 'response#errors' do
           subject { response.errors }
@@ -85,7 +85,7 @@ RSpec.describe(LivilApi::Requests::Users::CreateUserRequest) do
 
         it { is_expected.to be_error }
         it { is_expected.not_to be_success }
-        it { is_expected.to have_attributes(body: :no_content) }
+        it { is_expected.to have_attributes(body: :conflict) }
 
         context 'response#errors' do
           subject { response.errors }

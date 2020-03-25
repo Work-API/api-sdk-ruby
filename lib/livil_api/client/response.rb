@@ -46,10 +46,14 @@ module LivilApi
         json[:uri]
       end
 
+      def http_reason_phrase
+        raw_response.reason_phrase
+      end
+
       protected
 
       def deserializer
-        @deserializer ||= deserializer_class.new(json)
+        @deserializer ||= deserializer_class.new(json, http_reason_phrase)
       end
 
       def deserializer_class

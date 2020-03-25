@@ -26,7 +26,7 @@ RSpec.describe(LivilApi::Requests::Integrations::ModifyIntegrationRequest) do
 
       context '#body' do
         subject { response.body }
-        it { is_expected.to eq(:no_content) }
+        it { is_expected.to eq(:not_found) }
       end
 
       context '@error?' do

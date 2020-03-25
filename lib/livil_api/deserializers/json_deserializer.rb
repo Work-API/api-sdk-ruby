@@ -6,7 +6,7 @@ module LivilApi
   class JsonDeserializer < BaseDeserializer
     def deserialize
       if @json.blank?
-        :no_content
+        status
       else
         @json
       end

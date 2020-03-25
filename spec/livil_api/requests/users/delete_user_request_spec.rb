@@ -53,7 +53,7 @@ RSpec.describe(LivilApi::Requests::Users::DeleteUserRequest) do
 
       context '#body' do
         subject { response.body }
-        it { is_expected.to eq(:no_content) }
+        it { is_expected.to eq(:unauthorized) }
       end
 
       context '#errors#first' do

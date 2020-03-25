@@ -13,7 +13,7 @@ module LivilApi
       when Hash
         deserialize_single(data)
       when {}, nil
-        :no_content
+        status
       end
     end
 

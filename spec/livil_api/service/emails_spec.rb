@@ -31,7 +31,7 @@ RSpec.describe(LivilApi::Service::Emails) do
 
     let(:email) { LivilApi::Email.new(**email_attributes) }
 
-    it { is_expected.to eq(:no_content) }
+    it { is_expected.to eq(:accepted) }
   end
 
   context 'list_emails' do

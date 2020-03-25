@@ -21,7 +21,7 @@ RSpec.describe(LivilApi::Requests::Integrations::AuthIntegrationRequest) do
 
       context '#body' do
         subject { response.body }
-        it { is_expected.to eq(:no_content) }
+        it { is_expected.to eq(:internal_server_error) }
       end
 
       context '@error?' do
