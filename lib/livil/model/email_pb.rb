@@ -52,6 +52,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :integration_id, :string, 2
       optional :inline, :bool, 3
       optional :payload, :message, 4, "google.protobuf.Any"
+      optional :content_transfer_encoding, :string, 5
     end
   end
 end
