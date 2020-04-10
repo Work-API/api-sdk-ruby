@@ -6,11 +6,7 @@ require 'livil_api/requests/events/modify_event_request'
 RSpec.describe(LivilApi::Requests::Events::ModifyEventRequest) do
   include_context 'with live client'
 
-  # TODO: add support for moving event between calendars
-  # let(:calendar_remote_id) { 'primary' }
-  # let(:calendar_id) { Base64.urlsafe_encode64("#{integration_id}:#{calendar_remote_id}") }
-
-  let(:event_id) { 'NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv' }
+  let(:event_id) { 'NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOjA2ajNvNmY1MWQxcTc2NDlzZDUzZ2I2djVh' }
 
   let(:name) { 'New name' }
   let(:description) { 'A new description' }

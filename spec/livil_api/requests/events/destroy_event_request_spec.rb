@@ -9,7 +9,7 @@ RSpec.describe(LivilApi::Requests::Events::DestroyEventRequest) do
 
   let(:event_attributes) do
     {
-      integration_id: '5e5d1077390585003fd8fc68',
+      integration_id: '5e7b7829f40c9b001c2d4e6f',
       name: 'should be deleted',
       start_date_time: '2020-02-13T13:00:00+01:00',
       start_timezone: 'Europe/Paris',

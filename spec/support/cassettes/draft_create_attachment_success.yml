@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-alpha.work-api.com/email/drafts
+    body:
+      encoding: UTF-8
+      string: "----test-boundary\r\nContent-Disposition: form-data; name=\"email\"\r\nContent-Type:
+        application/vnd.api+json\r\n\r\n{\r\n  \"data\": {\r\n    \"attributes\":
+        {\r\n      \"remote_id\": \"\",\r\n      \"integration_id\": \"5e74696b859c20000902b159\",\r\n
+        \     \"subject\": \"Test Email Subject\",\r\n      \"body\": {\r\n        \"plain_text\":
+        [\r\n          \"This is a plain text body segment\"\r\n        ],\r\n        \"html\":
+        [\r\n\r\n        ]\r\n      },\r\n      \"sender\": null,\r\n      \"to_recipients\":
+        [\r\n        {\r\n          \"name\": \"Dan\",\r\n          \"address\": \"dan@livil.co\"\r\n
+        \       }\r\n      ],\r\n      \"cc_recipients\": [\r\n\r\n      ],\r\n      \"bcc_recipients\":
+        [\r\n\r\n      ],\r\n      \"flags\": null\r\n    },\r\n    \"type\": \"email\"\r\n
+        \ }\r\n}\r\n\r\n----test-boundary\r\nContent-Disposition: form-data; name=\"files[]\";
+        filename=\"test_1.txt\"\r\nContent-Type: application/octet-stream\r\nContent-Transfer-Encoding:
+        base64\r\n\r\ndGVzdCBjb250ZW50IG9uZQ==\r\n----test-boundary\r\nContent-Disposition:
+        form-data; name=\"files[]\"; filename=\"test_2.txt\"\r\nContent-Type: application/octet-stream\r\nContent-Transfer-Encoding:
+        base64\r\n\r\ndGVzdCBjb250ZW50IHR3bw==\r\n----test-boundary--"
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODcxMDY0MzUsImlhdCI6MTU4NDY4NzIzNSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTc0Njg3Mzg1OWMyMDAwMDkwMmIxNTgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MzUxNDgxM0B3b3JrLWFwaS5jb20ifX0.syElOsiOeUBt4DeiMjc1rm1NdEEi6bV_4dcPE4MBkdA
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - multipart/form-data; boundary=--test-boundary
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 25 Mar 2020 13:57:28 GMT
+      X-Request-Id:
+      - 379b869f-0715-4575-a6af-d10509c6ec73
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '703'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OnItNjYwMDM5NTM0NTM3NjM4MjI3NDo6","type":"email","attributes":{"integration_id":"5e74696b859c20000902b159","bcc_recipients":[],"body":{"plain_text":["This
+        is a plain text body segment"],"html":[]},"cc_recipients":[],"flags":{"seen":true,"flagged":false},"labels":["draft"],"received_at":1585144647,"sender":{"name":"","address":"liviltestacc@gmail.com"},"subject":"Test
+        Email Subject","thread_id":"NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OjE3MTExZmJkMTUxMGMxYzM6","to_recipients":[{"name":"Dan","address":"dan@livil.co"}]},"relationships":{"mailboxes":{"data":[{"id":"NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OkRSQUZU","type":"mailbox"}]},"email_attachments":{"data":[]}}}}'
+    http_version: null
+  recorded_at: Wed, 25 Mar 2020 13:57:28 GMT
+recorded_with: VCR 5.1.0

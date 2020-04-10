@@ -1,30 +1,45 @@
 # frozen_string_literal: true
 
 require_relative './base_deserializer'
+require 'ostruct'
 
 module LivilApi
   class JsonapiDeserializer < BaseDeserializer
+    def initialize(*)
+      super
+
+      @meta_json = @json&.delete('meta')
+    end
+
     def deserialize
       data = @json[:data] if @json.present?
 
       case data
       when Array
-        deserialize_collection(data)
+        deserialize_collection(data, doc_root: true)
       when Hash
-        deserialize_single(data)
+        deserialize_single(data, meta: meta)
       when {}, nil
         status
       end
     end
 
+    def meta
+      return if @meta_json.nil?
+
+      @meta ||= OpenStruct.new(@meta_json)
+    end
+
     protected
 
-    def deserialize_single(hash, use_included: false)
+    def deserialize_single(hash, use_included: false, meta: nil)
       id, type, attributes, relationships = hash.slice(:id, :type, :attributes, :relationships).values
 
       attributes = build_single_attrs(id, type, attributes, use_included)
       model = instantiate_model(type, attributes)
       assign_relationships(model, relationships)
+
+      model.meta = meta if meta.present?
 
       model
     end
@@ -44,8 +59,13 @@ module LivilApi
       class_for(type).new(**attributes)
     end
 
-    def deserialize_collection(array)
-      array.map(&method(:deserialize_single))
+    def deserialize_collection(array, doc_root: false)
+      array.map(&method(:deserialize_single)).tap do |arr|
+        break unless doc_root
+
+        meta_hash = meta
+        arr.define_singleton_method(:meta) { meta_hash }
+      end
     end
 
     def assign_relationships(model, relationships)
@@ -59,7 +79,7 @@ module LivilApi
     end
 
     def get_included(id, type)
-      @json['included'].find do |included_hash|
+      @json['included']&.find do |included_hash|
         included_hash['id'] == id && included_hash['type'] == type
       end
     end

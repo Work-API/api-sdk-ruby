@@ -30,5 +30,9 @@ module LivilApi
                         super
                       end
     end
+
+    def email_attachments
+      attachments
+    end
   end
 end

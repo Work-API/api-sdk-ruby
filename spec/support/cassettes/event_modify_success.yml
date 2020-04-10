@@ -133,4 +133,95 @@ http_interactions:
         is invalid: the supplied request is invalid: required: Missing end time."}]}'
     http_version: null
   recorded_at: Wed, 11 Mar 2020 16:23:58 GMT
+- request:
+    method: put
+    uri: https://api-alpha.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"remote_id":"fipmdsvbpd9rus4i3jbbk1561o","integration_id":"5e5d1077390585003fd8fc68","name":"New
+        name","description":"A new description","attendees":[],"start_date_time":"2020-02-01T00:00:00+00:00","start_timezone":"Europe/London","end_date_time":"2020-02-02T02:00:00+00:00","end_timezone":"Europe/London","location":"A
+        change of location","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0,"calendar_id":""},"type":"event","id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODcxMDY0MzUsImlhdCI6MTU4NDY4NzIzNSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTc0Njg3Mzg1OWMyMDAwMDkwMmIxNTgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MzUxNDgxM0B3b3JrLWFwaS5jb20ifX0.syElOsiOeUBt4DeiMjc1rm1NdEEi6bV_4dcPE4MBkdA
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 10 Apr 2020 14:30:55 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '146'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":"not_found_error","detail":"the remote resource
+        could not be found: integration not found with ID: 5e5d1077390585003fd8fc68"}]}'
+    http_version: null
+  recorded_at: Fri, 10 Apr 2020 14:30:55 GMT
+- request:
+    method: put
+    uri: https://api-alpha.work-api.com/event/events/NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOjA2ajNvNmY1MWQxcTc2NDlzZDUzZ2I2djVh
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"remote_id":"06j3o6f51d1q7649sd53gb6v5a","integration_id":"5e7b7829f40c9b001c2d4e6f","name":"New
+        name","description":"A new description","attendees":[],"start_date_time":"2020-02-01T00:00:00+00:00","start_timezone":"Europe/London","end_date_time":"2020-02-02T02:00:00+00:00","end_timezone":"Europe/London","location":"A
+        change of location","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0,"calendar_id":""},"type":"event","id":"NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOjA2ajNvNmY1MWQxcTc2NDlzZDUzZ2I2djVh"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODcxMDY0MzUsImlhdCI6MTU4NDY4NzIzNSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTc0Njg3Mzg1OWMyMDAwMDkwMmIxNTgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MzUxNDgxM0B3b3JrLWFwaS5jb20ifX0.syElOsiOeUBt4DeiMjc1rm1NdEEi6bV_4dcPE4MBkdA
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 10 Apr 2020 15:36:05 GMT
+      X-Request-Id:
+      - 7fc971dd-fa9f-45ba-afc0-8fc21f9585de
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '618'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOjA2ajNvNmY1MWQxcTc2NDlzZDUzZ2I2djVh","type":"event","attributes":{"integration_id":"5e7b7829f40c9b001c2d4e6f","remote_id":"06j3o6f51d1q7649sd53gb6v5a","calendar_id":"NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOnByaW1hcnk6","name":"New
+        name","description":"A new description","attendees":[],"start_date_time":"2020-02-01T00:00:00+00:00","start_timezone":"Europe/London","end_date_time":"2020-02-02T02:00:00+00:00","end_timezone":"Europe/London","all_day":false,"parent_event_id":"","location":"A
+        change of location","recurrence":"","created_at":1563187455,"updated_at":1586532965}}}'
+    http_version: null
+  recorded_at: Fri, 10 Apr 2020 15:36:05 GMT
 recorded_with: VCR 5.1.0

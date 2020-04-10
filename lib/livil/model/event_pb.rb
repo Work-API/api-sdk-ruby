@@ -39,6 +39,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :attachments, :message, 15, "livil.model.EventAttachment"
       optional :created_at, :uint64, 16
       optional :updated_at, :uint64, 17
+      optional :calendar_id, :string, 18
     end
     add_message "livil.model.EventAttachment" do
       optional :remote_id, :string, 1

@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-alpha.work-api.com/event/events/NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOmRmcHY0MjJoNWcyMGM0bXJnMmNob2UxY2Zv?calendar_id=NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOnByaW1hcnk6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODcxMDY0MzUsImlhdCI6MTU4NDY4NzIzNSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTc0Njg3Mzg1OWMyMDAwMDkwMmIxNTgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MzUxNDgxM0B3b3JrLWFwaS5jb20ifX0.syElOsiOeUBt4DeiMjc1rm1NdEEi6bV_4dcPE4MBkdA
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 10 Apr 2020 13:20:19 GMT
+      X-Request-Id:
+      - 5a584bf3-9bf8-4812-8233-5741611d11b8
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '564'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOmRmcHY0MjJoNWcyMGM0bXJnMmNob2UxY2Zv","type":"event","attributes":{"integration_id":"5e7b7829f40c9b001c2d4e6f","remote_id":"dfpv422h5g20c4mrg2choe1cfo","calendar_id":"NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOnByaW1hcnk6","name":"API-test-event
+        ALL-DAY","description":"API-test-event description","attendees":[],"start_date_time":"2019-07-10","start_timezone":"","end_date_time":"2019-07-10","end_timezone":"","all_day":true,"parent_event_id":"","location":"","recurrence":"","created_at":1562575460,"updated_at":1562575460}}}'
+    http_version: null
+  recorded_at: Fri, 10 Apr 2020 13:20:19 GMT
+recorded_with: VCR 5.1.0

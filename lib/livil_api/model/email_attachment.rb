@@ -2,6 +2,7 @@
 
 require 'livil/model/email_pb'
 require_relative 'base_model'
+require_relative 'with_composite_id'
 require_relative 'buffable'
 
 module LivilApi
@@ -9,6 +10,7 @@ module LivilApi
 
   class EmailAttachment
     include BaseModel
+    include WithCompositeId
     include Buffable
 
     attr_reader :upload

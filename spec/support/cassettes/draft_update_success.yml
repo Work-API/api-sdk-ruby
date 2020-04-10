@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api-alpha.work-api.com/email/drafts/NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OnItMzY4MTk5NzYwMTMwMjc3MDcyOTo6
+    body:
+      encoding: UTF-8
+      string: '{"data":{"attributes":{"remote_id":"r-3681997601302770729","integration_id":"5e74696b859c20000902b159","subject":"Test
+        Email Subject Updated (Request)","body":{"plain_text":["This is a plain text
+        body segment (updated)"],"html":[]},"sender":null,"to_recipients":[{"name":"Dan","address":"dan+updatedrequest@livil.co"}],"cc_recipients":[],"bcc_recipients":[],"flags":null},"type":"email","id":"NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OnItMzY4MTk5NzYwMTMwMjc3MDcyOTo6"}}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODcxMDY0MzUsImlhdCI6MTU4NDY4NzIzNSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTc0Njg3Mzg1OWMyMDAwMDkwMmIxNTgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MzUxNDgxM0B3b3JrLWFwaS5jb20ifX0.syElOsiOeUBt4DeiMjc1rm1NdEEi6bV_4dcPE4MBkdA
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 25 Mar 2020 14:12:46 GMT
+      X-Request-Id:
+      - 5ed9928f-7b96-4f2f-bf91-0eaadf7bc781
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '746'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OnItMzY4MTk5NzYwMTMwMjc3MDcyOTo6","type":"email","attributes":{"integration_id":"5e74696b859c20000902b159","bcc_recipients":[],"body":{"plain_text":["This
+        is a plain text body segment (updated)"],"html":[]},"cc_recipients":[],"flags":{"seen":true,"flagged":false},"labels":["draft"],"received_at":1585145565,"sender":{"name":"","address":"liviltestacc@gmail.com"},"subject":"Test
+        Email Subject Updated (Request)","thread_id":"NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OjE3MTEyMDlkMzM4ODNlMWI6","to_recipients":[{"name":"Dan","address":"dan+updatedrequest@livil.co"}]},"relationships":{"mailboxes":{"data":[{"id":"NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OkRSQUZU","type":"mailbox"}]},"email_attachments":{"data":[]}}}}'
+    http_version: null
+  recorded_at: Wed, 25 Mar 2020 14:12:46 GMT
+recorded_with: VCR 5.1.0

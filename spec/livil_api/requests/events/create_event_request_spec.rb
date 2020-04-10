@@ -6,11 +6,7 @@ require 'livil_api/requests/events/create_event_request'
 RSpec.describe(LivilApi::Requests::Events::CreateEventRequest) do
   include_context 'with live client'
 
-  # TODO: add support for adding event on specific calendar
-  # let(:calendar_remote_id) { 'primary' }
-  # let(:calendar_id) { Base64.urlsafe_encode64("#{integration_id}:#{calendar_remote_id}") }
-
-  let(:integration_id) { '5e5d1077390585003fd8fc68' }
+  let(:integration_id) { '5e87444cc30f5a0009f0905b' }
 
   let(:name) { 'Exciting' }
   let(:description) { 'An exciting event' }
@@ -19,6 +15,10 @@ RSpec.describe(LivilApi::Requests::Events::CreateEventRequest) do
   let(:start_timezone) { 'Europe/Budapest' }
   let(:end_date_time) { '2020-02-29T02:00:00+01:00' }
   let(:end_timezone) { 'Europe/Budapest' }
+  let(:calendar_id) do
+    'NWU4NzQ0NGNjMzBmNWEwMDA5ZjA5MDViOkFRTWtBR0UxT0dSak9HVXhMVEpsTmpNdE5EQXpNaTA1WVRabExXWTROamt6T1RnNU1'\
+    'EWTFNUUF1QUFBRE9iVHo2WnR1M0V1VDF0a25rQkFqYkFFQXhpTnJjM3JjbWtfSl9BaUlQMjItTkFBQUFnRU5BQUFB'
+  end
 
   let(:event) do
     LivilApi::Event.new(
@@ -29,7 +29,8 @@ RSpec.describe(LivilApi::Requests::Events::CreateEventRequest) do
       start_date_time: start_date_time,
       start_timezone: start_timezone,
       end_date_time: end_date_time,
-      end_timezone: end_timezone
+      end_timezone: end_timezone,
+      calendar_id: calendar_id
     )
   end
 
@@ -54,13 +55,30 @@ RSpec.describe(LivilApi::Requests::Events::CreateEventRequest) do
       it do
         is_expected.to have_attributes(
           name: name,
-          description: description,
           location: location,
-          start_date_time: start_date_time,
-          start_timezone: start_timezone,
-          end_date_time: end_date_time,
-          end_timezone: end_timezone
+          calendar_id: calendar_id
         )
+      end
+
+      context 'description' do
+        subject { call.body.description }
+        it { is_expected.to match(/#{description}/) }
+      end
+
+      context 'start time' do
+        let(:received_time) do
+          Time.parse("#{call.body.start_date_time} #{call.body.start_timezone}")
+        end
+        subject { received_time }
+        it { is_expected.to eq(Time.parse(start_date_time)) }
+      end
+
+      context 'end time' do
+        let(:received_time) do
+          Time.parse("#{call.body.end_date_time} #{call.body.end_timezone}")
+        end
+        subject { received_time }
+        it { is_expected.to eq(Time.parse(end_date_time)) }
       end
     end
   end
