@@ -27,6 +27,18 @@ module LivilApi
       def validate!
         invalid_params = @params.keys.reject { |key| self.class.accepted_params.include?(key) }
         raise ArgumentError, "invalid parameters for #{self.class.name}: #{invalid_params.join(', ')}" if invalid_params.present?
+
+        @errors = {}
+        validate
+        raise ValidationError, "request is not valid: #{@errors}" unless @errors.empty?
+      end
+
+      def validate
+        # custom validations can be added here
+      end
+
+      def valid?
+        @errors.empty?
       end
 
       def args
@@ -36,6 +48,8 @@ module LivilApi
       end
 
       def body
+        validate!
+
         return if @body.nil?
 
         serialized = @body.serializer.serialize

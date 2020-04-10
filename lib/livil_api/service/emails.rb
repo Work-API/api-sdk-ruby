@@ -15,13 +15,13 @@ module LivilApi
         call(request).body
       end
 
-      # rubocop:disable Metrics/AbcSize
-      # rubocop:disable Metrics/PerceivedComplexity
-      def list_emails(email_ids: nil, mailbox_ids: nil, limit: nil, date_from: nil, date_until: nil, search_text: nil, contact: nil)
+      # rubocop:disable Metrics/AbcSize, Metrics/PerceivedComplexity, Metrics/MethodLength
+      def list_emails(email_ids: nil, mailbox_ids: nil, limit: nil, page: nil, date_from: nil, date_until: nil, search_text: nil, contact: nil)
         params = {}
         params[:email_ids] = email_ids unless email_ids.nil?
         params[:mailbox_ids] = mailbox_ids unless mailbox_ids.nil?
         params[:limit] = limit unless limit.nil?
+        params[:page] = page unless page.nil?
         params[:date_from] = date_from unless date_from.nil?
         params[:date_until] = date_until unless date_until.nil?
         params[:search_text] = search_text unless search_text.nil?
@@ -31,8 +31,7 @@ module LivilApi
 
         call(request).body
       end
-      # rubocop:enable Metrics/AbcSize
-      # rubocop:enable Metrics/PerceivedComplexity
+      # rubocop:enable Metrics/AbcSize, Metrics/PerceivedComplexity, Metrics/MethodLength
 
       def get_email(email_id:)
         request = Requests::Emails::GetEmailRequest.new(email_id: email_id)

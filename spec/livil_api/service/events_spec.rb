@@ -3,7 +3,7 @@
 RSpec.describe(LivilApi::Service::Events) do
   include_context 'with service'
 
-  let(:integration_id) { '5e5d1077390585003fd8fc68' }
+  let(:integration_id) { '5e7b7829f40c9b001c2d4e6f' }
 
   context 'list_calendars' do
     let(:api_method) { :list_calendars }
@@ -25,6 +25,14 @@ RSpec.describe(LivilApi::Service::Events) do
       subject { call.first }
       it { is_expected.to be_a(LivilApi::Event) }
     end
+  end
+
+  context 'get_event' do
+    let(:api_method) { :get_event }
+    let(:event_id) { 'NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOmRmcHY0MjJoNWcyMGM0bXJnMmNob2UxY2Zv' }
+    let(:args) { { event_id: event_id } }
+
+    it { is_expected.to be_a(LivilApi::Event) }
   end
 
   context 'create_event' do
@@ -49,7 +57,7 @@ RSpec.describe(LivilApi::Service::Events) do
 
   context 'modify_event' do
     let(:api_method) { :modify_event }
-    let(:event_id) { 'NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv' }
+    let(:event_id) { 'NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOmJrYWxsbW1sYWhhZWtzcHZ0aWFsMHF0bnY4' }
     let(:attributes) do
       {
         name: 'new name',

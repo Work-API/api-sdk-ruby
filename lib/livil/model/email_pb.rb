@@ -53,6 +53,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :inline, :bool, 3
       optional :payload, :message, 4, "google.protobuf.Any"
       optional :content_transfer_encoding, :string, 5
+      optional :filename, :string, 6
+      optional :mime_type, :string, 7
+      optional :size, :uint64, 8
+      optional :uri, :string, 9
     end
   end
 end

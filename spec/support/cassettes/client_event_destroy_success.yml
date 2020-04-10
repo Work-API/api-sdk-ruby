@@ -5,11 +5,11 @@ http_interactions:
     uri: https://api-alpha.work-api.com/event/events
     body:
       encoding: UTF-8
-      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e5d1077390585003fd8fc68","name":"should
-        be deleted","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","location":"","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0},"type":"event"}}'
+      string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e7b7829f40c9b001c2d4e6f","name":"should
+        be deleted","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","location":"","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0,"calendar_id":""},"type":"event"}}'
     headers:
       Authorization:
-      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODcxMDY0MzUsImlhdCI6MTU4NDY4NzIzNSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTc0Njg3Mzg1OWMyMDAwMDkwMmIxNTgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MzUxNDgxM0B3b3JrLWFwaS5jb20ifX0.syElOsiOeUBt4DeiMjc1rm1NdEEi6bV_4dcPE4MBkdA
       Accept:
       - application/vnd.api+json
       User-Agent:
@@ -28,32 +28,32 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 05 Mar 2020 11:43:32 GMT
+      - Fri, 10 Apr 2020 15:40:02 GMT
       X-Request-Id:
-      - b74228b7-1f28-4838-baea-f203c8c4989e
+      - 429f306c-e05d-4bf2-901b-2d5ad5c19175
       Content-Type:
       - application/vnd.api+json
       Content-Length:
-      - '470'
+      - '588'
       Vary:
       - Origin
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OjVjdmRhbWMwaGtuZGt1NDczanUwcHI1bGkw","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"should
-        be deleted","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","all_day":false,"parent_event_id":"","location":"","created_at":1583408612,"updated_at":1583408612}}}'
+      string: '{"data":{"id":"NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOjltM2YzajA0OGxqODBpb21lNDAxamxwOWlz","type":"event","attributes":{"integration_id":"5e7b7829f40c9b001c2d4e6f","remote_id":"9m3f3j048lj80iome401jlp9is","calendar_id":"NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOnByaW1hcnk6","name":"should
+        be deleted","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","all_day":false,"parent_event_id":"","location":"","recurrence":"","created_at":1586533202,"updated_at":1586533202}}}'
     http_version: null
-  recorded_at: Thu, 05 Mar 2020 11:43:32 GMT
+  recorded_at: Fri, 10 Apr 2020 15:40:02 GMT
 - request:
     method: delete
-    uri: https://api-alpha.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OjVjdmRhbWMwaGtuZGt1NDczanUwcHI1bGkw
+    uri: https://api-alpha.work-api.com/event/events/NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOjltM2YzajA0OGxqODBpb21lNDAxamxwOWlz
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODcxMDY0MzUsImlhdCI6MTU4NDY4NzIzNSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTc0Njg3Mzg1OWMyMDAwMDkwMmIxNTgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MzUxNDgxM0B3b3JrLWFwaS5jb20ifX0.syElOsiOeUBt4DeiMjc1rm1NdEEi6bV_4dcPE4MBkdA
       Accept:
       - application/vnd.api+json
       User-Agent:
@@ -72,9 +72,9 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 05 Mar 2020 11:43:33 GMT
+      - Fri, 10 Apr 2020 15:40:04 GMT
       X-Request-Id:
-      - 81643288-2367-424c-b831-d48dcd2ef23a
+      - 8b3163b7-7b8b-4330-bd5b-3bbba61e842e
       Vary:
       - Origin
       Via:
@@ -83,5 +83,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: null
-  recorded_at: Thu, 05 Mar 2020 11:43:33 GMT
+  recorded_at: Fri, 10 Apr 2020 15:40:04 GMT
 recorded_with: VCR 5.1.0

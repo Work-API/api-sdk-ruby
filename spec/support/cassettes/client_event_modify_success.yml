@@ -2,14 +2,14 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api-alpha.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
+    uri: https://api-alpha.work-api.com/event/events/NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOmJrYWxsbW1sYWhhZWtzcHZ0aWFsMHF0bnY4
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"remote_id":"","integration_id":"","name":"new
-        name","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","location":"","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0},"type":"event"}}'
+        name","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","location":"","all_day":false,"reminders":[],"recurrence":"","parent_event_id":"","attachments":[],"created_at":0,"updated_at":0,"calendar_id":""},"type":"event"}}'
     headers:
       Authorization:
-      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODU3NTY0NDMsImlhdCI6MTU4MzMzNzI0MywiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTRhYmQzYjJjMjgwYTAwMWUzMjFkODgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0NDc1NDk5MEB3b3JrLWFwaS5jb20ifX0.3SS3-tLHDZ0oWMlqrHQZV7RIC13c6I9SbPq-YBBschs
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODcxMDY0MzUsImlhdCI6MTU4NDY4NzIzNSwiaXNzIjoiU1BJQ08gQWNjb3VudCIsInVzZXIiOnsiaWQiOiI1ZTc0Njg3Mzg1OWMyMDAwMDkwMmIxNTgiLCJhcmJpdHJhcnlfaWQiOiJ0ZXN0MzUxNDgxM0B3b3JrLWFwaS5jb20ifX0.syElOsiOeUBt4DeiMjc1rm1NdEEi6bV_4dcPE4MBkdA
       Accept:
       - application/vnd.api+json
       User-Agent:
@@ -28,21 +28,21 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 05 Mar 2020 11:15:24 GMT
+      - Fri, 10 Apr 2020 15:18:47 GMT
       X-Request-Id:
-      - 1d971c40-afdc-4c4e-9f27-f4ea38500c7a
+      - cc8b1d56-9197-4e5b-befa-c8b88c0b7075
       Content-Type:
       - application/vnd.api+json
       Content-Length:
-      - '461'
+      - '579'
       Vary:
       - Origin
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv","type":"event","attributes":{"integration_id":"5e5d1077390585003fd8fc68","name":"new
-        name","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","all_day":false,"parent_event_id":"","location":"","created_at":1583403049,"updated_at":1583406843}}}'
+      string: '{"data":{"id":"NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOmJrYWxsbW1sYWhhZWtzcHZ0aWFsMHF0bnY4","type":"event","attributes":{"integration_id":"5e7b7829f40c9b001c2d4e6f","remote_id":"bkallmmlahaekspvtial0qtnv8","calendar_id":"NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOnByaW1hcnk6","name":"new
+        name","description":"","attendees":[],"start_date_time":"2020-02-13T13:00:00+01:00","start_timezone":"Europe/Paris","end_date_time":"2020-02-14T14:00:00+01:00","end_timezone":"Europe/Paris","all_day":false,"parent_event_id":"","location":"","recurrence":"","created_at":1586531726,"updated_at":1586531927}}}'
     http_version: null
-  recorded_at: Thu, 05 Mar 2020 11:15:24 GMT
+  recorded_at: Fri, 10 Apr 2020 15:18:47 GMT
 recorded_with: VCR 5.1.0
