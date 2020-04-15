@@ -19,7 +19,7 @@ module LivilApi
 
       def initialize(body: nil, **params)
         @body = body
-        @params = params
+        @params = params.reject { |_k, v| v.nil? }
 
         validate!
       end

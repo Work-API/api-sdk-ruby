@@ -21,8 +21,8 @@ module LivilApi
         call(request).body
       end
 
-      def get_event(event_id:)
-        request = Requests::Events::GetEventRequest.new(event_id: event_id)
+      def get_event(event_id:, calendar_id: nil)
+        request = Requests::Events::GetEventRequest.new(event_id: event_id, calendar_id: calendar_id)
 
         call(request).body
       end
