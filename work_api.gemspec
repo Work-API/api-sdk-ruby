@@ -5,15 +5,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'livil_api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'livil_api'
-  spec.version       = LivilApi::VERSION
+  spec.name          = 'work_api'
+  spec.version       = WorkApi::VERSION
   spec.authors       = ['Dan de Havilland']
   spec.email         = ['dan@livil.co']
 
-  spec.summary       = 'SDK for accessing Livil API'
-  spec.homepage      = 'https://github.com/livilco/livil-api-ruby'
-
-  spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+  spec.summary       = 'SDK for accessing Work-API REST backend'
+  spec.homepage      = 'https://github.com/Work-API/api-sdk-ruby'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = "#{spec.homepage}.git"
