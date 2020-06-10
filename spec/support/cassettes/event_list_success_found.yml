@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/event/events
+    uri: https://api.work-api.com/event/events
     body:
       encoding: US-ASCII
       string: ''

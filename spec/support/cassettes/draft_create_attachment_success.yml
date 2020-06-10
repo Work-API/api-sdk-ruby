@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/email/drafts
+    uri: https://api.work-api.com/email/drafts
     body:
       encoding: UTF-8
       string: "----test-boundary\r\nContent-Disposition: form-data; name=\"email\"\r\nContent-Type:

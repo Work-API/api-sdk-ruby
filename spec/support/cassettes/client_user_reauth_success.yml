@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/users/reauth
+    uri: https://api.work-api.com/users/reauth
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"arbitrary_id":"another_create_user@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'

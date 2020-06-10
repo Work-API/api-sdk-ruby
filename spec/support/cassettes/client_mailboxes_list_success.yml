@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/email/mailboxes
+    uri: https://api.work-api.com/email/mailboxes
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api-alpha.work-api.com/event/events/NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOmJrYWxsbW1sYWhhZWtzcHZ0aWFsMHF0bnY4
+    uri: https://api.work-api.com/event/events/NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOmJrYWxsbW1sYWhhZWtzcHZ0aWFsMHF0bnY4
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"remote_id":"","integration_id":"","name":"new

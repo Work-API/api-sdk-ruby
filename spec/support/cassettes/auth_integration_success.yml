@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/integrations
+    uri: https://api.work-api.com/integrations
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}}'
@@ -45,7 +45,7 @@ http_interactions:
   recorded_at: Mon, 02 Mar 2020 14:29:31 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/auth/init/5e5d184b390585001bd8fc69?redirect=true&return_to=http://localhost:3000/done
+    uri: https://api.work-api.com/auth/init/5e5d184b390585001bd8fc69?redirect=true&return_to=http://localhost:3000/done
     body:
       encoding: US-ASCII
       string: ''
@@ -70,7 +70,7 @@ http_interactions:
       Date:
       - Mon, 02 Mar 2020 14:29:32 GMT
       Location:
-      - https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api-alpha.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F4T0RSaU16a3dOVGcxTURBeFltUTRabU0yT1NJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURlBSRlV4VG1wQk0wMUVaM05KYld4b1pFTkpOazFVVlRSTmVrVXdUVlJWZDA5RGQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhVkZKb1dXMVJlbGxxU21wTmFtZDNXVlJCZDAxWFZYcE5ha1pyVDBSbmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLTUZwWVRqQk9SR014VGtSck5VMUZRak5pTTBweVRGZEdkMkZUTldwaU1qQnBabGd3TG5NeVQxOU5YeTFSVFc4elVXa3phMmhGWTBWT1JXVk5Ta1pWTWpOblpGSnBRMDVpTldOVVNGZG9TVlVpZlE9PSI=
+      - https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F4T0RSaU16a3dOVGcxTURBeFltUTRabU0yT1NJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURlBSRlV4VG1wQk0wMUVaM05KYld4b1pFTkpOazFVVlRSTmVrVXdUVlJWZDA5RGQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhVkZKb1dXMVJlbGxxU21wTmFtZDNXVlJCZDAxWFZYcE5ha1pyVDBSbmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLTUZwWVRqQk9SR014VGtSck5VMUZRak5pTTBweVRGZEdkMkZUTldwaU1qQnBabGd3TG5NeVQxOU5YeTFSVFc4elVXa3phMmhGWTBWT1JXVk5Ta1pWTWpOblpGSnBRMDVpTldOVVNGZG9TVlVpZlE9PSI=
       Content-Type:
       - text/plain
       Content-Length:
@@ -81,12 +81,12 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: This resource has been moved temporarily to https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api-alpha.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F4T0RSaU16a3dOVGcxTURBeFltUTRabU0yT1NJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURlBSRlV4VG1wQk0wMUVaM05KYld4b1pFTkpOazFVVlRSTmVrVXdUVlJWZDA5RGQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhVkZKb1dXMVJlbGxxU21wTmFtZDNXVlJCZDAxWFZYcE5ha1pyVDBSbmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLTUZwWVRqQk9SR014VGtSck5VMUZRak5pTTBweVRGZEdkMkZUTldwaU1qQnBabGd3TG5NeVQxOU5YeTFSVFc4elVXa3phMmhGWTBWT1JXVk5Ta1pWTWpOblpGSnBRMDVpTldOVVNGZG9TVlVpZlE9PSI=.
+      string: This resource has been moved temporarily to https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F4T0RSaU16a3dOVGcxTURBeFltUTRabU0yT1NJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURlBSRlV4VG1wQk0wMUVaM05KYld4b1pFTkpOazFVVlRSTmVrVXdUVlJWZDA5RGQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhVkZKb1dXMVJlbGxxU21wTmFtZDNXVlJCZDAxWFZYcE5ha1pyVDBSbmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLTUZwWVRqQk9SR014VGtSck5VMUZRak5pTTBweVRGZEdkMkZUTldwaU1qQnBabGd3TG5NeVQxOU5YeTFSVFc4elVXa3phMmhGWTBWT1JXVk5Ta1pWTWpOblpGSnBRMDVpTldOVVNGZG9TVlVpZlE9PSI=.
     http_version: null
   recorded_at: Mon, 02 Mar 2020 14:29:32 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/auth/init/5e5d184b390585001bd8fc69?redirect=false&return_to=http://localhost:3000/done
+    uri: https://api.work-api.com/auth/init/5e5d184b390585001bd8fc69?redirect=false&return_to=http://localhost:3000/done
     body:
       encoding: US-ASCII
       string: ''
@@ -120,12 +120,12 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"uri":"https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api-alpha.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F4T0RSaU16a3dOVGcxTURBeFltUTRabU0yT1NJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURlBSRlV4VG1wQk0wMUVaM05KYld4b1pFTkpOazFVVlRSTmVrVXdUVlJWZDA5RGQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhVkZKb1dXMVJlbGxxU21wTmFtZDNXVlJCZDAxWFZYcE5ha1pyVDBSbmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLTUZwWVRqQk9SR014VGtSck5VMUZRak5pTTBweVRGZEdkMkZUTldwaU1qQnBabGd3TG5NeVQxOU5YeTFSVFc4elVXa3phMmhGWTBWT1JXVk5Ta1pWTWpOblpGSnBRMDVpTldOVVNGZG9TVlVpZlE9PSI="}'
+      string: '{"uri":"https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=37034661781-jib0ej2ent1nr2u8c1ssr6g4ipgnpqvv.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=https://api.work-api.com/auth/callback&response_type=code&scope=profile%20email%20https://www.googleapis.com/auth/calendar&state=ImV5SnBiblJsWjNKaGRHbHZibDlwWkNJNklqVmxOV1F4T0RSaU16a3dOVGcxTURBeFltUTRabU0yT1NJc0luSmxkSFZ5Ymw5MGJ5STZJbWgwZEhBNkx5OXNiMk5oYkdodmMzUTZNekF3TUM5a2IyNWxJaXdpZEc5clpXNGlPaUpsZVVwb1lrZGphVTlwU2tsVmVra3hUbWxLT1M1bGVVcHNaVWhCYVU5cVJURlBSRlV4VG1wQk0wMUVaM05KYld4b1pFTkpOazFVVlRSTmVrVXdUVlJWZDA5RGQybGhXRTU2U1dwdmFWVXhRa3BSTURoblVWZE9hbUl6Vm5Wa1EwbHpTVzVXZWxwWVNXbFBibk5wWVZkUmFVOXBTVEZhVkZKb1dXMVJlbGxxU21wTmFtZDNXVlJCZDAxWFZYcE5ha1pyVDBSbmFVeERTbWhqYlVwd1pFaEthR051YkdaaFYxRnBUMmxLTUZwWVRqQk9SR014VGtSck5VMUZRak5pTTBweVRGZEdkMkZUTldwaU1qQnBabGd3TG5NeVQxOU5YeTFSVFc4elVXa3phMmhGWTBWT1JXVk5Ta1pWTWpOblpGSnBRMDVpTldOVVNGZG9TVlVpZlE9PSI="}'
     http_version: null
   recorded_at: Mon, 02 Mar 2020 14:30:18 GMT
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/integrations
+    uri: https://api.work-api.com/integrations
     body:
       encoding: UTF-8
       string: '{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}'
@@ -168,7 +168,7 @@ http_interactions:
   recorded_at: Wed, 11 Mar 2020 16:24:01 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/auth/init/5e6910a11f35090015efe50a?redirect=false&return_to=http://localhost:3000/done
+    uri: https://api.work-api.com/auth/init/5e6910a11f35090015efe50a?redirect=false&return_to=http://localhost:3000/done
     body:
       encoding: US-ASCII
       string: ''

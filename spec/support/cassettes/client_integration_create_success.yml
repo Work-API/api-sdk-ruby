@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/integrations
+    uri: https://api.work-api.com/integrations
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}}'

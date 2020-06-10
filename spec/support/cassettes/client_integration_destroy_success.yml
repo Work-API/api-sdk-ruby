@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api-alpha.work-api.com/integrations/5e5d2007390585003fd8fc69
+    uri: https://api.work-api.com/integrations/5e5d2007390585003fd8fc69
     body:
       encoding: US-ASCII
       string: ''

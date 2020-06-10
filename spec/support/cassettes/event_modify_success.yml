@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api-alpha.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
+    uri: https://api.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"remote_id":"fipmdsvbpd9rus4i3jbbk1561o","integration_id":"5e5d1077390585003fd8fc68","name":"New
@@ -49,7 +49,7 @@ http_interactions:
   recorded_at: Thu, 05 Mar 2020 10:54:12 GMT
 - request:
     method: put
-    uri: https://api-alpha.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
+    uri: https://api.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{},"type":"event","id":"NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv"}}'
@@ -91,7 +91,7 @@ http_interactions:
   recorded_at: Wed, 11 Mar 2020 10:27:14 GMT
 - request:
     method: put
-    uri: https://api-alpha.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
+    uri: https://api.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
     body:
       encoding: UTF-8
       string: '{"attributes":{"remote_id":"fipmdsvbpd9rus4i3jbbk1561o","integration_id":"5e5d1077390585003fd8fc68","name":"New
@@ -135,7 +135,7 @@ http_interactions:
   recorded_at: Wed, 11 Mar 2020 16:23:58 GMT
 - request:
     method: put
-    uri: https://api-alpha.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
+    uri: https://api.work-api.com/event/events/NWU1ZDEwNzczOTA1ODUwMDNmZDhmYzY4OmZpcG1kc3ZicGQ5cnVzNGkzamJiazE1NjFv
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"remote_id":"fipmdsvbpd9rus4i3jbbk1561o","integration_id":"5e5d1077390585003fd8fc68","name":"New
@@ -179,7 +179,7 @@ http_interactions:
   recorded_at: Fri, 10 Apr 2020 14:30:55 GMT
 - request:
     method: put
-    uri: https://api-alpha.work-api.com/event/events/NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOjA2ajNvNmY1MWQxcTc2NDlzZDUzZ2I2djVh
+    uri: https://api.work-api.com/event/events/NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOjA2ajNvNmY1MWQxcTc2NDlzZDUzZ2I2djVh
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"remote_id":"06j3o6f51d1q7649sd53gb6v5a","integration_id":"5e7b7829f40c9b001c2d4e6f","name":"New

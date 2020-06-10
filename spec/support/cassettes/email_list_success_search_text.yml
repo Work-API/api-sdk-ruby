@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/email/emails?search_text=test
+    uri: https://api.work-api.com/email/emails?search_text=test
     body:
       encoding: US-ASCII
       string: ''
@@ -44,7 +44,7 @@ http_interactions:
   recorded_at: Thu, 05 Mar 2020 14:32:34 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/email/emails?search_text=terms
+    uri: https://api.work-api.com/email/emails?search_text=terms
     body:
       encoding: US-ASCII
       string: ''

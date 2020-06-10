@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/email/emails?date_from=2019-10-01T00:00z&date_until=2019-12-31T00:00z
+    uri: https://api.work-api.com/email/emails?date_from=2019-10-01T00:00z&date_until=2019-12-31T00:00z
     body:
       encoding: US-ASCII
       string: ''

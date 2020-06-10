@@ -43,7 +43,7 @@ http_interactions:
   recorded_at: Thu, 28 Nov 2019 14:17:19 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/event/events
+    uri: https://api.work-api.com/event/events
     body:
       encoding: US-ASCII
       string: ''

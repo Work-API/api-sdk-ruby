@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/integrations
+    uri: https://api.work-api.com/integrations
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}}'
@@ -45,7 +45,7 @@ http_interactions:
   recorded_at: Mon, 17 Feb 2020 13:00:01 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/auth/init/5e4a8e515a83120022901da6?integration_id=5e4a8e515a83120022901da6&redirect=false&return_to=http://localhost:3000/done
+    uri: https://api.work-api.com/auth/init/5e4a8e515a83120022901da6?integration_id=5e4a8e515a83120022901da6&redirect=false&return_to=http://localhost:3000/done
     body:
       encoding: US-ASCII
       string: ''
@@ -85,7 +85,7 @@ http_interactions:
   recorded_at: Mon, 17 Feb 2020 13:00:10 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/auth/init/5e4a8e515a83120022901da6?integration_id=5e4a8e515a83120022901da6&redirect=true&return_to=http://localhost:3000/done
+    uri: https://api.work-api.com/auth/init/5e4a8e515a83120022901da6?integration_id=5e4a8e515a83120022901da6&redirect=true&return_to=http://localhost:3000/done
     body:
       encoding: US-ASCII
       string: ''
@@ -118,7 +118,7 @@ http_interactions:
   recorded_at: Mon, 02 Mar 2020 13:36:27 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/auth/init/5e4a8e515a83120022901da6?redirect=false&return_to=http://localhost:3000/done
+    uri: https://api.work-api.com/auth/init/5e4a8e515a83120022901da6?redirect=false&return_to=http://localhost:3000/done
     body:
       encoding: US-ASCII
       string: ''
@@ -151,7 +151,7 @@ http_interactions:
   recorded_at: Mon, 02 Mar 2020 14:31:45 GMT
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/integrations
+    uri: https://api.work-api.com/integrations
     body:
       encoding: UTF-8
       string: '{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}'
@@ -194,7 +194,7 @@ http_interactions:
   recorded_at: Wed, 11 Mar 2020 16:23:59 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/auth/init/5e69109e1f35090009efe50b?redirect=false&return_to=http://localhost:3000/done
+    uri: https://api.work-api.com/auth/init/5e69109e1f35090009efe50b?redirect=false&return_to=http://localhost:3000/done
     body:
       encoding: US-ASCII
       string: ''

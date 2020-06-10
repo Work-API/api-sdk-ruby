@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api-alpha.work-api.com/integrations/5e5d1077390585003fd8fc68
+    uri: https://api.work-api.com/integrations/5e5d1077390585003fd8fc68
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"provider":"","media_type":"event"},"type":"integration","id":"5e5d1077390585003fd8fc68"}}'

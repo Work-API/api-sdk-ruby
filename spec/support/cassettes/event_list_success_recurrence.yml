@@ -289,7 +289,7 @@ http_interactions:
   recorded_at: Fri, 10 Apr 2020 15:29:23 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/event/events?calendar_ids%5B%5D=NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOnByaW1hcnk6&recurring_event_id=NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOjA2ajNvNmY1MWQxcTc2NDlzZDUzZ2I2djVh
+    uri: https://api.work-api.com/event/events?calendar_ids%5B%5D=NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOnByaW1hcnk6&recurring_event_id=NWU3Yjc4MjlmNDBjOWIwMDFjMmQ0ZTZmOjA2ajNvNmY1MWQxcTc2NDlzZDUzZ2I2djVh
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/email/emails
+    uri: https://api.work-api.com/email/emails
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e60f76b99ce66000936897b","thread_id":"","subject":"Test
@@ -46,7 +46,7 @@ http_interactions:
   recorded_at: Thu, 05 Mar 2020 15:34:59 GMT
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/email/emails
+    uri: https://api.work-api.com/email/emails
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e60f76b99ce66000936897b","subject":"Test
@@ -90,7 +90,7 @@ http_interactions:
   recorded_at: Wed, 11 Mar 2020 10:27:10 GMT
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/email/emails
+    uri: https://api.work-api.com/email/emails
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{},"type":"email"}}'
@@ -191,7 +191,7 @@ http_interactions:
   recorded_at: Wed, 11 Mar 2020 14:53:24 GMT
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/email/emails
+    uri: https://api.work-api.com/email/emails
     body:
       encoding: UTF-8
       string: '{"attributes":{"remote_id":"","integration_id":"5e60f76b99ce66000936897b","subject":"Test

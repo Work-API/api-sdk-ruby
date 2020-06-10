@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/email/drafts
+    uri: https://api.work-api.com/email/drafts
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e74696b859c20000902b159","subject":"Test

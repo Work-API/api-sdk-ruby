@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/users
+    uri: https://api.work-api.com/users
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"arbitrary_id":"create_user_dupe@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'
@@ -44,7 +44,7 @@ http_interactions:
   recorded_at: Fri, 28 Feb 2020 12:44:14 GMT
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/users
+    uri: https://api.work-api.com/users
     body:
       encoding: UTF-8
       string: '{"attributes":{"arbitrary_id":"create_user_dupe@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}'
@@ -86,7 +86,7 @@ http_interactions:
   recorded_at: Wed, 11 Mar 2020 16:24:13 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/users/reauth?path_to_private_key=/repos/spico/livil_api/keys/livil-31d6543f-5e26-4203-a258-011b5032a1c6.pem
+    uri: https://api.work-api.com/users/reauth?path_to_private_key=/repos/spico/livil_api/keys/livil-31d6543f-5e26-4203-a258-011b5032a1c6.pem
     body:
       encoding: US-ASCII
       string: ''
@@ -127,7 +127,7 @@ http_interactions:
   recorded_at: Wed, 18 Mar 2020 14:00:57 GMT
 - request:
     method: get
-    uri: https://api-alpha.work-api.com/users/reauth
+    uri: https://api.work-api.com/users/reauth
     body:
       encoding: US-ASCII
       string: ''
@@ -168,7 +168,7 @@ http_interactions:
   recorded_at: Wed, 18 Mar 2020 14:03:52 GMT
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/users/reauth
+    uri: https://api.work-api.com/users/reauth
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"arbitrary_id":"create_user_dupe@livil.co","environment_guid":"31d6543f-5e26-4203-a258-011b5032a1c6"},"type":"user"}}'

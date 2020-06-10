@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api-alpha.work-api.com/email/drafts/NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OnItMzY4MTk5NzYwMTMwMjc3MDcyOTo6
+    uri: https://api.work-api.com/email/drafts/NWU3NDY5NmI4NTljMjAwMDA5MDJiMTU5OnItMzY4MTk5NzYwMTMwMjc3MDcyOTo6
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"remote_id":"r-3681997601302770729","integration_id":"5e74696b859c20000902b159","subject":"Test

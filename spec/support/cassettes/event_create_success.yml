@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/event/events
+    uri: https://api.work-api.com/event/events
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e87444cc30f5a0009f0905b","name":"Exciting","description":"An

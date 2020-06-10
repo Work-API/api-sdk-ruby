@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/integrations
+    uri: https://api.work-api.com/integrations
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}}'
@@ -45,7 +45,7 @@ http_interactions:
   recorded_at: Mon, 02 Mar 2020 15:27:34 GMT
 - request:
     method: delete
-    uri: https://api-alpha.work-api.com/integrations/5e5d25e6390585003fd8fc6a
+    uri: https://api.work-api.com/integrations/5e5d25e6390585003fd8fc6a
     body:
       encoding: US-ASCII
       string: ''
@@ -84,7 +84,7 @@ http_interactions:
   recorded_at: Mon, 02 Mar 2020 15:27:35 GMT
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/integrations
+    uri: https://api.work-api.com/integrations
     body:
       encoding: UTF-8
       string: '{"attributes":{"provider":"gcal","media_type":"event"},"type":"integration"}'
@@ -127,7 +127,7 @@ http_interactions:
   recorded_at: Wed, 11 Mar 2020 16:24:04 GMT
 - request:
     method: delete
-    uri: https://api-alpha.work-api.com/integrations/5e6910a31f3509003eefe50a
+    uri: https://api.work-api.com/integrations/5e6910a31f3509003eefe50a
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api-alpha.work-api.com/email/emails
+    uri: https://api.work-api.com/email/emails
     body:
       encoding: UTF-8
       string: '{"data":{"attributes":{"remote_id":"","integration_id":"5e60f76b99ce66000936897b","subject":"this is a test","body":{"plain_text":["This is a plain text test email"],"html":[]},"sender":null,"to_recipients":[{"name":"","address":"dan@livil.co"}],"cc_recipients":[],"bcc_recipients":[],"flags":null},"type":"email"}}'
