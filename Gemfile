@@ -6,5 +6,5 @@ group :development, :test do
   gem 'byebug'
 end
 
-# Specify your gem's dependencies in livil_api.gemspec
+# Specify your gem's dependencies in work_api.gemspec
 gemspec

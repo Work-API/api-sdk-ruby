@@ -12,7 +12,7 @@ end
 
 def load_integration(provider, media_type)
   json = read_from_file(path_for_integration(provider, media_type))
-  LivilApi::JsonapiDeserializer.new(json).deserialize
+  WorkApi::JsonapiDeserializer.new(json).deserialize
 rescue Errno::ENOENT
   false
 end
@@ -35,7 +35,7 @@ def auth_integration(provider, media_type)
   path = "auth/init/#{integration.id}"
   response = perform_request(:get, path, query: { redirect: false })
 
-  deserialized = LivilApi::JsonDeserializer.new(response).deserialize
+  deserialized = WorkApi::JsonDeserializer.new(response).deserialize
 
   puts 'Attempting to open a browser window with the following URI:'
   puts deserialized['uri']

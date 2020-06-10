@@ -12,6 +12,6 @@ RSpec.shared_context 'with live client' do
   end
 
   let(:cassette_name) { raise 'please specify a +cassette_name+ in your spec' }
-  let(:client) { LivilApi::Client.new }
+  let(:client) { WorkApi::Client.new }
   let(:evironment_guid) { '31d6543f-5e26-4203-a258-011b5032a1c6' }
 end

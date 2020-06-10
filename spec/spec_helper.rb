@@ -3,7 +3,7 @@
 require 'bundler/setup'
 require 'byebug'
 require 'ffaker'
-require 'livil_api'
+require 'work_api'
 
 APP_ROOT = File.expand_path('..', __dir__)
 

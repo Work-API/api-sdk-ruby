@@ -8,7 +8,7 @@ def generate_apt(arbitrary_id: nil)
   priv_key_path = File.expand_path("keys/livil-#{environment_guid}.pem", APP_ROOT)
   pub_key_path = File.expand_path("keys/livil-#{environment_guid}.pub", APP_ROOT)
 
-  apt = LivilApi::AptGenerator.generate_apt(
+  apt = WorkApi::AptGenerator.generate_apt(
     environment_guid: environment_guid,
     path_to_private_key: priv_key_path,
     arbitrary_id: arbitrary_id,
@@ -16,7 +16,7 @@ def generate_apt(arbitrary_id: nil)
   )
 
   # validate the token
-  LivilApi::AptGenerator.decode_apt(apt, path_to_public_key: pub_key_path)
+  WorkApi::AptGenerator.decode_apt(apt, path_to_public_key: pub_key_path)
 
   apt
 end
@@ -24,7 +24,7 @@ end
 def load_user
   @load_user ||= begin
                    user_json = File.read(File.expand_path('tmp/user.json', APP_ROOT))
-                   LivilApi::JsonapiDeserializer.new(user_json).deserialize
+                   WorkApi::JsonapiDeserializer.new(user_json).deserialize
                  end
 end
 
@@ -39,7 +39,7 @@ def read_from_file(path)
 end
 
 def perform_request(method, path, payload_attrs: nil, query: nil, token: nil)
-  path = "#{LivilApi::Client.url}/#{path}"
+  path = "#{WorkApi::Client.url}/#{path}"
   params = if payload_attrs.present?
              { data: { attributes: payload_attrs } }.to_json
            else

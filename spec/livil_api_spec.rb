@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe LivilApi do
+RSpec.describe WorkApi do
   it 'has a version number' do
-    expect(LivilApi::VERSION).not_to be nil
+    expect(WorkApi::VERSION).not_to be nil
   end
 end

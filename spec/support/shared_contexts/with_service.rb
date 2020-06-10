@@ -3,7 +3,7 @@
 RSpec.shared_context 'with service' do
   include_context 'with token'
 
-  let(:service_class) { LivilApi::Service }
+  let(:service_class) { WorkApi::Service }
   let(:service) { service_class.new(token) }
   let(:expected_outcome) { 'success' }
   let(:cassette_name) { "client_#{api_method.to_s.split('_').reverse.join('_')}_#{expected_outcome}" }

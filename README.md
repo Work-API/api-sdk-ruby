@@ -12,7 +12,7 @@ In order to create or update specs that run against the live API you will need:
 
 ## An account
 
-Visit https://alpha.work-api.com/ and create an account.
+Visit https://dashboard.work-api.com/ and create an account.
 
 ## An environment
 

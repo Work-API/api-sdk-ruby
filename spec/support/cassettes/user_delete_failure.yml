@@ -40,4 +40,44 @@ http_interactions:
         token is invalid: invalid token"}]}'
     http_version: null
   recorded_at: Wed, 18 Mar 2020 14:49:46 GMT
+- request:
+    method: delete
+    uri: https://api.work-api.com/users/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer
+      Accept:
+      - application/vnd.api+json
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 10 Jun 2020 14:55:46 GMT
+      Content-Type:
+      - application/vnd.api+json
+      Content-Length:
+      - '104'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":"invalid_token_error","detail":"the supplied auth
+        token is invalid: invalid token"}]}'
+    http_version: null
+  recorded_at: Wed, 10 Jun 2020 14:55:46 GMT
 recorded_with: VCR 5.1.0

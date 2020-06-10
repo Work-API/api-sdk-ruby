@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require_relative './common'
-require 'livil_api/apt_generator'
-require 'livil_api/client'
+require 'work_api/apt_generator'
+require 'work_api/client'
 
 def load_tokens
   raw_json = File.read(File.expand_path('tmp/tokens.json'))
