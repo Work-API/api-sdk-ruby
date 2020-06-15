@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    work_api (0.1.0)
+    work_api (0.1.1)
       activesupport (~> 6)
       faraday (~> 0.15)
       google-protobuf (= 3.7.0)
@@ -32,7 +32,7 @@ GEM
     ffaker (2.13.0)
     ffi (1.12.2)
     formatador (0.2.5)
-    google-protobuf (3.7.0)
+    google-protobuf (3.7.0-x86_64-linux)
     guard (2.16.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
