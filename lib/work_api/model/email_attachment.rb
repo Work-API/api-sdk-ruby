@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'livil/model/email_pb'
+require 'work_api/protobufs/model/email_pb'
 require_relative 'base_model'
 require_relative 'with_composite_id'
 require_relative 'buffable'
 
 module WorkApi
-  EmailAttachment = Livil::Model::EmailAttachment
+  EmailAttachment = Protobufs::Model::EmailAttachment
 
   class EmailAttachment
     include BaseModel

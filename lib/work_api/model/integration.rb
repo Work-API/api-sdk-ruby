@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'livil/model/integration_pb'
+require 'work_api/protobufs/model/integration_pb'
 require_relative 'base_model'
 
 module WorkApi
-  Integration = Livil::Model::Integration
+  Integration = Protobufs::Model::Integration
 
   class Integration
     include BaseModel

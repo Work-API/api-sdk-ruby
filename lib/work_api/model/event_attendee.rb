@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'livil/model/event_pb'
+require 'work_api/protobufs/model/event_pb'
 require_relative 'base_model'
 
 module WorkApi
-  EventAttendee = Livil::Model::EventAttendee
+  EventAttendee = Protobufs::Model::EventAttendee
 
   class EventAttendee
     include BaseModel

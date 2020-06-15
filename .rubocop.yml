@@ -6,4 +6,4 @@ Layout/LineLength:
 
 AllCops:
   Exclude:
-    - 'lib/livil/**/*.rb'
+    - 'lib/work_api/protobufs/**/*.rb'

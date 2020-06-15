@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'livil/model/event_pb'
+require 'work_api/protobufs/model/event_pb'
 require_relative 'base_model'
 require_relative 'with_composite_id'
 
 module WorkApi
-  Event = Livil::Model::Event
+  Event = Protobufs::Model::Event
 
   class Event
     include BaseModel

@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'livil/error_pb'
+require 'work_api/protobufs/error_pb'
 
 module WorkApi
-  Error = Livil::Error
+  Error = Protobufs::Error
 
   class Error
   end

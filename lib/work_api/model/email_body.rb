@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'livil/model/email_pb'
+require 'work_api/protobufs/model/email_pb'
 require_relative 'base_model'
 
 module WorkApi
-  EmailBody = Livil::Model::EmailBody
+  EmailBody = Protobufs::Model::EmailBody
 
   class EmailBody
     include BaseModel

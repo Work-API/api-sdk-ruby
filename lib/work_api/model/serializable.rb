@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'byebug'
-
 module WorkApi
   module Serializable
     def self.included(base)

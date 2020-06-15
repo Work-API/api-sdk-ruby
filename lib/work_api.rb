@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'livil'))
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'work_api'))
 
 require 'active_support/core_ext/hash'
 

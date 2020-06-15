@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'livil/model/user_pb'
+require 'work_api/protobufs/model/user_pb'
 require_relative 'base_model'
 
 module WorkApi
-  User = Livil::Model::User
+  User = Protobufs::Model::User
 
   class User
     include BaseModel
